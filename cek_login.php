@@ -23,7 +23,7 @@ $cek = mysqli_num_rows($login);
  	$_SESSION['username'] = $username;
  	$_SESSION['id_akses'] = "1";
  	// ini tujuuannya ke tabel admin
- 	header("location:halaman_admin.html");
+ 	header("location:homeadmin.php");
 
  // cek jika user login sebagai pegawai
  }else if($data['id_akses']=="2"){
@@ -35,7 +35,7 @@ $cek = mysqli_num_rows($login);
  }else{
 
 	// alihkan ke halaman login kembali
- 	header("location:indexlog.php?pesan=gagal");
+ 	header("location:index.php?pesan=gagal");
  }
 
 ?>
