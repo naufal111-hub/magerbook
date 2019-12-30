@@ -94,59 +94,52 @@ font-size: 16px;"> Perpustakaan Online &nbsp;</a> </div>
                             <div class="table-responsive">
                                 <table class="table table-striped table-bordered table-hover">
                                     <thead>
-                                        <tr>
-                                            <th>No</th>
-                                            <th>First Name</th>
-                                            <th>Last Name</th>
-                                            <th>Username</th>
-                                             <th>User No.</th>
-                                        </tr>
+                                       <div class="cart-main-area section-padding--lg bg--white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 ol-lg-12">
+                        <form action="#">               
+                            <div class="table-content wnro__table table-responsive">
+                                <table>
+                                    <thead>
+                                        <tr class="title-top">
+                                            <th class="product-thumbnail">Buku</th>
+                                            <th class="product-name">Nama Buku</th>
+                                            <th class="product-price">Nama Peminjam</th>
+                                            <th class="product-quantity">Status</th>
+                                            <th class="product-subtotal">Tenggang Waktu</th>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>1</td>
-                                            <td>Mark</td>
-                                            <td>Otto</td>
-                                            <td>@mdo</td>
-                                            <td>100090</td>
+                                            <td class="product-thumbnail"><a href="#"><img src="images/product/sm-3/1.jpg" alt="product img"></a></td>
+                                            <td class="product-name"><a href="#">PKN IIX</a></td>
+                                            <td class="product-price"><span class="amount">Kevin Rahandika</span></td>
+                                            <td class="product-quantity">Buku Telah Dipinjam</td>
+                                            <td class="product-subtotal">4 Minggu</td>
                                         </tr>
                                         <tr>
-                                            <td>2</td>
-                                            <td>Jacob</td>
-                                            <td>Thornton</td>
-                                            <td>@fat</td>
-                                            <td>100090</td>
+                                            <td class="product-thumbnail"><a href="#"><img src="images/product/sm-3/2.jpg" alt="product img"></a></td>
+                                            <td class="product-name"><a href="#">IPA X</a></td>
+                                            <td class="product-price"><span class="amount">Naufal Raihan</span></td>
+                                            <td class="product-quantity">Buku Telah Dipinjam</td>
+                                            <td class="product-subtotal">3 Minggu</td>
                                         </tr>
                                         <tr>
-                                            <td>3</td>
-                                            <td>Larry</td>
-                                            <td>the Bird</td>
-                                            <td>@twitter</td>
-                                            <td>100090</td>
+                                            <td class="product-thumbnail"><a href="#"><img src="images/product/sm-3/3.jpg" alt="product img"></a></td>
+                                            <td class="product-name"><a href="#">IPS IX</a></td>
+                                            <td class="product-price"><span class="amount">Siti Anisa</span></td>
+                                            <td class="product-quantity">Buku Telah Dipinjam</td>
+                                            <td class="product-subtotal">2 Minggu</td>
                                         </tr>
-                                         <tr>
-                                            <td>1</td>
-                                            <td>Mark</td>
-                                            <td>Otto</td>
-                                            <td>@mdo</td>
-                                            <td>100090</td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>Jacob</td>
-                                            <td>Thornton</td>
-                                            <td>@fat</td>
-                                            <td>100090</td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td>Larry</td>
-                                            <td>the Bird</td>
-                                            <td>@twitter</td>
-                                            <td>100090</td>
-                                        </tr>
-
                                     </tbody>
+                                </table>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>  
+        </div>
+                                            </tbody>
                                 </table>
                             </div>
                         </div>
