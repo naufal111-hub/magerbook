@@ -45,7 +45,7 @@ font-size: 16px;"> Perpustakaan Online &nbsp; </div>
                     <img src="assets/img/find_user.png" class="user-image img-responsive"/>
 					</li>
                     <li>
-                        <a  href="index.html"><i class="fa fa-dashboard fa-3x"></i> Home </a>
+                        <a  href="homeadmin.php"><i class="fa fa-dashboard fa-3x"></i> Home </a>
                     </li>
                     <li >
                         <a   href="anggota.php"><i class="fa fa-table fa-3x"></i> Anggota </a>
