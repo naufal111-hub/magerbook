@@ -31,7 +31,7 @@ $cek = mysqli_num_rows($login);
  	$_SESSION['username'] = $username;
  	$_SESSION['id_akses'] = "2";
  	// alihkan ke halaman dashboard user
- 	header("location:homeuser.html");
+ 	header("location:homeuser.php");
  }else{
 
 	// alihkan ke halaman login kembali
