@@ -45,7 +45,7 @@ font-size: 16px;"> Perpustakaan Online &nbsp; </div>
                     <img src="assets/img/find_user.png" class="user-image img-responsive"/>
 					</li>
                     <li>
-                        <a  href="index.html"><i class="fa fa-dashboard fa-3x"></i> Home </a>
+                        <a  href="homeadmin.php"><i class="fa fa-dashboard fa-3x"></i> Home </a>
                     </li>
                     <li >
                         <a href="anggota.php"><i class="fa fa-table fa-3x"></i> Anggota </a>
@@ -85,7 +85,7 @@ font-size: 16px;"> Perpustakaan Online &nbsp; </div>
                                 <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                                     <thead>
                                         <tr>
-                                            <td>No</td>
+                                            <th>No</th>
                                             <th>Cover</th>
                                             <th>Judul Buku</th>
                                             <th>Kategori</th>
@@ -97,13 +97,14 @@ font-size: 16px;"> Perpustakaan Online &nbsp; </div>
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        <?php $i=1; ?>
                                        <?php
                         $query = mysqli_query($koneksi, "SELECT * FROM tb_buku"); //digunakan untuk mengambil data dari database lalu menmapilkannya pada tabel
                         while($data = mysqli_fetch_array($query)) { //untuk memecahkan data menjadi array dan memasukkan ke dalam variabel data agar data bisa kita tampilkan dalam bentuk perulangan //aray dalam bentuk object menjadi array yang kita kenal
                         ?>
                         <tr> <!-- untuk menampilakan data dari database ke tabel -->
-							  <td><?php echo $data ['id_buku'];?></td>
-							  echo "<td><img src='images/".$data['gambar']."' width='100' height='100'></td>";
+							  <td><?=$i; ?></td>
+							  <td><img src="img/<?php echo $data ['gambar'];?>" width='50'></td>
 							  <td><?php echo $data ['judul'];?></td>
 							  <td><?php echo $data ['id_kategori'];?></td>
 							  <td><?php echo $data ['pengarang'];?></td>
@@ -111,8 +112,9 @@ font-size: 16px;"> Perpustakaan Online &nbsp; </div>
 							  <td><?php echo $data ['thn_terbit'];?></td>
 							  <td><?php echo $data ['link'];?></td>
 							  
-							  <td><a href="edit_buku.php?id=<?php echo $data['id_buku'];?>" class="btn btn-warning"><span class="glyphicon glyphicon-edit"></span>Edit</a>|<a href="hapus_buku.php?id=<?php echo $data['id_buku'];?>" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span>Hapus</a></td>
+							  <td><a href="edit_buku.php?id=<?php echo $data['id_buku'];?>" class="btn btn-warning"><span class="glyphicon glyphicon-edit"></span>Edit</a>|<a href="hapus_buku.php?id=<?php echo $data['id_buku'];?>" onclick="return confirm('yakin ingin menghapus data ini?');" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span>Hapus</a></td>
 							</tr>
+                            <?php $i++; ?>
 							<?php } ?>
                                         
                                     </tbody>

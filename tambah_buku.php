@@ -1,5 +1,23 @@
 <?php
 require ("koneksi.php");
+
+if( isset($_POST["submit"]) ) {
+
+    //cek apakah data dapt ditambahkan atau tidak
+    if( tambah_buku($_POST) > 0 ) {
+        echo " 
+                <script>
+                    alert('data berhasil ditambahkan');
+                    document.location.href = 'bukuadmin.php';
+                </script>";
+    } else {
+        echo " 
+                <script>
+                    alert('data gagal ditambahkan');
+                    document.location.href = 'bukuadmin.php';
+                </script>";
+    }
+}
 ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -78,7 +96,7 @@ font-size: 16px;"> Perpustakaan Online &nbsp; </div>
                         <div class="panel-heading">
                              Form Tambah Buku
                         </div>
-    <form method="post" action="proses_tbuku.php" enctype="multipart/form-data">
+    <form  action="proses_tbuku.php" method="post" enctype="multipart/form-data">
         <table>
             
             <tr>

@@ -48,7 +48,7 @@ font-size: 16px;"> Perpustakaan Online &nbsp; </div>
                         <a  href="homeadmin.php"><i class="fa fa-dashboard fa-3x"></i> Home </a>
                     </li>
                     <li >
-                        <a class="active-menu"  href="anggota.html"><i class="fa fa-table fa-3x"></i> Anggota </a>
+                        <a class="active-menu"  href="anggota.php"><i class="fa fa-table fa-3x"></i> Anggota </a>
                     </li>
                     <li  >
                         <a  href="bukuadmin.php"><i class="fa fa-edit fa-3x"></i> Buku </a>
@@ -94,18 +94,20 @@ font-size: 16px;"> Perpustakaan Online &nbsp; </div>
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        <?php $i = 1; ?>
                                        <?php
                         $query = mysqli_query($koneksi, "SELECT * FROM tb_login_user"); //digunakan untuk mengambil data dari database lalu menmapilkannya pada tabel
                         while($data = mysqli_fetch_array($query)) { //untuk memecahkan data menjadi array dan memasukkan ke dalam variabel data agar data bisa kita tampilkan dalam bentuk perulangan //aray dalam bentuk object menjadi array yang kita kenal
                         ?>
                         <tr> <!-- untuk menampilakan data dari database ke tabel -->
-                          <td><?php echo $data ['id_user'];?></td>  
+                          <td><?= $i; ?></td>  
                           <td><?php echo $data ['nama_user'];?></td>
                           <td><?php echo $data ['username'];?></td>
                           <td><?php echo $data ['password'];?></td>
                           <td><?php echo $data ['id_akses'];?></td>
-                          <td><a href="edit_anggota.php?id=<?php echo $data['id_user'];?>" class="btn btn-warning"><span class="glyphicon glyphicon-edit"></span>Edit</a>|<a href="hapus_anggota.php?id=<?php echo $data['id_user'];?>" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span>Hapus</a></td>
+                          <td><a href="edit_anggota.php?id=<?php echo $data['id_user'];?>" class="btn btn-warning"><span class="glyphicon glyphicon-edit"></span>Edit</a>|<a href="hapus_anggota.php?id=<?php echo $data['id_user'];?>" onclick="return confirm('yakin ingin menghapus data ini?');" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span>Hapus</a></td>
                         </tr>
+                        <?php $i++; ?>
                         <?php } ?>
                                         
                                     </tbody>
