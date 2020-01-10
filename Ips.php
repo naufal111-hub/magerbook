@@ -162,8 +162,8 @@
                     <div class="col-lg-12">
                         <div class="slider__content">
 		            			<div class="contentbox">
-		            				<h2 style="text-align: center;"><span style="color: black;">My Library</span></h2><h2 style="text-align: center;"><span style="color: black;">Is</span></h2>
-		            				<h2 style="text-align: center;"><span style="color: black;">My Book</span></h2>
+		            					<h2 style="text-align: center;"><span style="color: white;">My Library</span></h2><h2 style="text-align: center;"><span style="color: white;">Is</span></h2>
+		            				<h2 style="text-align: center;"><span style="color: white;">My Book</span></h2>
 		            			</div>
 	            			</div>
 	            		</div>
