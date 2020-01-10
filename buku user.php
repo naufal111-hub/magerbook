@@ -35,13 +35,13 @@
 	<!-- Main wrapper -->
 	<div class="wrapper" id="wrapper">
 		<!-- Header -->
-		<header id="wn__header" class="header__area header__absolute sticky__header">
+		<header id="wn__header" class="oth-page header__area header__absolute sticky__header">
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-md-6 col-sm-6 col-6 col-lg-2">
 						<div class="logo">
 							<a href="homeuser.php">
- 								<img src="images/logo/logo.png" alt="logo images" style="height: 80px; width: 80px; border-radius: 50%;	">
+ 								<img src="images/logo/logo.png" alt="logo images" style="height: 90px; width: 90px; border-radius: 50%;	">
 							</a>
 						</div>
 					</div>
@@ -81,7 +81,7 @@
 												<div class="switcher-currency-trigger">
 													<div class="setting__menu">
 														<span><a href="#" value="<?php $data['nama_user']?>"> </a></span>
-														<span><a href="#">Sign In</a></span>
+														<span><a href="index.php">Logout</a></span>
 													</div>
 												</div>
 											</div>
@@ -156,14 +156,15 @@
 		</div>
 		<!-- End Search Popup -->
         <!-- Start Bradcaump area -->
-          <div class="slide animation__style10 bg-image--8 fullscreen align__center--left">
+          <div class="slide animation__style10 bg-image--9 fullscreen align__center--left">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="slider__content">
 		            			<div class="contentbox">
-		            				<h2 style="text-align: center;"><span style="color: white;">My Library</span></h2><h2 style="text-align: center;"><span style="color: white;">Is</span></h2>
-		            				<h2 style="text-align: center;"><span style="color: white;">My Book</span></h2>
+		            				<h2 style="text-align: center;"><span style="color: lightcyan;">My Library</span></h2>
+		            				<h2 style="text-align: center;"><span style="color: lightcyan;">Is</span></h2>
+		            				<h2 style="text-align: center;"><span style="color: lightcyan;">My Book</span>
 		            			</div>
 	            			</div>
 	            		</div>
