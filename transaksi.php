@@ -93,8 +93,7 @@
                                                 </ul>
                                         </div>
                                 </div>
-                                                                <!-- End Shopping Cart -->
-                                                      
+                                <!-- End Shopping Cart -->                      
                                 <!-- Start Mobile Menu -->
                                 <div class="row d-none">
                                         <div class="col-lg-12 d-none">
@@ -159,7 +158,6 @@
                 </div>
                 <!-- End Search Popup -->
         <!-- Start Bradcaump area -->
-        
         <!-- End Bradcaump area -->
         <!-- Start Blog Area -->
         <div class="page-blog bg--white section-padding--lg blog-sidebar right-sidebar">
@@ -171,120 +169,8 @@
                                                         <h2>Transaksi Peminjaman</h2>
                                                 </div>
                                                 <!-- Start Single Post -->
-                                                <article class="blog__post d-flex flex-wrap">
-                                                        <div class="thumb">
-                                                                <a href="blog-details.html">
-                                                                        <img src="images/blog/blog-3/1.jpg" alt="blog images">
-                                                                </a>
-                                                        </div>
-                                                        <div class="content">
-                                                                <h4><a href="blog-details.html">IPS X</a></h4>
-                                                                <ul class="post__meta">
-                                                                        <li>Posts by : <a href="#">road theme</a></li>
-                                                                        <li class="post_separator">/</li>
-                                                                        <li>Mar 10 2018</li>
-                                                                </ul>
-                                                                <p>Donec vitae hendrerit arcu, sit amet faucibus nisl. Crastoup pretium arcu ex. Aenean posuere libero eu augue rhoncus Praesent ornare tortor amet.</p>
-                                                                <div class="blog__btn">
-                                                                        <a href="blog-details.html">Baca</a>
-                                                                </div>
-                                                        </div>
-                                                </article>
-                                                <!-- End Single Post -->
-                                                <!-- Start Single Post -->
-                                                <article class="blog__post d-flex flex-wrap">
-                                                        <div class="thumb">
-                                                                <a href="blog-details.html">
-                                                                        <img src="images/blog/blog-3/2.jpg" alt="blog images">
-                                                                </a>
-                                                        </div>
-                                                        <div class="content">
-                                                                <h4><a href="blog-details.html">IPA X</a></h4>
-                                                                <ul class="post__meta">
-                                                                        <li>Posts by : <a href="#">road theme</a></li>
-                                                                        <li class="post_separator">/</li>
-                                                                        <li>Mar 10 2018</li>
-                                                                </ul>
-                                                                <p>Donec vitae hendrerit arcu, sit amet faucibus nisl. Crastoup pretium arcu ex. Aenean posuere libero eu augue rhoncus Praesent ornare tortor amet.</p>
-                                                                <div class="blog__btn">
-                                                                        <a href="blog-details.html">Baca</a>
-                                                                </div>
-                                                        </div>
-                                                </article>
-                                                <!-- End Single Post -->
-                                                <!-- Start Single Post -->
-                                                <article class="blog__post d-flex flex-wrap">
-                                                        <div class="thumb">
-                                                                <a href="blog-details.html">
-                                                                        <img src="images/blog/blog-3/3.jpg" alt="blog images">
-                                                                </a>
-                                                        </div>
-                                                        <div class="content">
-                                                                <h4><a href="blog-details.html">PKN X</a></h4>
-                                                                <ul class="post__meta">
-                                                                        <li>Posts by : <a href="#">road theme</a></li>
-                                                                        <li class="post_separator">/</li>
-                                                                        <li>Mar 10 2018</li>
-                                                                </ul>
-                                                                <p>Donec vitae hendrerit arcu, sit amet faucibus nisl. Crastoup pretium arcu ex. Aenean posuere libero eu augue rhoncus Praesent ornare tortor amet.</p>
-                                                                <div class="blog__btn">
-                                                                        <a href="blog-details.html">Baca</a>
-                                                                </div>
-                                                        </div>
-                                                </article>
-                                                <!-- End Single Post -->
-                                                <!-- Start Single Post -->
-                                                <article class="blog__post d-flex flex-wrap">
-                                                        <div class="thumb">
-                                                                <a href="blog-details.html">
-                                                                        <img src="images/blog/blog-3/4.jpg" alt="blog images">
-                                                                </a>
-                                                        </div>
-                                                        <div class="content">
-                                                                <h4><a href="blog-details.html">Bahasa Indonesia X</a></h4>
-                                                                <ul class="post__meta">
-                                                                        <li>Posts by : <a href="#">road theme</a></li>
-                                                                        <li class="post_separator">/</li>
-                                                                        <li>Mar 10 2018</li>
-                                                                </ul>
-                                                                <p>Donec vitae hendrerit arcu, sit amet faucibus nisl. Crastoup pretium arcu ex. Aenean posuere libero eu augue rhoncus Praesent ornare tortor amet.</p>
-                                                                <div class="blog__btn">
-                                                                        <a href="blog-details.html">Baca</a>
-                                                                </div>
-                                                        </div>
-                                                </article>
-                                                <!-- End Single Post -->
-                                                <!-- Start Single Post -->
-                                                <article class="blog__post d-flex flex-wrap">
-                                                        <div class="thumb">
-                                                                <a href="blog-details.html">
-                                                                        <img src="images/blog/blog-3/5.jpg" alt="blog images">
-                                                                </a>
-                                                        </div>
-                                                        <div class="content">
-                                                                <h4><a href="blog-details.html"></a>Agama X</h4>
-                                                                <ul class="post__meta">
-                                                                        <li>Posts by : <a href="#">road theme</a></li>
-                                                                        <li class="post_separator">/</li>
-                                                                        <li>Mar 10 2018</li>
-                                                                </ul>
-                                                                <p>Donec vitae hendrerit arcu, sit amet faucibus nisl. Crastoup pretium arcu ex. Aenean posuere libero eu augue rhoncus Praesent ornare tortor amet.</p>
-                                                                <div class="blog__btn">
-                                                                        <a href="blog-details.html">Baca</a>
-                                                                </div>
-                                                        </div>
-                                                </article>
-                                                <!-- End Single Post -->
-                                        </div>
-                                        <ul class="wn__pagination">
-                                                <li class="active"><a href="#">1</a></li>
-                                                <li><a href="#">2</a></li>
-                                                <li><a href="#">3</a></li>
-                                                <li><a href="#">4</a></li>
-                                                <li><a href="#"><i class="zmdi zmdi-chevron-right"></i></a></li>
-                                        </ul>
-                                </div>
-                                <div class="col-lg-3 col-12 md-mt-40 sm-mt-40">
+                                                <div class="container">
+                                                     <div class="col-lg-3 col-12 md-mt-40 sm-mt-40">
                                         <div class="wn__sidebar">
                                                 <!-- Start Single Widget -->
                                                 <aside class="widget search_widget">
@@ -299,12 +185,90 @@
                                                 <!-- End Single Widget -->
                                         </div>
                                 </div>
+                <div class="row">
+                    <div class="col-md-15 col-sm-15 ol-lg-15">
+                        <form action="#">               
+                            <div class="table-content wnro__table table-responsive">
+                                <table>
+                                    <thead>
+                                        <tr class="title-top">
+                                            <th class="product-thumbnail">Sampul Buku</th>
+                                            <th class="product-price">Nama Buku</th>
+                                            <th class="product-price">Nama Peminjam</th>
+                                            <th class="product-quantity">Status Peminjaman</th>
+                                            <th class="product-price">Tanggal Menminjam</th>
+                                            <th class="product-price">Tanggal Kembali</th>
+                                            <th class="product-subtotal">Tenggang Waktu</th>
+                                            <th class="aksi">Tindakan</th>
+                                        </tr>   
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="product-thumbnail"><a href="#"><img src="images/product/sm-3/1.jpg" alt="product img" height="135px" width="200px"></a></td>
+                                            <td class="product-price"><a href="#">PKN IIX</a></td>
+                                            <td class="product-price"><span class="amount">Kevin</span></td>
+                                            <td class="product-quantity">Buku Telah Dipinjam</td>
+                                            <td class="product-price">10 januari 2020</td>
+                                            <td class="product-price">20 januari 2020</td>
+                                            <td class="product-subtotal">1 Semester</td>
+                                            <td class="aksi"><a href="edit_anggota.php>" class="btn btn-warning"><span class="glyphicon glyphicon-edit"></span>Baca Kembali</a><a href="hapus_peminjaman.php" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span>Hapus</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="product-thumbnail"><a href="#"><img src="images/product/sm-3/2.jpg" alt="product img" height="135px" width="200px"></a></td>
+                                            <td class="product-price"><a href="#">IPA X</a></td>
+                                            <td class="product-price"><span class="amount">Naufal Raihan</span></td>
+                                            <td class="product-quantity">Buku Telah Dipinjam</td>
+                                            <td class="product-price">11 januari 2020</td>
+                                            <td class="product-price">21 januari 2020</td>
+                                            <td class="product-subtotal">1 Semester</td>
+                                             <td class="aksi"><a href="edit_anggota.php>" class="btn btn-warning"><span class="glyphicon glyphicon-edit"></span>Baca Kembali</a><a href="hapus_peminjaman.php" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span>Hapus</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="product-thumbnail"><a href="#"><img src="images/product/sm-3/3.jpg" alt="product img" height="135px" width="200px"></a></td>
+                                            <td class="product-price"><a href="#">IPS IX</a></td>
+                                            <td class="product-price"><span class="amount">Siti Anisa</span></td>
+                                            <td class="product-quantity">Buku Telah Dipinjam</td>
+                                            <td class="product-price">12 januari 2020</td>
+                                            <td class="product-price">22 januari 2020</td>
+                                            <td class="product-subtotal">1 Semester</td>
+                                             <td class="aksi"><a href="edit_anggota.php>" class="btn btn-warning"><span class="glyphicon glyphicon-edit"></span>Baca Kembali</a><a href="hapus_peminjaman.php" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span>Hapus</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="product-thumbnail"><a href="#"><img src="images/product/sm-3/3.jpg" alt="product img" height="135px" width="200px"></a></td>
+                                            <td class="product-price"><a href="#">Agama IX</a></td>
+                                            <td class="product-price"><span class="amount">Choirul</span></td>
+                                            <td class="product-quantity">Buku Telah Dipinjam</td>
+                                            <td class="product-price">13 januari 2020</td>
+                                            <td class="product-price">23 januari 2020</td>
+                                            <td class="product-subtotal">1 Semester</td>
+                                             <td class="aksi"><a href="edit_anggota.php>" class="btn btn-warning"><span class="glyphicon glyphicon-edit"></span>Baca Kembali</a><a href="hapus_peminjaman.php" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span>Hapus</a></td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>  
+        </div>                          
+                                                <!-- End Single Post -->
+                                        
+                               
                         </div>
                 </div>
         </div>
         <!-- End Blog Area -->
-
                 <!-- Footer Area -->
+                </div>
+                                        <ul class="wn__pagination">
+                                                <li class="active"><a href="#">1</a></li>
+                                                <li><a href="#">2</a></li>
+                                                <li><a href="#">3</a></li>
+                                                <li><a href="#">4</a></li>
+                                                <li><a href="#"><i class="zmdi zmdi-chevron-right"></i></a></li>
+                                        </ul>
+                                </div>
                 <footer id="wn__footer" class="footer__area bg__cat--8 brown--color">
                         <div class="footer-static-top">
                                 <div class="container">
@@ -313,7 +277,7 @@
                                                         <div class="footer__widget footer__menu">
                                                                 <div class="ft__logo">
                                                                         <a href="index.html">
-                                                                                <img src="images/logo/3.png" alt="logo">
+                                                                                <img src="images/logo/3.png" alt="logo" style="height: 80px; width: 80px; border-radius: 50%;">
                                                                         </a>
                                                                         <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered duskam alteration variations of passages</p>
                                                                 </div>
@@ -324,14 +288,6 @@
                                                                                 <li><a href="#"><i class="bi bi-twitter"></i></a></li>
                                                                                 <li><a href="#"><i class="bi bi-linkedin"></i></a></li>
                                                                                 <li><a href="#"><i class="bi bi-youtube"></i></a></li>
-                                                                        </ul>
-                                                                        <ul class="mainmenu d-flex justify-content-center">
-                                                                                <li><a href="index.html">Trending</a></li>
-                                                                                <li><a href="index.html">Best Seller</a></li>
-                                                                                <li><a href="index.html">All Product</a></li>
-                                                                                <li><a href="index.html">Wishlist</a></li>
-                                                                                <li><a href="index.html">Blog</a></li>
-                                                                                <li><a href="index.html">Contact</a></li>
                                                                         </ul>
                                                                 </div>
                                                         </div>
@@ -351,7 +307,7 @@
                                                 </div>
                                                 <div class="col-lg-6 col-md-6 col-sm-12">
                                                         <div class="payment text-right">
-                                                                <img src="images/icons/payment.png" alt=""  style="height: 80px; width: 80px;" /> 
+                                                                <img src="images/icons/payment.png" alt="logo"/> 
                                                         </div>
                                                 </div>
                                         </div>
@@ -359,12 +315,8 @@
                         </div>
                 </footer>
                 <!-- //Footer Area -->
-
         </div>
         <!-- //Main wrapper -->
-
-        
-
         <!-- JS Files -->
         <script src="js/vendor/jquery-3.2.1.min.js"></script>
         <script src="js/popper.min.js"></script>

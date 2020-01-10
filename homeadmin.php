@@ -14,6 +14,7 @@
     <link href="assets/css/custom.css" rel="stylesheet" />
      <!-- GOOGLE FONTS-->
    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+   <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="wrapper">
@@ -84,7 +85,7 @@ font-size: 16px;"> Perpustakaan Online &nbsp;</a> </div>
                         </div>
                     </div>
                     </div>
-                    <div class="col-md-9 col-sm-12 col-xs-12">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                
                     <div class="panel panel-default">
                         <div class="panel-heading">
@@ -92,9 +93,8 @@ font-size: 16px;"> Perpustakaan Online &nbsp;</a> </div>
                         </div>
                         <div class="panel-body">
                             <div class="table-responsive">
-                                <table class="table table-striped table-bordered table-hover">
-                                    <thead>
-                                       <div class="cart-main-area section-padding--lg bg--white">
+                               
+            
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 col-sm-12 ol-lg-12">
@@ -104,32 +104,50 @@ font-size: 16px;"> Perpustakaan Online &nbsp;</a> </div>
                                     <thead>
                                         <tr class="title-top">
                                             <th class="product-thumbnail">Buku</th>
-                                            <th class="product-name">Nama Buku</th>
+                                            <th class="product-price">Nama Buku</th>
                                             <th class="product-price">Nama Peminjam</th>
                                             <th class="product-quantity">Status</th>
+                                            <th class="product-price">Tanggal Menminjam</th>
+                                            <th class="product-price">Tanggal Kembali</th>
                                             <th class="product-subtotal">Tenggang Waktu</th>
+                                        </tr>	
                                     </thead>
                                     <tbody>
                                         <tr>
                                             <td class="product-thumbnail"><a href="#"><img src="images/product/sm-3/1.jpg" alt="product img"></a></td>
-                                            <td class="product-name"><a href="#">PKN IIX</a></td>
-                                            <td class="product-price"><span class="amount">Kevin Rahandika</span></td>
+                                            <td class="product-price"><a href="#">PKN IIX</a></td>
+                                            <td class="product-price"><span class="amount">Kevin</span></td>
                                             <td class="product-quantity">Buku Telah Dipinjam</td>
-                                            <td class="product-subtotal">4 Minggu</td>
+                                            <td class="product-price">10 januari 2020</td>
+                                            <td class="product-price">20 januari 2020</td>
+                                            <td class="product-subtotal">1 Semester</td>
                                         </tr>
                                         <tr>
                                             <td class="product-thumbnail"><a href="#"><img src="images/product/sm-3/2.jpg" alt="product img"></a></td>
-                                            <td class="product-name"><a href="#">IPA X</a></td>
+                                            <td class="product-price"><a href="#">IPA X</a></td>
                                             <td class="product-price"><span class="amount">Naufal Raihan</span></td>
                                             <td class="product-quantity">Buku Telah Dipinjam</td>
-                                            <td class="product-subtotal">3 Minggu</td>
+                                            <td class="product-price">11 januari 2020</td>
+                                            <td class="product-price">21 januari 2020</td>
+                                            <td class="product-subtotal">1 Semester</td>
                                         </tr>
                                         <tr>
                                             <td class="product-thumbnail"><a href="#"><img src="images/product/sm-3/3.jpg" alt="product img"></a></td>
-                                            <td class="product-name"><a href="#">IPS IX</a></td>
+                                            <td class="product-price"><a href="#">IPS IX</a></td>
                                             <td class="product-price"><span class="amount">Siti Anisa</span></td>
                                             <td class="product-quantity">Buku Telah Dipinjam</td>
-                                            <td class="product-subtotal">2 Minggu</td>
+                                            <td class="product-price">12 januari 2020</td>
+                                            <td class="product-price">22 januari 2020</td>
+                                            <td class="product-subtotal">1 Semester</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="product-thumbnail"><a href="#"><img src="images/product/sm-3/3.jpg" alt="product img"></a></td>
+                                            <td class="product-price"><a href="#">Agama IX</a></td>
+                                            <td class="product-price"><span class="amount">Choirul</span></td>
+                                            <td class="product-quantity">Buku Telah Dipinjam</td>
+                                            <td class="product-price">13 januari 2020</td>
+                                            <td class="product-price">23 januari 2020</td>
+                                            <td class="product-subtotal">1 Semester</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -138,9 +156,7 @@ font-size: 16px;"> Perpustakaan Online &nbsp;</a> </div>
                     </div>
                 </div>
             </div>  
-        </div>
-                                            </tbody>
-                                </table>
+        </div>                          
                             </div>
                         </div>
                     </div>
@@ -170,7 +186,5 @@ font-size: 16px;"> Perpustakaan Online &nbsp;</a> </div>
     <script src="assets/js/morris/morris.js"></script>
       <!-- CUSTOM SCRIPTS -->
     <script src="assets/js/custom.js"></script>
-    
-   
 </body>
 </html>
