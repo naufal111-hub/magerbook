@@ -336,7 +336,7 @@
 		                        <!-- Start product images -->
 		                        <div class="product-images">
 		                            <div class="main-image images">
-		                                <img alt="big images" src="images/books/2.png"">
+		                                <img alt="big images" src="images/books/2.png">
 		                            </div>
 		                        </div>
 		                        <!-- end product images -->
