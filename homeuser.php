@@ -35,13 +35,13 @@
 	<!-- Main wrapper -->
 	<div class="wrapper" id="wrapper">
 		<!-- Header -->
-		<header id="wn__header" class="header__area header__absolute sticky__header">
+		<header id="wn__header" class="oth-page header__area header__absolute sticky__header">
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-md-6 col-sm-6 col-6 col-lg-2">
 						<div class="logo">
 							<a href="homeuser.php">
- 								<img src="images/logo/logo.png" alt="logo images" style="height: 80px; width: 80px; border-radius: 50%;	">
+ 								<img src="images/logo/logo.png" alt="logo images" style="height: 90px; width: 90px; border-radius: 50%;	">
 							</a>
 						</div>
 					</div>
@@ -50,9 +50,9 @@
 						<nav class="mainmenu__nav">
 							<ul class="meninmenu d-flex justify-content-start">
 								
-								<li class="drop with--one--item"><a href="homeuser.php" style="color: black">Home</a></li>
+								<li class="drop with--one--item"><a href="homeuser.php" style="color: white">Home</a></li>
 								
-								<li class="drop"><a href="buku user.php" style="color: black">Books</a>
+								<li class="drop"><a href="buku user.php" style="color: white">Books</a>
 									<div class="megamenu mega03" style="height: 200px; width: 150px;">
 										<ul class="item item03">
 											<li class="title">Kategori</li>
@@ -63,7 +63,7 @@
 										</ul>
 									</div>
 								</li>
-								<li class="drop"><a href="Transaksi.php" style="color: black">Transaksi</a>
+								<li class="drop"><a href="Transaksi.php" style="color: white">Transaksi</a>
 							</ul>
 						</nav>
 					</div>
@@ -75,7 +75,7 @@
 									<div class="content-inner">
 										<div class="switcher-currency">
 											<strong class="label switcher-label">
-												<span><a href="#">My Account</a></span>
+												<span><a href="my-account.php">My Account</a></span>
 											</strong>
 											<div class="switcher-options">
 												<div class="switcher-currency-trigger">
@@ -137,24 +137,6 @@
         <!-- Start Slider area -->
         <div class="slider-area black__nav slider--15 slide__activation slide__arrow01 owl-carousel owl-theme">
         	<!-- Start Single Slide -->
-	        <div class="slide animation__style10 bg-image--8 fullscreen align__center--left">
-	            <div class="container">
-	            	<div class="row">
-	            		<div class="col-lg-12">
-	            			<div class="slider__content">
-		            			<div class="contentbox">
-		            				<h2 style="color: black;">Mau <span style="color: green;"> Baca Buku??? </span></h2> 
-		            				<h2 style="color: black;">Baca <span style="color: green;">Disini  </span></h2>
-		            				<h2 style="color: black;">Aja <span style="color: green;">Bro</span></h2>
-				                   	<a class="shopbtn" href="buku user.php" style="color : black;">Lihat Sekarang  </a>
-		            			</div>
-	            			</div>
-	            		</div>
-	            	</div>
-	            </div>
-            </div>
-            <!-- End Single Slide -->
-        	<!-- Start Single Slide -->
 	        <div class="slide animation__style10 bg-image--1 fullscreen align__center--left">
 	            <div class="container">
 	            	<div class="row">
@@ -172,6 +154,24 @@
 	            </div>
             </div>
             <!-- End Single Slide -->
+        	<!-- Start Single Slide -->
+        	<div class="slide animation__style10 bg-image--8 fullscreen align__center--left">
+	            <div class="container">
+	            	<div class="row">
+	            		<div class="col-lg-12">
+	            			<div class="slider__content">
+		            			<div class="contentbox">
+		            				<h2 style="color: black;">Mau <span style="color: green;"> Baca Buku??? </span></h2> 
+		            				<h2 style="color: black;">Baca <span style="color: green;">Disini  </span></h2>
+		            				<h2 style="color: black;">Aja <span style="color: green;">Bro</span></h2>
+				                   	<a class="shopbtn" href="buku user.php" style="color : black;">Lihat Sekarang  </a>
+		            			</div>
+	            			</div>
+	            		</div>
+	            	</div>
+	            </div>
+            </div>
+            <!-- End Single Slide -->
         </div>
         <!-- End Slider area -->
 		<!-- Start BEst Seller Area -->
@@ -180,7 +180,7 @@
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="section__title text-center">
-							<h2 class="title__be--2">New <span class="color--theme">Products</span></h2>
+							<h2 class="title__be--2" style="color: black">New <span style="color: black">Products</span></h2>
 						</div>
 					</div>
 				</div>
