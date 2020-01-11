@@ -129,6 +129,21 @@
 					</div>
 				</div>
 			</form>
+			 <?php 
+             if (isset($_POST['cari'])) {
+				  $koneksi = mysql_connect("localhost","root","","perpustakaan");
+				  $cari = $_POST['cari'];
+				  $sql = "select * from tb_buku where judul like '%".$cari."%'";
+				  $result = mysql_query($sql);
+				  if (mysql_num_rows($result) > 0) {
+				  }else{
+				    while ($row = mysql_fetch_array($query)) {
+				      $judul = $row['judul'];
+				      $id_buku = $row['id_buku'];
+				    }
+				  }
+				}
+			?>
 			<div class="close__wrap">
 				<span>close</span>
 			</div>
