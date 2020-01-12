@@ -120,7 +120,7 @@
 		</header>
 		<!-- //Header -->
 		<!-- Start Search Popup -->
-		<div class="brown--color box-search-content search_active block-bg close__top">
+		<div class="box-search-content search_active block-bg close__top">
 			<form id="search_mini_form" class="minisearch" action="#">
 				<div class="field__search">
 					<input type="text" placeholder="Search entire store here...">
@@ -285,9 +285,6 @@
 				<!-- End Single Tab Content -->
 			</div>
 		</section>
-		<!-- Start BEst Seller Area -->
-		<!-- Start NEwsletter Area -->
-		
 		<!-- End NEwsletter Area -->
 		<!-- Start Best Seller Area -->
 		 								 
@@ -315,6 +312,7 @@
 								</div> 
 							</div>
 						</div>
+
 					</div>
 				</div>
 			</div>
