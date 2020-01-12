@@ -1,4 +1,12 @@
- <!doctype html>
+<?php
+include ("koneksi.php");
+
+session_start();
+@$sess = $_SESSION['username'];
+
+
+?>
+<!doctype html>
 <html class="no-js" lang="zxx">
 <head>
 	<meta charset="utf-8">
@@ -35,7 +43,8 @@
 	<!-- Main wrapper -->
 	<div class="wrapper" id="wrapper">
 		<!-- Header -->
-		<header id="wn__header" class="oth-page header__area header__absolute sticky__header">
+		
+		<header id="wn__header" class="header__area header__absolute sticky__header">
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-md-6 col-sm-6 col-6 col-lg-2">
@@ -74,16 +83,23 @@
 								<div class="searchbar__content setting__block">
 									<div class="content-inner">
 										<div class="switcher-currency">
+										
+											<?php
+												$query = mysqli_query($koneksi, "SELECT * FROM tb_login_user WHERE username = '$sess'"); //digunakan untuk mengambil data dari database lalu menmapilkannya pada tabel
+												while($data = mysqli_fetch_array($query)) {//untuk memecahkan data menjadi array dan memasukkan ke dalam variabel data agar data bisa kita tampilkan dalam bentuk perulangan //aray dalam bentuk object menjadi array yang kita kenal
+												?>
 											<strong class="label switcher-label">
-												<span><a href="my-account.php">My Account</a></span>
+												<span><a href="#"><?php echo $data['nama_user']?></a></span>
 											</strong>
 											<div class="switcher-options">
 												<div class="switcher-currency-trigger">
 													<div class="setting__menu">
-														<span><a href="#" value="<?php $data['nama_user']?>"> </a></span>
+														<span><a href="#" > </a></span>
 														<span><a href="index.php">Logout</a></span>
 													</div>
 												</div>
+												
+												<?php } ?>
 											</div>
 										</div>
 									</div>
@@ -334,7 +350,7 @@
 		                        <!-- Start product images -->
 		                        <div class="product-images">
 		                            <div class="main-image images">
-		                                <img alt="big images" src="images/books/2.png">
+		                                <img alt="big images" src="images/books/2.png"">
 		                            </div>
 		                        </div>
 		                        <!-- end product images -->
@@ -367,6 +383,8 @@
 		    </div>
 		</div>
 		<!-- END QUICKVIEW PRODUCT -->
+		
+	
 	</div>
 	<!-- //Main wrapper -->
 
