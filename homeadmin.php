@@ -26,7 +26,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Admin MaBook</a> 
+                <a class="navbar-brand" href="index.html" style="color: white">Admin MaBook</a> 
             </div>
   <div style="color: white;
 padding: 15px 50px 5px 50px;
@@ -97,13 +97,13 @@ font-size: 16px;"> Perpustakaan Online &nbsp;</a> </div>
             
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12 col-sm-12 ol-lg-12">
+                    <div class="col-md-11 col-sm-11 ol-lg-11">
                         <form action="#">               
                             <div class="table-content wnro__table table-responsive">
                                 <table>
                                     <thead>
                                         <tr class="title-top">
-                                            <th class="product-thumbnail">Buku</th>
+                                            <th class="product-thumbnail">Sampul Buku</th>
                                             <th class="product-price">Nama Buku</th>
                                             <th class="product-price">Nama Peminjam</th>
                                             <th class="product-quantity">Status</th>
@@ -185,6 +185,6 @@ font-size: 16px;"> Perpustakaan Online &nbsp;</a> </div>
      <script src="assets/js/morris/raphael-2.1.0.min.js"></script>
     <script src="assets/js/morris/morris.js"></script>
       <!-- CUSTOM SCRIPTS -->
-    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/custom.js"></script>	
 </body>
 </html>

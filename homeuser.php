@@ -50,7 +50,7 @@ session_start();
 					<div class="col-md-6 col-sm-6 col-6 col-lg-2">
 						<div class="logo">
 							<a href="homeuser.php">
- 								<img src="images/logo/logo.png" alt="logo images" style="height: 80px; width: 80px; border-radius: 50%;	">
+ 								<img src="images/logo/logo.png" alt="logo images" style="height: 90px; width: 90px; border-radius: 50%;	">
 							</a>
 						</div>
 					</div>
@@ -59,9 +59,9 @@ session_start();
 						<nav class="mainmenu__nav">
 							<ul class="meninmenu d-flex justify-content-start">
 								
-								<li class="drop with--one--item"><a href="homeuser.php" style="color: black">Home</a></li>
+								<li class="drop with--one--item"><a href="homeuser.php" style="color: white">Home</a></li>
 								
-								<li class="drop"><a href="buku user.php" style="color: black">Books</a>
+								<li class="drop"><a href="buku user.php" style="color: white">Books</a>
 									<div class="megamenu mega03" style="height: 200px; width: 150px;">
 										<ul class="item item03">
 											<li class="title">Kategori</li>
@@ -72,7 +72,7 @@ session_start();
 										</ul>
 									</div>
 								</li>
-								<li class="drop"><a href="Transaksi.php" style="color: black">Transaksi</a>
+								<li class="drop"><a href="Transaksi.php" style="color: white">Transaksi</a>
 							</ul>
 						</nav>
 					</div>
@@ -136,7 +136,7 @@ session_start();
 		</header>
 		<!-- //Header -->
 		<!-- Start Search Popup -->
-		<div class="brown--color box-search-content search_active block-bg close__top">
+		<div class="box-search-content search_active block-bg close__top">
 			<form id="search_mini_form" class="minisearch" action="#">
 				<div class="field__search">
 					<input type="text" placeholder="Search entire store here...">
@@ -152,24 +152,6 @@ session_start();
 		<!-- End Search Popup -->
         <!-- Start Slider area -->
         <div class="slider-area black__nav slider--15 slide__activation slide__arrow01 owl-carousel owl-theme">
-        	<!-- Start Single Slide -->
-	        <div class="slide animation__style10 bg-image--8 fullscreen align__center--left">
-	            <div class="container">
-	            	<div class="row">
-	            		<div class="col-lg-12">
-	            			<div class="slider__content">
-		            			<div class="contentbox">
-		            				<h2 style="color: black;">Mau <span style="color: green;"> Baca Buku??? </span></h2> 
-		            				<h2 style="color: black;">Baca <span style="color: green;">Disini  </span></h2>
-		            				<h2 style="color: black;">Aja <span style="color: green;">Bro</span></h2>
-				                   	<a class="shopbtn" href="buku user.php" style="color : black;">Lihat Sekarang  </a>
-		            			</div>
-	            			</div>
-	            		</div>
-	            	</div>
-	            </div>
-            </div>
-            <!-- End Single Slide -->
         	<!-- Start Single Slide -->
 	        <div class="slide animation__style10 bg-image--1 fullscreen align__center--left">
 	            <div class="container">
@@ -188,6 +170,24 @@ session_start();
 	            </div>
             </div>
             <!-- End Single Slide -->
+        	<!-- Start Single Slide -->
+        	<div class="slide animation__style10 bg-image--8 fullscreen align__center--left">
+	            <div class="container">
+	            	<div class="row">
+	            		<div class="col-lg-12">
+	            			<div class="slider__content">
+		            			<div class="contentbox">
+		            				<h2 style="color: black;">Mau <span style="color: green;"> Baca Buku??? </span></h2> 
+		            				<h2 style="color: black;">Baca <span style="color: green;">Disini  </span></h2>
+		            				<h2 style="color: black;">Aja <span style="color: green;">Bro</span></h2>
+				                   	<a class="shopbtn" href="buku user.php" style="color : black;">Lihat Sekarang  </a>
+		            			</div>
+	            			</div>
+	            		</div>
+	            	</div>
+	            </div>
+            </div>
+            <!-- End Single Slide -->
         </div>
         <!-- End Slider area -->
 		<!-- Start BEst Seller Area -->
@@ -196,7 +196,7 @@ session_start();
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="section__title text-center">
-							<h2 class="title__be--2">New <span class="color--theme">Products</span></h2>
+							<h2 class="title__be--2" style="color: black">New <span style="color: black">Products</span></h2>
 						</div>
 					</div>
 				</div>
@@ -301,9 +301,6 @@ session_start();
 				<!-- End Single Tab Content -->
 			</div>
 		</section>
-		<!-- Start BEst Seller Area -->
-		<!-- Start NEwsletter Area -->
-		
 		<!-- End NEwsletter Area -->
 		<!-- Start Best Seller Area -->
 		 								 
@@ -331,6 +328,7 @@ session_start();
 								</div> 
 							</div>
 						</div>
+
 					</div>
 				</div>
 			</div>

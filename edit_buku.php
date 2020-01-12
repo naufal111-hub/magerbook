@@ -35,7 +35,7 @@ if(isset($_GET['id'])){
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Admin MaBook</a> 
+                <a class="navbar-brand" href="homeadmin.php">Admin MaBook</a> 
             </div>
   <div style="color: white;
 padding: 15px 50px 5px 50px;
@@ -56,7 +56,7 @@ font-size: 16px;"> Perpustakaan Online &nbsp; </div>
                         <a href="anggota.php"><i class="fa fa-table fa-3x"></i> Anggota </a>
                     </li>
                     <li  >
-                        <a  class="active-menu" href="buku.html"><i class="fa fa-edit fa-3x"></i> Buku </a>
+                        <a  class="active-menu" href="bukuadmin.php"><i class="fa fa-edit fa-3x"></i> Buku </a>
                     </li>				
 					<li  >
                         <a   href="index.php"><i class="fa fa-bolt fa-3x"></i> Logout </a>

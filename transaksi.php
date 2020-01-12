@@ -186,7 +186,7 @@
                                         </div>
                                 </div>
                 <div class="row">
-                    <div class="col-md-15 col-sm-15 ol-lg-15">
+                    <div class="col-md-13 col-sm-13 ol-lg-13">
                         <form action="#">               
                             <div class="table-content wnro__table table-responsive">
                                 <table>
