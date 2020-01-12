@@ -1,3 +1,11 @@
+<?php
+include ("koneksi.php");
+
+session_start();
+@$sess = $_SESSION['username'];
+
+
+?>
 <!doctype html>
 <html class="no-js" lang="zxx">
 <head>
@@ -35,13 +43,13 @@
 	<!-- Main wrapper -->
 	<div class="wrapper" id="wrapper">
 		<!-- Header -->
-		<header id="wn__header" class="header__area header__absolute sticky__header">
+		<header id="wn__header" class="oth-page header__area header__absolute sticky__header">
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-md-6 col-sm-6 col-6 col-lg-2">
 						<div class="logo">
-							<a href="homeuser.html">
- 								<img src="images/logo/logo.png" alt="logo images" style="height: 80px; width: 80px; border-radius: 50%;	">
+							<a href="homeuser.php">
+ 								<img src="images/logo/logo.png" alt="logo images" style="height: 90px; width: 90px; border-radius: 50%;	">
 							</a>
 						</div>
 					</div>
@@ -56,10 +64,10 @@
 									<div class="megamenu mega03" style="height: 200px; width: 150px;">
 										<ul class="item item03">
 											<li class="title">Kategori</li>
-											<li><a href="Ipa.php">IPA</a></li>
-        									<li><a href="Ips.php">IPS</a></li>
-        									<li><a href="Bahasa.php">BAHASA</a></li>
-        									<li><a href="Umum.php">UMUM</a></li>
+											<li><a href="ipa.php">IPA </a></li>
+											<li><a href="ips.php">IPS </a></li>
+											<li><a href="bahasa.php">BAHASA </a></li>
+											<li><a href="umum.php">UMUM </a></li>
 										</ul>
 									</div>
 								</li>
@@ -74,14 +82,19 @@
 								<div class="searchbar__content setting__block">
 									<div class="content-inner">
 										<div class="switcher-currency">
+											<?php
+												$query = mysqli_query($koneksi, "SELECT * FROM tb_login_user WHERE username = '$sess'"); //digunakan untuk mengambil data dari database lalu menmapilkannya pada tabel
+												while($data = mysqli_fetch_array($query)) {//untuk memecahkan data menjadi array dan memasukkan ke dalam variabel data agar data bisa kita tampilkan dalam bentuk perulangan //aray dalam bentuk object menjadi array yang kita kenal
+												?>
 											<strong class="label switcher-label">
-												<span>My Account</span>
+												<span><a href="#"><?php echo $data['nama_user']?></a></span>
 											</strong>
+											<?php } ?>
 											<div class="switcher-options">
 												<div class="switcher-currency-trigger">
 													<div class="setting__menu">
 														<span><a href="#" value="<?php $data['nama_user']?>"> </a></span>
-														<span><a href="#">Sign In</a></span>
+														<span><a href="index.php">Logout</a></span>
 													</div>
 												</div>
 											</div>

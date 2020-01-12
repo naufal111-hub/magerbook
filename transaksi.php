@@ -76,13 +76,13 @@ session_start();
                                                 </nav>
                                         </div>
                                         <div class="col-md-8 col-sm-8 col-5 col-lg-2">
-                                                <ul class="header__sidebar__right d-flex justify-content-end align-items-center">
-                                                        <li class="shop_search"><a class="search__active" href="#" ></a></li>
-                                                        <li class="setting__bar__icon"><a class="setting__active" href="#"></a>
-                                                                <div class="searchbar__content setting__block">
-                                                                        <div class="content-inner">
-                                                                                <div class="switcher-currency">
-                                                                                        <?php
+                        <ul class="header__sidebar__right d-flex justify-content-end align-items-center">
+                            <li class="shop_search"><a class="search__active" href="#" ></a></li>
+                            <li class="setting__bar__icon"><a class="setting__active" href="#"></a>
+                                <div class="searchbar__content setting__block">
+                                    <div class="content-inner">
+                                        <div class="switcher-currency">
+                                            <?php
                                                 $query = mysqli_query($koneksi, "SELECT * FROM tb_login_user WHERE username = '$sess'"); //digunakan untuk mengambil data dari database lalu menmapilkannya pada tabel
                                                 while($data = mysqli_fetch_array($query)) {//untuk memecahkan data menjadi array dan memasukkan ke dalam variabel data agar data bisa kita tampilkan dalam bentuk perulangan //aray dalam bentuk object menjadi array yang kita kenal
                                                 ?>
@@ -90,17 +90,21 @@ session_start();
                                                 <span><a href="#"><?php echo $data['nama_user']?></a></span>
                                             </strong>
                                             <?php } ?>
-                                                <span><a>Logout</a></span>
-                                                                                                        </div>
-                                                                                                </div>
-                                                                                        </div>
-                                                                                </div>
-                                                                        </div>
-                                                                </div>
-                                                        </li>
-                                                </ul>
+                                            <div class="switcher-options">
+                                                <div class="switcher-currency-trigger">
+                                                    <div class="setting__menu">
+                                                        <span><a href="#" value="<?php $data['nama_user']?>"> </a></span>
+                                                        <span><a href="index.php">Logout</a></span>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
+                                    </div>
                                 </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
                                 <!-- End Shopping Cart -->                      
                                 <!-- Start Mobile Menu -->
                                 <div class="row d-none">
