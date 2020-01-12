@@ -1,3 +1,10 @@
+<?php
+require ("koneksi.php");
+
+session_start();
+@$sess = $_SESSION['username'];
+
+?>
 <!doctype html>
 <html class="no-js" lang="zxx">
 <head>
@@ -69,30 +76,35 @@
                                                 </nav>
                                         </div>
                                         <div class="col-md-8 col-sm-8 col-5 col-lg-2">
-                                                <ul class="header__sidebar__right d-flex justify-content-end align-items-center">
-                                                        <li class="shop_search"><a class="search__active" href="#" ></a></li>
-                                                        <li class="setting__bar__icon"><a class="setting__active" href="#"></a>
-                                                                <div class="searchbar__content setting__block">
-                                                                        <div class="content-inner">
-                                                                                <div class="switcher-currency">
-                                                                                        <strong class="label switcher-label">
-                                                                                                <span>My Account</span>
-                                                                                        </strong>
-                                                                                        <div class="switcher-options">
-                                                                                                <div class="switcher-currency-trigger">
-                                                                                                        <div class="setting__menu">
-                                                                                                                <span><a href="#" value="<?php $data['nama_user']?>"> </a></span>
-                                                                                                                <span><a href="#">Sign In</a></span>
-                                                                                                        </div>
-                                                                                                </div>
-                                                                                        </div>
-                                                                                </div>
-                                                                        </div>
-                                                                </div>
-                                                        </li>
-                                                </ul>
+                        <ul class="header__sidebar__right d-flex justify-content-end align-items-center">
+                            <li class="shop_search"><a class="search__active" href="#" ></a></li>
+                            <li class="setting__bar__icon"><a class="setting__active" href="#"></a>
+                                <div class="searchbar__content setting__block">
+                                    <div class="content-inner">
+                                        <div class="switcher-currency">
+                                            <?php
+                                                $query = mysqli_query($koneksi, "SELECT * FROM tb_login_user WHERE username = '$sess'"); //digunakan untuk mengambil data dari database lalu menmapilkannya pada tabel
+                                                while($data = mysqli_fetch_array($query)) {//untuk memecahkan data menjadi array dan memasukkan ke dalam variabel data agar data bisa kita tampilkan dalam bentuk perulangan //aray dalam bentuk object menjadi array yang kita kenal
+                                                ?>
+                                            <strong class="label switcher-label">
+                                                <span><a href="#"><?php echo $data['nama_user']?></a></span>
+                                            </strong>
+                                            <?php } ?>
+                                            <div class="switcher-options">
+                                                <div class="switcher-currency-trigger">
+                                                    <div class="setting__menu">
+                                                        <span><a href="#" value="<?php $data['nama_user']?>"> </a></span>
+                                                        <span><a href="index.php">Logout</a></span>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
+                                    </div>
                                 </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
                                 <!-- End Shopping Cart -->                      
                                 <!-- Start Mobile Menu -->
                                 <div class="row d-none">
@@ -192,58 +204,29 @@
                                 <table>
                                     <thead>
                                         <tr class="title-top">
-                                            <th class="product-thumbnail">Sampul Buku</th>
-                                            <th class="product-price">Nama Buku</th>
-                                            <th class="product-price">Nama Peminjam</th>
-                                            <th class="product-quantity">Status Peminjaman</th>
-                                            <th class="product-price">Tanggal Menminjam</th>
-                                            <th class="product-price">Tanggal Kembali</th>
-                                            <th class="product-subtotal">Tenggang Waktu</th>
-                                            <th class="aksi">Tindakan</th>
-                                        </tr>   
+                                            <th>Kode Buku</th>
+                                            <th>Status Peminjaman</th>
+                                            <th>Tanggal Menminjam</th>
+                                            <th>Tanggal Kembali</th>
+                                            <th>Tenggang Waktu</th>
+                                            <th>Tindakan</th>
+                                        </tr>
                                     </thead>
                                     <tbody>
+                                         <?php
+                        $query = mysqli_query($koneksi, "SELECT * FROM tb_peminjaman"); //digunakan untuk mengambil data dari database lalu menmapilkannya pada tabel
+                        while($data = mysqli_fetch_array($query)) { //untuk memecahkan data menjadi array dan memasukkan ke dalam variabel data agar data bisa kita tampilkan dalam bentuk perulangan //aray dalam bentuk object menjadi array yang kita kenal
+                        ?>
                                         <tr>
-                                            <td class="product-thumbnail"><a href="#"><img src="images/product/sm-3/1.jpg" alt="product img" height="135px" width="200px"></a></td>
-                                            <td class="product-price"><a href="#">PKN IIX</a></td>
-                                            <td class="product-price"><span class="amount">Kevin</span></td>
-                                            <td class="product-quantity">Buku Telah Dipinjam</td>
-                                            <td class="product-price">10 januari 2020</td>
-                                            <td class="product-price">20 januari 2020</td>
-                                            <td class="product-subtotal">1 Semester</td>
-                                            <td class="aksi"><a href="edit_anggota.php>" class="btn btn-warning"><span class="glyphicon glyphicon-edit"></span>Baca Kembali</a><a href="hapus_peminjaman.php" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span>Hapus</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="product-thumbnail"><a href="#"><img src="images/product/sm-3/2.jpg" alt="product img" height="135px" width="200px"></a></td>
-                                            <td class="product-price"><a href="#">IPA X</a></td>
-                                            <td class="product-price"><span class="amount">Naufal Raihan</span></td>
-                                            <td class="product-quantity">Buku Telah Dipinjam</td>
-                                            <td class="product-price">11 januari 2020</td>
-                                            <td class="product-price">21 januari 2020</td>
-                                            <td class="product-subtotal">1 Semester</td>
-                                             <td class="aksi"><a href="edit_anggota.php>" class="btn btn-warning"><span class="glyphicon glyphicon-edit"></span>Baca Kembali</a><a href="hapus_peminjaman.php" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span>Hapus</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="product-thumbnail"><a href="#"><img src="images/product/sm-3/3.jpg" alt="product img" height="135px" width="200px"></a></td>
-                                            <td class="product-price"><a href="#">IPS IX</a></td>
-                                            <td class="product-price"><span class="amount">Siti Anisa</span></td>
-                                            <td class="product-quantity">Buku Telah Dipinjam</td>
-                                            <td class="product-price">12 januari 2020</td>
-                                            <td class="product-price">22 januari 2020</td>
-                                            <td class="product-subtotal">1 Semester</td>
-                                             <td class="aksi"><a href="edit_anggota.php>" class="btn btn-warning"><span class="glyphicon glyphicon-edit"></span>Baca Kembali</a><a href="hapus_peminjaman.php" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span>Hapus</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="product-thumbnail"><a href="#"><img src="images/product/sm-3/3.jpg" alt="product img" height="135px" width="200px"></a></td>
-                                            <td class="product-price"><a href="#">Agama IX</a></td>
-                                            <td class="product-price"><span class="amount">Choirul</span></td>
-                                            <td class="product-quantity">Buku Telah Dipinjam</td>
-                                            <td class="product-price">13 januari 2020</td>
-                                            <td class="product-price">23 januari 2020</td>
-                                            <td class="product-subtotal">1 Semester</td>
-                                             <td class="aksi"><a href="edit_anggota.php>" class="btn btn-warning"><span class="glyphicon glyphicon-edit"></span>Baca Kembali</a><a href="hapus_peminjaman.php" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span>Hapus</a></td>
+                                              <td><?php echo $data ['id_buku'];?></td>
+                                              <td><?php echo $data ['id_status'];?></td>
+                                              <td><?php echo $data ['tgl_pinjam'];?></td>
+                                              <td><?php echo $data ['tgl_kembali'];?></td>
+                                              <td><?php echo $data ['lama_pinjam'];?></td>
+                                            <td><a href="pdf.php" class="btn btn-warning"><span class="glyphicon glyphicon-edit"></span>Baca Kembali</a><a href="hapus_peminjaman.php?id=<?php echo $data['id_peminjaman'];?>"  onclick="return confirm('yakin ingin menghapus buku ini?');" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span>Hapus</a></td>
                                         </tr>
 
+                                        <?php } ?>
                                     </tbody>
                                 </table>
                             </div>
@@ -261,13 +244,7 @@
         <!-- End Blog Area -->
                 <!-- Footer Area -->
                 </div>
-                                        <ul class="wn__pagination">
-                                                <li class="active"><a href="#">1</a></li>
-                                                <li><a href="#">2</a></li>
-                                                <li><a href="#">3</a></li>
-                                                <li><a href="#">4</a></li>
-                                                <li><a href="#"><i class="zmdi zmdi-chevron-right"></i></a></li>
-                                        </ul>
+                                        
                                 </div>
                 <footer id="wn__footer" class="footer__area bg__cat--8 brown--color">
                         <div class="footer-static-top">

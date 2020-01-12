@@ -1,3 +1,6 @@
+<?php
+require ("koneksi.php");
+?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -102,53 +105,32 @@ font-size: 16px;"> Perpustakaan Online &nbsp;</a> </div>
                             <div class="table-content wnro__table table-responsive">
                                 <table>
                                     <thead>
-                                        <tr class="title-top">
-                                            <th class="product-thumbnail">Sampul Buku</th>
-                                            <th class="product-price">Nama Buku</th>
-                                            <th class="product-price">Nama Peminjam</th>
-                                            <th class="product-quantity">Status</th>
-                                            <th class="product-price">Tanggal Menminjam</th>
-                                            <th class="product-price">Tanggal Kembali</th>
-                                            <th class="product-subtotal">Tenggang Waktu</th>
-                                        </tr>	
+                                    	<tr class="title-top">
+                                    		<th>User</th>
+                                            <th>Kode Buku</th>
+                                            <th>Status Peminjaman</th>
+                                            <th>Tanggal Menminjam</th>
+                                            <th>Tanggal Kembali</th>
+                                            <th>Tenggang Waktu</th>
+                                            <th>Tindakan</th>
+                                        </tr>
                                     </thead>
                                     <tbody>
+                                         <?php
+                        $query = mysqli_query($koneksi, "SELECT * FROM tb_peminjaman"); //digunakan untuk mengambil data dari database lalu menmapilkannya pada tabel
+                        while($data = mysqli_fetch_array($query)) { //untuk memecahkan data menjadi array dan memasukkan ke dalam variabel data agar data bisa kita tampilkan dalam bentuk perulangan //aray dalam bentuk object menjadi array yang kita kenal
+                        ?>
                                         <tr>
-                                            <td class="product-thumbnail"><a href="#"><img src="images/product/sm-3/1.jpg" alt="product img"></a></td>
-                                            <td class="product-price"><a href="#">PKN IIX</a></td>
-                                            <td class="product-price"><span class="amount">Kevin</span></td>
-                                            <td class="product-quantity">Buku Telah Dipinjam</td>
-                                            <td class="product-price">10 januari 2020</td>
-                                            <td class="product-price">20 januari 2020</td>
-                                            <td class="product-subtotal">1 Semester</td>
+                                        	<td><?php echo $data ['id_user'];?></td>
+                                              <td><?php echo $data ['id_buku'];?></td>
+                                              <td><?php echo $data ['id_status'];?></td>
+                                              <td><?php echo $data ['tgl_pinjam'];?></td>
+                                              <td><?php echo $data ['tgl_kembali'];?></td>
+                                              <td><?php echo $data ['lama_pinjam'];?></td>
+                                            <td><a href="hapus_peminjaman.php?id=<?php echo $data['id_peminjaman'];?>"  onclick="return confirm('yakin ingin menghapus buku ini?');" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span>Hapus</a></td>
                                         </tr>
-                                        <tr>
-                                            <td class="product-thumbnail"><a href="#"><img src="images/product/sm-3/2.jpg" alt="product img"></a></td>
-                                            <td class="product-price"><a href="#">IPA X</a></td>
-                                            <td class="product-price"><span class="amount">Naufal Raihan</span></td>
-                                            <td class="product-quantity">Buku Telah Dipinjam</td>
-                                            <td class="product-price">11 januari 2020</td>
-                                            <td class="product-price">21 januari 2020</td>
-                                            <td class="product-subtotal">1 Semester</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="product-thumbnail"><a href="#"><img src="images/product/sm-3/3.jpg" alt="product img"></a></td>
-                                            <td class="product-price"><a href="#">IPS IX</a></td>
-                                            <td class="product-price"><span class="amount">Siti Anisa</span></td>
-                                            <td class="product-quantity">Buku Telah Dipinjam</td>
-                                            <td class="product-price">12 januari 2020</td>
-                                            <td class="product-price">22 januari 2020</td>
-                                            <td class="product-subtotal">1 Semester</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="product-thumbnail"><a href="#"><img src="images/product/sm-3/3.jpg" alt="product img"></a></td>
-                                            <td class="product-price"><a href="#">Agama IX</a></td>
-                                            <td class="product-price"><span class="amount">Choirul</span></td>
-                                            <td class="product-quantity">Buku Telah Dipinjam</td>
-                                            <td class="product-price">13 januari 2020</td>
-                                            <td class="product-price">23 januari 2020</td>
-                                            <td class="product-subtotal">1 Semester</td>
-                                        </tr>
+
+                                        <?php } ?>
                                     </tbody>
                                 </table>
                             </div>

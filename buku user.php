@@ -1,3 +1,11 @@
+<?php
+include ("koneksi.php");
+
+session_start();
+@$sess = $_SESSION['username'];
+
+
+?>
 <!doctype html>
 <html class="no-js" lang="zxx">
 <head>
@@ -74,9 +82,14 @@
 								<div class="searchbar__content setting__block">
 									<div class="content-inner">
 										<div class="switcher-currency">
+											<?php
+												$query = mysqli_query($koneksi, "SELECT * FROM tb_login_user WHERE username = '$sess'"); //digunakan untuk mengambil data dari database lalu menmapilkannya pada tabel
+												while($data = mysqli_fetch_array($query)) {//untuk memecahkan data menjadi array dan memasukkan ke dalam variabel data agar data bisa kita tampilkan dalam bentuk perulangan //aray dalam bentuk object menjadi array yang kita kenal
+												?>
 											<strong class="label switcher-label">
-												<span>My Account</span>
+												<span><a href="#"><?php echo $data['nama_user']?></a></span>
 											</strong>
+											<?php } ?>
 											<div class="switcher-options">
 												<div class="switcher-currency-trigger">
 													<div class="setting__menu">
@@ -181,7 +194,7 @@
         					<aside class="wedget__categories poroduct--cat">
         						<h3 class="wedget__title">Categories</h3>
         						<ul>
-        							<li><a href="Ipa.php">IPA <span>(3)</span></a></li>
+        							<li><a href="Ipa.php">IPA <span>(6)</span></a></li>
         							<li><a href="Ips.php">IPS <span>(4)</span></a></li>
         							<li><a href="Bahasa.php">BAHASA <span>(6)</span></a></li>
         							<li><a href="Umum.php">UMUM <span>(7)</span></a></li>

@@ -83,7 +83,7 @@ font-size: 16px;"> Perpustakaan Online &nbsp; </div>
                         <div class="panel-heading">
                              Form Edit Buku
                         </div>
-   <form method="post" action="proses_ebuku.php">
+   <form method="post" action="proses_ebuku.php" enctype="multipart/form-data">
         <input type="hidden" name="id" value="<?php echo $data['id_buku'];?>">
         <table>
             
