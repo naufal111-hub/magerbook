@@ -214,7 +214,7 @@ require ("koneksi.php");
                                               <td><?php echo $data ['tgl_pinjam'];?></td>
                                               <td><?php echo $data ['tgl_kembali'];?></td>
                                               <td><?php echo $data ['lama_pinjam'];?></td>
-                                            <td><a class="btn btn-warning"><span class="glyphicon glyphicon-edit"></span>Baca Kembali</a><a href="hapus_peminjaman.php?id=<?php echo $data['id_peminjaman'];?>"  onclick="return confirm('yakin ingin menghapus buku ini?');" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span>Hapus</a></td>
+                                            <td><a href="pdf.php" class="btn btn-warning"><span class="glyphicon glyphicon-edit"></span>Baca Kembali</a><a href="hapus_peminjaman.php?id=<?php echo $data['id_peminjaman'];?>"  onclick="return confirm('yakin ingin menghapus buku ini?');" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span>Hapus</a></td>
                                         </tr>
 
                                         <?php } ?>
