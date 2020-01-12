@@ -120,7 +120,7 @@
 		</header>
 		<!-- //Header -->
 		<!-- Start Search Popup -->
-		<div class="brown--color box-search-content search_active block-bg close__top">
+		<div class="box-search-content search_active block-bg close__top">
 			<form id="search_mini_form" class="minisearch" action="#">
 				<div class="field__search">
 					<input type="text" placeholder="Search entire store here...">
@@ -129,21 +129,6 @@
 					</div>
 				</div>
 			</form>
-			 <?php 
-             if (isset($_POST['cari'])) {
-				  $koneksi = mysql_connect("localhost","root","","perpustakaan");
-				  $cari = $_POST['cari'];
-				  $sql = "select * from tb_buku where judul like '%".$cari."%'";
-				  $result = mysql_query($sql);
-				  if (mysql_num_rows($result) > 0) {
-				  }else{
-				    while ($row = mysql_fetch_array($query)) {
-				      $judul = $row['judul'];
-				      $id_buku = $row['id_buku'];
-				    }
-				  }
-				}
-			?>
 			<div class="close__wrap">
 				<span>close</span>
 			</div>
@@ -300,9 +285,6 @@
 				<!-- End Single Tab Content -->
 			</div>
 		</section>
-		<!-- Start BEst Seller Area -->
-		<!-- Start NEwsletter Area -->
-		
 		<!-- End NEwsletter Area -->
 		<!-- Start Best Seller Area -->
 		 								 
@@ -330,6 +312,7 @@
 								</div> 
 							</div>
 						</div>
+
 					</div>
 				</div>
 			</div>
