@@ -89,7 +89,7 @@ font-size: 16px;"> Perpustakaan Online &nbsp; </div>
             
             <tr>
                 <td>Cover</td>
-                <td>: <input type="text" name="gambar" value="<?php echo $data['gambar']?>"></td>
+                <td>: <input type="file" name="gambar" value="<?php echo $data['gambar']?>"></td>
             </tr>
 
             <tr>
