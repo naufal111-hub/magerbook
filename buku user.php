@@ -4,7 +4,6 @@ include ("koneksi.php");
 session_start();
 @$sess = $_SESSION['username'];
 
-
 ?>
 <!doctype html>
 <html class="no-js" lang="zxx">
@@ -232,7 +231,7 @@ session_start();
 												<div class="actions_inner">
 													<ul class="add_to_links">
 														
-														<li><a class="wishlist" href="wishlist.html"><i class="bi bi-shopping-cart-full"></i></a></li>
+														<li><a class="wishlist" href="transaksi.php"><i class="bi bi-shopping-cart-full"></i></a></li>
 														
 														<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="bi bi-search"></i></a></li>
 													</ul>
@@ -265,7 +264,7 @@ session_start();
 												<div class="actions_inner">
 													<ul class="add_to_links">
 														
-														<li><a class="wishlist" href="wishlist.html"><i class="bi bi-shopping-cart-full"></i></a></li>
+														<li><a class="wishlist" href="transaksi.php"><i class="bi bi-shopping-cart-full"></i></a></li>
 														
 														<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="bi bi-search"></i></a></li>
 													</ul>
@@ -661,32 +660,17 @@ session_start();
 		                    <div class="modal-product">
 		                        <!-- Start product images -->
 		                        <div class="product-images">
-		                            <div class="main-image images">
-		                                <img alt="big images" src="images/books/2.png">
-		                            </div>
-		                        </div>
-		                        <!-- end product images -->
-		                        <div class="product-info">
-		                            <h1>SBMPTN SOSHUM 2019</h1>
-		                            <div class="rating__and__review">
-		                                <ul class="rating">
-		                                    <li><span class="ti-star"></span></li>
-		                                    <li><span class="ti-star"></span></li>
-		                                    <li><span class="ti-star"></span></li>
-		                                    <li><span class="ti-star"></span></li>
-		                                    <li><span class="ti-star"></span></li>
-		                                </ul>
-		                            </div>
-		                            <div class="quick-desc">
-										<h6>Judul	 		: SBMPTN SOSHUM 2019</h6>
-										<h6>Penerbit 		: Pusat Perbukuan</h6>
-										<h6>Penulis  		: Moch.Anshori</h6>
-										<h6>Halaman Buku 	: 262</h6>
-		                            </div>
-		                            <div class="addtocart-btn">
-										<a href="pdf1.php">Read Now</a>
-										
-		                            </div>
+<?php 
+$koneksi = mysqli_connect("localhost","root","","db_perpustakaan");
+ 
+// Check connection
+if (mysqli_connect_errno()){
+	echo "Koneksi database gagal : " . mysqli_connect_error();
+}
+//Ambil semua data yang ada di table db_buku
+$
+ 
+?>
 		                        </div>
 		                    </div>
 		                </div>
