@@ -312,9 +312,19 @@ session_start();
 		                        <!-- Start product images -->
 		                        <div class="product-images">
 		                            <div class="main-image images">
-		                                <img alt="big images" src="images/books/2.png">
+		                                <img alt="big images" src="images/books/14.png">
 		                            </div>
 		                        </div>
+		                        <div class="action">
+		                        <div class="quick-desc">
+										<h6>Judul	 		: Biologi Kelas X Kurikulum 2006</h6>
+										<h6>Penerbit 		: Pusat Perbukuan</h6>
+										<h6>Penulis  		: Moch.Anshori</h6>
+										<h6>Halaman Buku 	: 262</h6>
+		                            </div>
+		                            <div class="addtocart-btn">
+										<a href="pdf.php">Read Now</a>
+		                            </div>
 		                            </div>
 		                        </div>
 		                    </div>
