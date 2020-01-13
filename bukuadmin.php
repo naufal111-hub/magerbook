@@ -1,5 +1,7 @@
 <?php
 require ("koneksi.php");
+session_start();
+@$sess = $_SESSION['username'];
 ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -30,7 +32,12 @@ require ("koneksi.php");
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Admin MaBook</a> 
+                <?php
+                        $query = mysqli_query($koneksi, "SELECT * FROM tb_login_user WHERE username = '$sess'"); //digunakan untuk mengambil data dari database lalu menmapilkannya pada tabel
+                        while($data = mysqli_fetch_array($query)) {//untuk memecahkan data menjadi array dan memasukkan ke dalam variabel data agar data bisa kita tampilkan dalam bentuk perulangan //aray dalam bentuk object menjadi array yang kita kenal
+                        ?>
+                <a class="navbar-brand" href="index.html" style="color: white"><?php echo $data['nama_user']?>
+                      <?php } ?> </a>
             </div>
   <div style="color: white;
 padding: 15px 50px 5px 50px;
@@ -64,8 +71,7 @@ font-size: 16px;"> Perpustakaan Online &nbsp; </div>
             <div id="page-inner">
                 <div class="row">
                     <div class="col-md-12">
-                    <h2>Buku</h2>   
-                        <h5>Selamat Datang Di Halaman Admin MaBook</h5>
+                    <h2 style="text-align: center;"><span style="color: black;">Form Buku</h2> 
                     </div>
                 </div>
                  <!-- /. ROW  -->
@@ -76,7 +82,7 @@ font-size: 16px;"> Perpustakaan Online &nbsp; </div>
                     <!-- Advanced Tables -->
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                             Tabel Buku
+                           
                         </div>
 
             <a href="tambah_buku.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-address-card fa-sm text-white-50"></i> Tambah Buku</a>
