@@ -203,7 +203,7 @@ session_start();
 						<div class="col-lg-3 col-md-4 col-sm-6 col-12">
 							<div class="product__thumb">
 										<?php
-												$query = mysqli_query($koneksi, "SELECT * FROM tb_buku WHERE gambar = 'ipa.png'"); //digunakan untuk mengambil data dari database lalu menmapilkannya pada tabel
+												$query = mysqli_query($koneksi, "SELECT * FROM tb_buku WHERE gambar = 'biologi.png'"); //digunakan untuk mengambil data dari database lalu menmapilkannya pada tabel
 												while($data = mysqli_fetch_array($query)) {//untuk memecahkan data menjadi array dan memasukkan ke dalam variabel data agar data bisa kita tampilkan dalam bentuk perulangan //aray dalam bentuk object menjadi array yang kita kenal
 												?>
 							
@@ -218,7 +218,7 @@ session_start();
 						<div class="col-lg-3 col-md-4 col-sm-6 col-12">
 							<div class="product__thumb">
 										<?php
-												$query = mysqli_query($koneksi, "SELECT * FROM tb_buku WHERE gambar = 'biologi.png'"); //digunakan untuk mengambil data dari database lalu menmapilkannya pada tabel
+												$query = mysqli_query($koneksi, "SELECT * FROM tb_buku WHERE gambar = 'ipa.png'"); //digunakan untuk mengambil data dari database lalu menmapilkannya pada tabel
 												while($data = mysqli_fetch_array($query)) {//untuk memecahkan data menjadi array dan memasukkan ke dalam variabel data agar data bisa kita tampilkan dalam bentuk perulangan //aray dalam bentuk object menjadi array yang kita kenal
 												?>
 							
