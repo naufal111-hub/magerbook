@@ -583,8 +583,8 @@ session_start();
 		                            <div class="quick-desc">
 										<h6>Judul	 		: Biologi Kelas X Kurikulum 2006</h6>
 										<h6>Penerbit 		: Pusat Perbukuan</h6>
-										<h6>Penulis  		: Sunanil Huda S,Pd.</h6>
-										<h6>Halaman Buku 	: 201</h6>
+										<h6>Penulis  		: Moch.Anshori</h6>
+										<h6>Halaman Buku 	: 262</h6>
 		                            </div>
 		                            <div class="addtocart-btn">
 										<a href="pdf.php">Read Now</a>
