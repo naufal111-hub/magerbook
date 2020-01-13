@@ -113,32 +113,18 @@ session_start();
 								<li><a href="homeuser.php">Home</a></li>
 								<li><a href="index.php">Pages</a>
 									<ul>
-										<li><a href="about.html">About Page</a></li>
-										<li><a href="portfolio.html">Portfolio</a>
+										
 											<ul>
 												<li><a href="portfolio.html">Portfolio</a></li>
 												<li><a href="portfolio-details.html">Portfolio Details</a></li>
 											</ul>
 										</li>
 										<li><a href="my-account.html">My Account</a></li>
-										<li><a href="cart.html">Cart Page</a></li>
-										<li><a href="checkout.html">Checkout Page</a></li>
-										<li><a href="wishlist.html">Wishlist Page</a></li>
-										<li><a href="error404.html">404 Page</a></li>
-										<li><a href="faq.html">Faq Page</a></li>
-										<li><a href="team.html">Team Page</a></li>
+										
 									</ul>
 								</li>
 								<li><a href="shop-grid.php">Shop</a>
-									<ul>
-										<li><a href="shop-grid.php">Shop Grid</a></li>
-										<li><a href="single-product.html">Single Product</a></li>
-									</ul>
-								</li>
-								<li><a href="blog.html">Blog</a>
-									<ul>
-										<li><a href="blog.html">Blog Page</a></li>
-										<li><a href="blog-details.html">Blog Details</a></li>
+								
 									</ul>
 								</li>
 								<li><a href="contact.html">Contact</a></li>
@@ -255,13 +241,7 @@ session_start();
 												</div>
 											</div>
 											<div class="product__hover--content">
-												<ul class="rating d-flex">
-													<li class="on"><i class="fa fa-star-o"></i></li>
-													<li class="on"><i class="fa fa-star-o"></i></li>
-													<li class="on"><i class="fa fa-star-o"></i></li>
-													<li><i class="fa fa-star-o"></i></li>
-													<li><i class="fa fa-star-o"></i></li>
-												</ul>
+											
 											</div>
 										</div>
 		        					</div>
@@ -288,13 +268,7 @@ session_start();
 												</div>
 											</div>
 											<div class="product__hover--content">
-												<ul class="rating d-flex">
-													<li class="on"><i class="fa fa-star-o"></i></li>
-													<li class="on"><i class="fa fa-star-o"></i></li>
-													<li class="on"><i class="fa fa-star-o"></i></li>
-													<li><i class="fa fa-star-o"></i></li>
-													<li><i class="fa fa-star-o"></i></li>
-												</ul>
+												
 											</div>
 										</div>
 		        					</div>
@@ -321,13 +295,7 @@ session_start();
 												</div>
 											</div>
 											<div class="product__hover--content">
-												<ul class="rating d-flex">
-													<li class="on"><i class="fa fa-star-o"></i></li>
-													<li class="on"><i class="fa fa-star-o"></i></li>
-													<li class="on"><i class="fa fa-star-o"></i></li>
-													<li><i class="fa fa-star-o"></i></li>
-													<li><i class="fa fa-star-o"></i></li>
-												</ul>
+											
 											</div>
 										</div>
 		        					</div>
@@ -354,13 +322,7 @@ session_start();
 												</div>
 											</div>
 											<div class="product__hover--content">
-												<ul class="rating d-flex">
-													<li class="on"><i class="fa fa-star-o"></i></li>
-													<li class="on"><i class="fa fa-star-o"></i></li>
-													<li class="on"><i class="fa fa-star-o"></i></li>
-													<li><i class="fa fa-star-o"></i></li>
-													<li><i class="fa fa-star-o"></i></li>
-												</ul>
+										
 											</div>
 										</div>
 		        					</div>
@@ -387,13 +349,7 @@ session_start();
 												</div>
 											</div>
 											<div class="product__hover--content">
-												<ul class="rating d-flex">
-													<li class="on"><i class="fa fa-star-o"></i></li>
-													<li class="on"><i class="fa fa-star-o"></i></li>
-													<li class="on"><i class="fa fa-star-o"></i></li>
-													<li><i class="fa fa-star-o"></i></li>
-													<li><i class="fa fa-star-o"></i></li>
-												</ul>
+												
 											</div>
 										</div>
 		        					</div>
@@ -420,13 +376,7 @@ session_start();
 												</div>
 											</div>
 											<div class="product__hover--content">
-												<ul class="rating d-flex">
-													<li class="on"><i class="fa fa-star-o"></i></li>
-													<li class="on"><i class="fa fa-star-o"></i></li>
-													<li class="on"><i class="fa fa-star-o"></i></li>
-													<li><i class="fa fa-star-o"></i></li>
-													<li><i class="fa fa-star-o"></i></li>
-												</ul>
+											
 											</div>
 										</div>
 		        					</div>
@@ -453,13 +403,7 @@ session_start();
 												</div>
 											</div>
 											<div class="product__hover--content">
-												<ul class="rating d-flex">
-													<li class="on"><i class="fa fa-star-o"></i></li>
-													<li class="on"><i class="fa fa-star-o"></i></li>
-													<li class="on"><i class="fa fa-star-o"></i></li>
-													<li><i class="fa fa-star-o"></i></li>
-													<li><i class="fa fa-star-o"></i></li>
-												</ul>
+												
 											</div>
 										</div>
 		        					</div>
@@ -486,13 +430,7 @@ session_start();
 												</div>
 											</div>
 											<div class="product__hover--content">
-												<ul class="rating d-flex">
-													<li class="on"><i class="fa fa-star-o"></i></li>
-													<li class="on"><i class="fa fa-star-o"></i></li>
-													<li class="on"><i class="fa fa-star-o"></i></li>
-													<li><i class="fa fa-star-o"></i></li>
-													<li><i class="fa fa-star-o"></i></li>
-												</ul>
+											
 											</div>
 										</div>
 		        					</div>
@@ -519,13 +457,7 @@ session_start();
 												</div>
 											</div>
 											<div class="product__hover--content">
-												<ul class="rating d-flex">
-													<li class="on"><i class="fa fa-star-o"></i></li>
-													<li class="on"><i class="fa fa-star-o"></i></li>
-													<li class="on"><i class="fa fa-star-o"></i></li>
-													<li><i class="fa fa-star-o"></i></li>
-													<li><i class="fa fa-star-o"></i></li>
-												</ul>
+												
 											</div>
 										</div>
 		        					</div>
@@ -552,13 +484,7 @@ session_start();
 												</div>
 											</div>
 											<div class="product__hover--content">
-												<ul class="rating d-flex">
-													<li class="on"><i class="fa fa-star-o"></i></li>
-													<li class="on"><i class="fa fa-star-o"></i></li>
-													<li class="on"><i class="fa fa-star-o"></i></li>
-													<li><i class="fa fa-star-o"></i></li>
-													<li><i class="fa fa-star-o"></i></li>
-												</ul>
+												
 											</div>
 										</div>
 		        					</div>
@@ -585,13 +511,7 @@ session_start();
 												</div>
 											</div>
 											<div class="product__hover--content">
-												<ul class="rating d-flex">
-													<li class="on"><i class="fa fa-star-o"></i></li>
-													<li class="on"><i class="fa fa-star-o"></i></li>
-													<li class="on"><i class="fa fa-star-o"></i></li>
-													<li><i class="fa fa-star-o"></i></li>
-													<li><i class="fa fa-star-o"></i></li>
-												</ul>
+												
 											</div>
 										</div>
 		        					</div>
@@ -618,13 +538,7 @@ session_start();
 												</div>
 											</div>
 											<div class="product__hover--content">
-												<ul class="rating d-flex">
-													<li class="on"><i class="fa fa-star-o"></i></li>
-													<li class="on"><i class="fa fa-star-o"></i></li>
-													<li class="on"><i class="fa fa-star-o"></i></li>
-													<li><i class="fa fa-star-o"></i></li>
-													<li><i class="fa fa-star-o"></i></li>
-												</ul>
+												
 											</div>
 										</div>
 		        					</div>
