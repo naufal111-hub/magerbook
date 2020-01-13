@@ -1,5 +1,7 @@
 <?php
 require ("koneksi.php");
+session_start();
+@$sess = $_SESSION['username'];
 ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -30,7 +32,12 @@ require ("koneksi.php");
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="homeadmin.php">Admin MaBook</a> 
+                 <?php
+                        $query = mysqli_query($koneksi, "SELECT * FROM tb_login_user WHERE username = '$sess'"); //digunakan untuk mengambil data dari database lalu menmapilkannya pada tabel
+                        while($data = mysqli_fetch_array($query)) {//untuk memecahkan data menjadi array dan memasukkan ke dalam variabel data agar data bisa kita tampilkan dalam bentuk perulangan //aray dalam bentuk object menjadi array yang kita kenal
+                        ?>
+                <a class="navbar-brand" href="index.html" style="color: white"><?php echo $data['nama_user']?>
+                      <?php } ?> </a>
             </div>
   <div style="color: white;
 padding: 15px 50px 5px 50px;
@@ -42,7 +49,7 @@ font-size: 16px;"> Perpustakaan Online &nbsp; </div>
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
 				<li class="text-center">
-                    <img src="assets/img/find_user.png" class="user-image img-responsive"/>
+                    <img class="user-image img-responsive"/>
 					</li>
                     <li>
                         <a  href="homeadmin.php"><i class="fa fa-dashboard fa-3x"></i> Home </a>
@@ -64,8 +71,7 @@ font-size: 16px;"> Perpustakaan Online &nbsp; </div>
             <div id="page-inner">
                 <div class="row">
                     <div class="col-md-12">
-                    <h2>Anggota</h2>   
-                        <h5>Selamat Datang Di Halaman Admin MaBook</h5>
+                    <h2 style="text-align: center;">Tabel Anggota</h2>   
                     </div>
                 </div>
                  <!-- /. ROW  -->
@@ -76,7 +82,6 @@ font-size: 16px;"> Perpustakaan Online &nbsp; </div>
                     <!-- Advanced Tables -->
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                             Tabel Anggota
                         </div>
 
             <a href="tambah_anggota.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-address-card fa-sm text-white-50"></i> Tambah Data</a>

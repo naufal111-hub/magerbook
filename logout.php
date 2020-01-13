@@ -1,7 +1,8 @@
 <?php
-session_start(); // Start sessionnya
-session_directory(); // Hapus semua session_directory
-
-include "koneksi.php";
-header("location: ".$base_url."homeuser.php"); //redirect ke halaman utama
+session_start();
+session_unset();
+if(session_destroy()) // Menghapus Sessions
+{
+header("Location: index.php"); // Langsung mengarah ke Home index.php
+}
 ?>

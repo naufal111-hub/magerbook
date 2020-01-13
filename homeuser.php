@@ -86,7 +86,7 @@ session_start();
 												while($data = mysqli_fetch_array($query)) {//untuk memecahkan data menjadi array dan memasukkan ke dalam variabel data agar data bisa kita tampilkan dalam bentuk perulangan //aray dalam bentuk object menjadi array yang kita kenal
 												?>
 											<strong class="label switcher-label">
-												<span><a href="#"><?php echo $data['nama_user']?></a></span>
+												<span><a><?php echo $data['nama_user']?></a></span>
 											</strong>
 											<?php } ?>
 											<div class="switcher-options">
@@ -190,7 +190,7 @@ session_start();
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="section__title text-center">
-							<h2 class="title__be--2" style="color: black">New <span style="color: black">Products</span></h2>
+							<h2 class="title__be--2" style="color: black">New <span style="color: black">Books</span></h2>
 						</div>
 					</div>
 				</div>
@@ -330,7 +330,7 @@ session_start();
 		                        <!-- Start product images -->
 		                        <div class="product-images">
 		                            <div class="main-image images">
-		                                <img alt="big images" src="images/books/2.png"">
+		                                <img alt="big images" src="images/books/2.png">
 		                            </div>
 		                        </div>
 		                        <!-- end product images -->

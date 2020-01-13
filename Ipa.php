@@ -234,13 +234,7 @@ session_start();
 												</div>
 											</div>
 											<div class="product__hover--content">
-												<ul class="rating d-flex">
-													<li class="on"><i class="fa fa-star-o"></i></li>
-													<li class="on"><i class="fa fa-star-o"></i></li>
-													<li class="on"><i class="fa fa-star-o"></i></li>
-													<li><i class="fa fa-star-o"></i></li>
-													<li><i class="fa fa-star-o"></i></li>
-												</ul>
+												
 											</div>
 										</div>
 		        					</div>
@@ -248,31 +242,25 @@ session_start();
 	        						<!-- Start Single Product -->
 		        					<div class="product product__style--3 col-lg-4 col-md-4 col-sm-6 col-12">
 			        					<div class="product__thumb">
-											<a class="first__img" href="single-product.html"><img src="images/books/15.png" alt="product image" style="height: 200px; height: 400px;"></a>
+											<a class="first__img" ><img src="images/books/15.png" alt="product image" style="height: 200px; height: 400px;"></a>
 											<div class="hot__box">
 												<span class="hot-label">HOT</span>
 											</div>
 										</div>
 										<div class="product__content content--center">
-											<h4><a href="single-product.html">Kimia Kelas X Kurikulum 2013</a></h4>
+											<h4><a>Kimia Kelas X Kurikulum 2013</a></h4>
 											<ul class="prize d-flex">
 											</ul>
 											<div class="action">
 												<div class="actions_inner">
 													<ul class="add_to_links">
-														<li><a class="wishlist" href="wishlist.html"><i class="bi bi-shopping-cart-full"></i></a></li>
+														<li><a class="wishlist" href="transaksi.php"><i class="bi bi-shopping-cart-full"></i></a></li>
 														<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal2"><i class="bi bi-search"></i></a></li>
 													</ul>
 												</div>
 											</div>
 											<div class="product__hover--content">
-												<ul class="rating d-flex">
-													<li class="on"><i class="fa fa-star-o"></i></li>
-													<li class="on"><i class="fa fa-star-o"></i></li>
-													<li class="on"><i class="fa fa-star-o"></i></li>
-													<li><i class="fa fa-star-o"></i></li>
-													<li><i class="fa fa-star-o"></i></li>
-												</ul>
+			
 											</div>
 										</div>
 		        					</div>
@@ -280,7 +268,7 @@ session_start();
 	        						<!-- Start Single Product -->
 		        					<div class="product product__style--3 col-lg-4 col-md-4 col-sm-6 col-12">
 			        					<div class="product__thumb">
-											<a class="first__img" href="single-product.html"><img src="images/books/12.png" alt="product image" style="height: 200px; height: 400px;"></a>
+											<a class="first__img" ><img src="images/books/12.png" alt="product image" style="height: 200px; height: 400px;"></a>
 											<div class="hot__box">
 												<span class="hot-label">HOT</span>
 											</div>
@@ -298,13 +286,7 @@ session_start();
 												</div>
 											</div>
 											<div class="product__hover--content">
-												<ul class="rating d-flex">
-													<li class="on"><i class="fa fa-star-o"></i></li>
-													<li class="on"><i class="fa fa-star-o"></i></li>
-													<li class="on"><i class="fa fa-star-o"></i></li>
-													<li><i class="fa fa-star-o"></i></li>
-													<li><i class="fa fa-star-o"></i></li>
-												</ul>
+											
 											</div>
 										</div>
 		        					</div>
@@ -312,7 +294,7 @@ session_start();
 	        						<!-- Start Single Product -->
 		        					<div class="product product__style--3 col-lg-4 col-md-4 col-sm-6 col-12">
 			        					<div class="product__thumb">
-											<a class="first__img" href="single-product.html"><img src="images/books/13.png" alt="product image" style="height: 200px; height: 400px;"></a>
+											<a class="first__img" ><img src="images/books/13.png" alt="product image" style="height: 200px; height: 400px;"></a>
 											<div class="hot__box">
 												<span class="hot-label">HOT</span>
 											</div>
@@ -330,13 +312,7 @@ session_start();
 												</div>
 											</div>
 											<div class="product__hover--content">
-												<ul class="rating d-flex">
-													<li class="on"><i class="fa fa-star-o"></i></li>
-													<li class="on"><i class="fa fa-star-o"></i></li>
-													<li class="on"><i class="fa fa-star-o"></i></li>
-													<li><i class="fa fa-star-o"></i></li>
-													<li><i class="fa fa-star-o"></i></li>
-												</ul>
+											
 											</div>
 										</div>
 		        					</div>
@@ -344,7 +320,7 @@ session_start();
 	        						<!-- Start Single Product -->
 		        					<div class="product product__style--3 col-lg-4 col-md-4 col-sm-6 col-12">
 			        					<div class="product__thumb">
-											<a class="first__img" href="single-product.html"><img src="images/books/11.png" alt="product image" style="height: 200px; height: 400px;"></a>
+											<a class="first__img" ><img src="images/books/11.png" alt="product image" style="height: 200px; height: 400px;"></a>
 											<div class="hot__box">
 												<span class="hot-label">BEST SALER</span>
 											</div>
@@ -362,13 +338,7 @@ session_start();
 												</div>
 											</div>
 											<div class="product__hover--content">
-												<ul class="rating d-flex">
-													<li class="on"><i class="fa fa-star-o"></i></li>
-													<li class="on"><i class="fa fa-star-o"></i></li>
-													<li class="on"><i class="fa fa-star-o"></i></li>
-													<li><i class="fa fa-star-o"></i></li>
-													<li><i class="fa fa-star-o"></i></li>
-												</ul>
+											
 											</div>
 										</div>
 		        					</div>
@@ -376,7 +346,7 @@ session_start();
 	        						<!-- Start Single Product -->
 		        					<div class="product product__style--3 col-lg-4 col-md-4 col-sm-6 col-12">
 			        					<div class="product__thumb">
-											<a class="first__img" href="single-product.html"><img src="images/books/3.png" alt="product image" style="height: 200px; height: 400px;"></a>
+											<a class="first__img" ><img src="images/books/3.png" alt="product image" style="height: 200px; height: 400px;"></a>
 											<div class="hot__box">
 												<span class="hot-label">BEST SALER</span>
 											</div>
@@ -394,13 +364,7 @@ session_start();
 												</div>
 											</div>
 											<div class="product__hover--content">
-												<ul class="rating d-flex">
-													<li class="on"><i class="fa fa-star-o"></i></li>
-													<li class="on"><i class="fa fa-star-o"></i></li>
-													<li class="on"><i class="fa fa-star-o"></i></li>
-													<li><i class="fa fa-star-o"></i></li>
-													<li><i class="fa fa-star-o"></i></li>
-												</ul>
+											
 											</div>
 										</div>
 		        					</div>
@@ -412,7 +376,7 @@ session_start();
 	        						<!-- Start Single Product -->
 	        						<div class="list__view">
 	        							<div class="thumb">
-	        								<a class="first__img" href="single-product.html"><img src="images/product/1.jpg" alt="product images"></a>
+	        								<a class="first__img" ><img src="images/product/1.jpg" alt="product images"></a>
 	        								<a class="second__img animation1" href="single-product.html"><img src="images/product/2.jpg" alt="product images" ></a>
 	        							</div>
 	        							<div class="content">
@@ -619,8 +583,8 @@ session_start();
 		                            <div class="quick-desc">
 										<h6>Judul	 		: Biologi Kelas X Kurikulum 2006</h6>
 										<h6>Penerbit 		: Pusat Perbukuan</h6>
-										<h6>Penulis  		: Moch.Anshori</h6>
-										<h6>Halaman Buku 	: 262</h6>
+										<h6>Penulis  		: Sunanil Huda S,Pd.</h6>
+										<h6>Halaman Buku 	: 201</h6>
 		                            </div>
 		                            <div class="addtocart-btn">
 										<a href="pdf.php">Read Now</a>

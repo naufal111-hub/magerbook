@@ -77,7 +77,7 @@ session_start();
                                         </div>
                                         <div class="col-md-8 col-sm-8 col-5 col-lg-2">
                         <ul class="header__sidebar__right d-flex justify-content-end align-items-center">
-                            <li class="shop_search"><a class="search__active" href="#" ></a></li>
+                            
                             <li class="setting__bar__icon"><a class="setting__active" href="#"></a>
                                 <div class="searchbar__content setting__block">
                                     <div class="content-inner">
@@ -178,22 +178,14 @@ session_start();
                                 <div class="col-lg-9 col-12">
                                         <div class="blog-page">
                                                 <div class="page__header">
-                                                        <h2>Transaksi Peminjaman</h2>
+                                                        <h2 style="text-align: center;">Transaksi Peminjaman</h2>
                                                 </div>
                                                 <!-- Start Single Post -->
                                                 <div class="container">
                                                      <div class="col-lg-3 col-12 md-mt-40 sm-mt-40">
                                         <div class="wn__sidebar">
                                                 <!-- Start Single Widget -->
-                                                <aside class="widget search_widget">
-                                                        <h3 class="widget-title">Search</h3>
-                                                        <form action="#">
-                                                                <div class="form-input">
-                                                                        <input type="text" placeholder="Search...">
-                                                                        <button><i class="fa fa-search"></i></button>
-                                                                </div>
-                                                        </form>
-                                                </aside>
+                                               
                                                 <!-- End Single Widget -->
                                         </div>
                                 </div>
@@ -247,50 +239,28 @@ session_start();
                                         
                                 </div>
                 <footer id="wn__footer" class="footer__area bg__cat--8 brown--color">
-                        <div class="footer-static-top">
-                                <div class="container">
-                                        <div class="row">
-                                                <div class="col-lg-12">
-                                                        <div class="footer__widget footer__menu">
-                                                                <div class="ft__logo">
-                                                                        <a href="index.html">
-                                                                                <img src="images/logo/3.png" alt="logo" style="height: 80px; width: 80px; border-radius: 50%;">
-                                                                        </a>
-                                                                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered duskam alteration variations of passages</p>
-                                                                </div>
-                                                                <div class="footer__content">
-                                                                        <ul class="social__net social__net--2 d-flex justify-content-center">
-                                                                                <li><a href="#"><i class="bi bi-facebook"></i></a></li>
-                                                                                <li><a href="#"><i class="bi bi-google"></i></a></li>
-                                                                                <li><a href="#"><i class="bi bi-twitter"></i></a></li>
-                                                                                <li><a href="#"><i class="bi bi-linkedin"></i></a></li>
-                                                                                <li><a href="#"><i class="bi bi-youtube"></i></a></li>
-                                                                        </ul>
-                                                                </div>
-                                                        </div>
-                                                </div>
-                                        </div>
-                                </div>
+            <div class="footer-static-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="footer__widget footer__menu">
+                                <div class="ft__logo">
+                                    <a href="homeuser.html">
+                                        <img src="images/logo/logo.png" alt="logo" style="height: 100px; width: 100px; border-radius: 50%;">
+                                    </a>
+                                    <p>Aku Rela Di Penjara Asalkan Bersama Buku, Karena Dengan Buku Aku Bebas</p>
+                                </div> 
+                            </div>
                         </div>
-                        <div class="copyright__wrapper">
-                                <div class="container">
-                                        <div class="row">
-                                                <div class="col-lg-6 col-md-6 col-sm-12">
-                                                        <div class="copyright">
-                                                                <div class="copy__right__inner text-left">
-                                                                        <p>Copyright <i class="fa fa-copyright"></i> <a href="https://freethemescloud.com/">Free themes Cloud.</a> All Rights Reserved</p>
-                                                                </div>
-                                                        </div>
-                                                </div>
-                                                <div class="col-lg-6 col-md-6 col-sm-12">
-                                                        <div class="payment text-right">
-                                                                <img src="images/icons/payment.png" alt="logo"/> 
-                                                        </div>
-                                                </div>
-                                        </div>
-                                </div>
-                        </div>
-                </footer>
+
+                    </div>
+                </div>
+            </div>
+             
+                    </div>
+                </div>
+            </div>
+        </footer>
                 <!-- //Footer Area -->
         </div>
         <!-- //Main wrapper -->
