@@ -1,27 +1,8 @@
-<?php session_start();
-error_reporting(0);
-include("koneksi.php");
-if(isset($_POST['submit'])) {
-  $_SESSION['submit']='';
-}
-
-if(isset($_POST['change']))
-{
- $username=$_POST['username'];
- $password=$_POST['password'];
- $query=mysqli_query($koneksi,"SELECT * FROM tb_login_user WHERE username='$username'");
- $num=mysqli_fetch_array($query);
- if($num>0)
- {
-  mysqli_query($koneksi,"update tb_login_user set password='$password' WHERE username='$username'");
-  $msg="Password Changed Successfully";
-}
-else
-{
-  $errmsg="Invalid username";
-}
-}
-?> 
+<?php
+require ("koneksi.php");
+	$_SESSION["username"] = 24;
+	
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -54,75 +35,44 @@ else
 </head>
 <body>
 <section class="login-content">
+
 	<div class="container-login100" style="background-image: url('images/buku.jpg');">
 		<div class="wrap-login100 p-l-55 p-r-55 p-t-80 p-b-30">
-			<form name="forgot" method="post" class="login100-form validate-form">
+			<form action="proses_pass.php" name="forgot" method="post" class="login100-form validate-form">
 				<span class="login100-form-title p-b-37">
-					Ganti Password
+					Forgot Password
 				</span>
 
 				<div class="wrap-input100 validate-input m-b-20" data-validate="Enter username">
-					<input class="input100" type="text" name="username" placeholder="username">
+					<input class="input100" type="text" name="username" placeholder="username"  required>
 					<span class="focus-input100"></span>
 				</div>
 
 				<div class="wrap-input100 validate-input m-b-25" data-validate = "Enter password">
-					<input class="input100" type="password" name="password" placeholder="New Password" id="password">
+					<input class="input100" type="password" id="newPassword" name="password" placeholder="New Password" id="password"  required>
 					<span class="focus-input100"></span>
 				</div>
 
                 <div class="wrap-input100 validate-input m-b-25" data-validate = "Confirm Password">
-					<input class="input100" type="password" name="confirmpassword" placeholder="Confirm Password" id="confirmpassword">
+					<input class="input100" type="password" id="confirmPassword" name="conpas" placeholder="Confirm Password" id="confirmpassword"  required>
 					<span class="focus-input100"></span>
 				</div>
 
 				<div class="container-login100-form-btn">
-					<button  type="submit" name="change" onclick="return valid();" class="login100-form-btn" data-toggle="modal" data-target="#myModal">
+					<button  type="submit" name="ganti" class="login100-form-btn" >
 						Ganti
 					</button>
+				</div>
+
+				<div class="text-center  p-t-57 p-b-20">
+					<a href="index.php" class="txt2 hov1">
+						Kembali
+					</a>
 				</div>
 			</form>
 
 			
 		</div>
-	</div>
-    <?php echo htmlentities($_SESSION['errmsg']); ?><?php echo htmlentities($_SESSION['errmsg']="");?>
-    <?php if($msg){
-              echo htmlentities($msg);
-              }?></p>
-	
-    <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog modal-sm">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Ganti Password</h4>
-        </div>
-        <div class="modal-body">
-        <p> <script type="text/javascript">
-            function valid()
-            {
-            if(document.forgot.password.value!= document.forgot.confirmpassword.value)
-            {
-                alert("Password and Confirm Password Field do not match  !!");
-                document.forgot.confirmpassword.focus();
-                return false;
-            }
-            return true;
-            }
-        </script></p>
-        </div>
-        <div class="modal-body">
-        <p> </p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 </section>
 
 	<div id="dropDownSelect1"></div>
@@ -143,6 +93,30 @@ else
 	<script src="vendor/countdowntime/countdowntime.js"></script>
 <!--===============================================================================================-->
 	<script src="js/main.js"></script>
+	<script type="text/javascript">
+		function validatePassword(){
+			var currentPassword, newPassword, confirmPassword, output = true;
+			newPassword = document.frmChange.newPassword;
+			confirmPassword = document.frmChange.confirmPassword;
+
+			if(!newPassword.value){
+				newPassword.focus();
+				document.getElementById("newPassword").innerHTML = "required";
+				output = false;
+			} else if(!confirmPassword.value){
+				confirmPassword.focus();
+				document.getElementById("confirmPassword").innerHTML = "required";
+				output = false;
+			} if (newPassword.value != confirmPassword.value) {
+				newPassword.value = "";
+				confirmPassword.value = "";
+				newPassword.focus();
+				document.getElementById("confirmPassword").innerHTML = "not same";
+				output = false;
+			}return output;
+		}
+	</script>
+	
 
 </body>
 </html>
