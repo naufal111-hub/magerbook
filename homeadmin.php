@@ -48,10 +48,10 @@ font-size: 16px;"> Perpustakaan Online &nbsp;</a> </div>
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
 				<li class="text-center">
-                    <img src="assets/img/find_user.png" class="user-image img-responsive"/>
+          <img class="user-image img-responsive"/>
 					</li>
                     <li>
-                        <a class="active-menu"  href="index.html"><i class="fa fa-dashboard fa-3x"></i> Home </a>
+                        <a class="active-menu"  href="homeadmin.php"><i class="fa fa-dashboard fa-3x"></i> Home </a>
                     </li>
                       <li  >
                         <a  href="anggota.php"><i class="fa fa-table fa-3x"></i> Anggota </a>
@@ -69,9 +69,6 @@ font-size: 16px;"> Perpustakaan Online &nbsp;</a> </div>
                 <div class="row">
                     <div class="col-md-12">
                    <h2 style="text-align: center;">Selamat Datang</h2>
-                      <strong class="label switcher-label" style="font-size: 20px;">
-                        <span><a href="#"><?php echo $data['nama_user']?></a></span>
-                      </strong> 
                     </div>
                 </div>              
                  <!-- /. ROW  -->
