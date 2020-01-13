@@ -111,23 +111,28 @@ session_start();
 						<nav class="mobilemenu__nav">
 							<ul class="meninmenu">
 								<li><a href="homeuser.php">Home</a></li>
-								<li><a href="index.php">Pages</a>
+								<li class="drop"><a href="buku user.php" >Buku</a>
+									<div class="megamenu mega03" style="height: 200px; width: 150px;">
+										<ul class="item item03">
+											<li class="title">Kategori</li>
+											<li><a href="ipa.php">IPA </a></li>
+											<li><a href="ips.php">IPS </a></li>
+											<li><a href="bahasa.php">BAHASA </a></li>
+											<li><a href="umum.php">UMUM </a></li>
+										</ul>
+									</div>
+								</li>
 									<ul>
 										
-											<ul>
-												<li><a href="portfolio.html">Portfolio</a></li>
-												<li><a href="portfolio-details.html">Portfolio Details</a></li>
-											</ul>
+											
 										</li>
 										<li><a href="my-account.html">My Account</a></li>
 										
 									</ul>
 								</li>
-								<li><a href="shop-grid.php">Shop</a>
 								
-									</ul>
-								</li>
-								<li><a href="contact.html">Contact</a></li>
+
+								
 							</ul>
 						</nav>
 					</div>
@@ -195,7 +200,7 @@ session_start();
 									<div class="shop__list nav justify-content-center" role="tablist">
 			     
 			                        </div>
-			                        <p> <p>ALL CATEGORIES</p>
+			                        <p> SEMUA KATEGORI</p>
 			                        <div class="product__content content--center">
 		                        </div>
         					</div>
