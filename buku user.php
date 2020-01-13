@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-<?php 
-session_start();
-include 'koneksi.php';
-?>
-
-=======
 <?php
 include ("koneksi.php");
 
@@ -13,7 +6,6 @@ session_start();
 
 
 ?>
->>>>>>> e57086bcd5c8ec35f77cf88f5832b9d0e2d1fefd
 <!doctype html>
 <html class="no-js" lang="zxx">
 <head>
@@ -163,37 +155,14 @@ session_start();
 		<!-- //Header -->
 		<!-- Start Search Popup -->
 		<div class="brown--color box-search-content search_active block-bg close__top">
-			<form id="search_mini_form" class="minisearch" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="GET">
+			<form id="search_mini_form" class="minisearch" action="hasil_pencarian.php" method="POST">
 				<div class="field__search">
-					<input type="text" name="q" placeholder="Masukan yang ingin anda cari ..." value="<?php $q = isset($_REQUEST['q']) ? urldecode($_REQUEST['q']) : ''; echo $q ?>"/>
-			 					<?php
-                                if ($q <> '')
-                                {
-                                ?>
-                          
-                                <?php
-                                }
-                                ?>>
-					<div class="action">
-						<a href="buku user.php"><i class="zmdi zmdi-search"></i></a>
-					</div>
+					<input type="text" name="q" placeholder="Masukan yang ingin anda cari ...">
+						<input type="submit">
+<!-- 						<a href="hasil_pencarian.php"><i class="zmdi zmdi-search"></i></a> -->
 				</div>
 			</form>
-			<?php 
-             if (isset($_POST['cari'])) {
-				  $koneksi = mysql_connect("localhost","root","","db_perpustakaan");
-				  $cari = $_POST['cari'];
-				  $sql = "select * from tb_buku where judul like '%".$cari."%'";
-				  $result = mysql_query($sql);
-				  if (mysql_num_rows($result) > 0) {
-				  }else{
-				    while ($row = mysql_fetch_array($query)) {
-				      $judul = $row['judul'];
-				      $id_buku = $row['id_buku'];
-				    }
-				  }
-				}
-			?>
+
 			<div class="close__wrap">
 				<span>close</span>
 			</div>
@@ -240,7 +209,7 @@ session_start();
 									<div class="shop__list nav justify-content-center" role="tablist">
 			     
 			                        </div>
-			                        <p>ALL CATEGORIES</p>
+			                        <p> <p>ALL CATEGORIES</p>
 			                        <div class="product__content content--center">
 		                        </div>
         					</div>
@@ -251,7 +220,6 @@ session_start();
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="section__title text-center">
-							<h2 class="title__be--2" style="color: black">New <span style="color: black">Products</span></h2>
 						</div>
 					</div>
 				</div>
@@ -260,82 +228,6 @@ session_start();
 					<!-- Start Single Product -->
 					<!-- Start Single Product -->
 					<!-- Start Single Product -->
-					<div class="product product__style--3">
-						<div class="col-lg-3 col-md-4 col-sm-6 col-12">
-							<div class="product__thumb">
-										<?php
-												$query = mysqli_query($koneksi, "SELECT * FROM tb_buku WHERE gambar = 'ipa.png'"); //digunakan untuk mengambil data dari database lalu menmapilkannya pada tabel
-												while($data = mysqli_fetch_array($query)) {//untuk memecahkan data menjadi array dan memasukkan ke dalam variabel data agar data bisa kita tampilkan dalam bentuk perulangan //aray dalam bentuk object menjadi array yang kita kenal
-												?>
-							
-								<a class="first__img" href="ipa.php"><img src="img/<?php echo $data['gambar'] ?>" alt="product image" style="height: 200px; height: 400px;"></a>
-								<td><?php echo $data['judul']?></td>
-							<?php }?>
-							</div>
-						</div>
-					</div>
-
-					<div class="product product__style--3">
-						<div class="col-lg-3 col-md-4 col-sm-6 col-12">
-							<div class="product__thumb">
-										<?php
-												$query = mysqli_query($koneksi, "SELECT * FROM tb_buku WHERE gambar = 'biologi.png'"); //digunakan untuk mengambil data dari database lalu menmapilkannya pada tabel
-												while($data = mysqli_fetch_array($query)) {//untuk memecahkan data menjadi array dan memasukkan ke dalam variabel data agar data bisa kita tampilkan dalam bentuk perulangan //aray dalam bentuk object menjadi array yang kita kenal
-												?>
-							
-								<a class="first__img" href="ipa.php"><img src="img/<?php echo $data['gambar'] ?>" alt="product image" style="height: 200px; height: 400px;"></a>
-								<td><?php echo $data['judul']?></td>
-							<?php }?>
-							</div>
-						</div>
-					</div>
-					<!-- Start Single Product -->
-					<!-- Start Single Product -->
-					<div class="product product__style--3">
-						<div class="col-lg-3 col-md-4 col-sm-6 col-12">
-							<div class="product__thumb">
-										<?php
-												$query = mysqli_query($koneksi, "SELECT * FROM tb_buku WHERE gambar = 'bahasa jepang.png'"); //digunakan untuk mengambil data dari database lalu menmapilkannya pada tabel
-												while($data = mysqli_fetch_array($query)) {//untuk memecahkan data menjadi array dan memasukkan ke dalam variabel data agar data bisa kita tampilkan dalam bentuk perulangan //aray dalam bentuk object menjadi array yang kita kenal
-												?>
-							
-								<a class="first__img" href="bahasa.php"><img src="img/<?php echo $data['gambar'] ?>" alt="product image" style="height: 200px; height: 400px;"></a>
-								<?php echo $data['judul']?>
-							<?php }?>
-							</div>
-						</div>
-					</div>
-					<!-- Start Single Product -->
-					<!-- Start Single Product -->
-					<div class="product product__style--3">
-						<div class="col-lg-3 col-md-4 col-sm-6 col-12">
-							<div class="product__thumb">
-								<?php
-												$query = mysqli_query($koneksi, "SELECT * FROM tb_buku WHERE gambar = '15.png'"); //digunakan untuk mengambil data dari database lalu menmapilkannya pada tabel
-												while($data = mysqli_fetch_array($query)) {//untuk memecahkan data menjadi array dan memasukkan ke dalam variabel data agar data bisa kita tampilkan dalam bentuk perulangan //aray dalam bentuk object menjadi array yang kita kenal
-												?>
-								<a class="first__img" href="ipa.php"><img src="img/<?php echo $data['gambar'] ?>" alt="product image" style="height: 200px; height: 400px;"></a>
-								<?php echo $data['judul']?>
-								<?php }?>
-							</div>
-						</div>
-					</div>
-					<!-- Start Single Product -->
-					<!-- Start Single Product -->
-					<div class="product product__style--3">
-						<div class="col-lg-3 col-md-4 col-sm-6 col-12">
-							<div class="product__thumb">
-										<?php
-												$query = mysqli_query($koneksi, "SELECT * FROM tb_buku WHERE gambar = 'bahasa jepang.png'"); //digunakan untuk mengambil data dari database lalu menmapilkannya pada tabel
-												while($data = mysqli_fetch_array($query)) {//untuk memecahkan data menjadi array dan memasukkan ke dalam variabel data agar data bisa kita tampilkan dalam bentuk perulangan //aray dalam bentuk object menjadi array yang kita kenal
-												?>
-							
-								<a class="first__img" href="bahasa.php"><img src="img/<?php echo $data['gambar'] ?>" alt="product image" style="height: 200px; height: 400px;"></a>
-								<?php echo $data['judul']?>
-							<?php }?>
-							</div>
-						</div>
-					</div>
 						<!-- Start Single Product -->
 					</div>
 				</div>
