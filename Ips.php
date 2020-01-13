@@ -154,19 +154,21 @@ session_start();
 		</header>
 		<!-- //Header -->
 		<!-- Start Search Popup -->
-		<div class="box-search-content search_active block-bg close__top">
-			<form id="search_mini_form" class="minisearch" action="#">
+		<!-- Start Search Popup -->
+		<div class="brown--color box-search-content search_active block-bg close__top">
+			<form id="search_mini_form" class="minisearch" action="hasil_pencarian.php" method="POST">
 				<div class="field__search">
-					<input type="text" placeholder="Search entire store here...">
-					<div class="action">
-						<a href="#"><i class="zmdi zmdi-search"></i></a>
-					</div>
+					<input type="text" name="q" placeholder="Masukan yang ingin anda cari ...">
+						<input type="submit">
+<!-- 						<a href="hasil_pencarian.php"><i class="zmdi zmdi-search"></i></a> -->
 				</div>
 			</form>
+
 			<div class="close__wrap">
 				<span>close</span>
 			</div>
 		</div>
+		
 		<!-- End Search Popup -->
         <!-- Start Bradcaump area -->
           <div class="slide animation__style10 bg-image--8 fullscreen align__center--left">

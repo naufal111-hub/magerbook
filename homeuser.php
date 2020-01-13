@@ -276,6 +276,21 @@ session_start();
 						</div>
 					</div>
 						<!-- Start Single Product -->
+					<!-- Start Single Product -->
+					<div class="product product__style--3">
+						<div class="col-lg-3 col-md-4 col-sm-6 col-12">
+							<div class="product__thumb">
+										<?php
+												$query = mysqli_query($koneksi, "SELECT * FROM tb_buku WHERE gambar = 'cinta.jpg'"); //digunakan untuk mengambil data dari database lalu menmapilkannya pada tabel
+												while($data = mysqli_fetch_array($query)) {//untuk memecahkan data menjadi array dan memasukkan ke dalam variabel data agar data bisa kita tampilkan dalam bentuk perulangan //aray dalam bentuk object menjadi array yang kita kenal
+												?>
+							
+								<a class="first__img" href="bahasa.php"><img src="img/<?php echo $data['gambar'] ?>" alt="product image" style="height: 200px; height: 400px;"></a>
+								<?php echo $data['judul']?>
+							<?php }?>
+							</div>
+						</div>
+					</div>
 					</div>
 				</div>
 				<!-- End Single Tab Content -->
