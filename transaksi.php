@@ -77,7 +77,7 @@ session_start();
                                         </div>
                                         <div class="col-md-8 col-sm-8 col-5 col-lg-2">
                         <ul class="header__sidebar__right d-flex justify-content-end align-items-center">
-                            <li class="shop_search"><a class="search__active" href="#" ></a></li>
+                            
                             <li class="setting__bar__icon"><a class="setting__active" href="#"></a>
                                 <div class="searchbar__content setting__block">
                                     <div class="content-inner">
@@ -185,15 +185,7 @@ session_start();
                                                      <div class="col-lg-3 col-12 md-mt-40 sm-mt-40">
                                         <div class="wn__sidebar">
                                                 <!-- Start Single Widget -->
-                                                <aside class="widget search_widget">
-                                                        <h3 class="widget-title">Search</h3>
-                                                        <form action="#">
-                                                                <div class="form-input">
-                                                                        <input type="text" placeholder="Search...">
-                                                                        <button><i class="fa fa-search"></i></button>
-                                                                </div>
-                                                        </form>
-                                                </aside>
+                                               
                                                 <!-- End Single Widget -->
                                         </div>
                                 </div>
