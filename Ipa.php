@@ -228,7 +228,7 @@ session_start();
 											<div class="action">
 												<div class="actions_inner">
 													<ul class="add_to_links">
-														<li><a class="wishlist" href="wishlist.html"><i class="bi bi-shopping-cart-full"></i></a></li>
+														<li><a class="wishlist" href="transaksi.php"><i class="bi bi-shopping-cart-full"></i></a></li>
 														<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal1"><i class="bi bi-search"></i></a></li>
 													</ul>
 												</div>
@@ -254,7 +254,7 @@ session_start();
 											</div>
 										</div>
 										<div class="product__content content--center">
-											<h4><a href="single-product.html">Buku Fisika Kelas X Kurikulum 2013</a></h4>
+											<h4><a href="single-product.html">Kimia Kelas X Kurikulum 2013</a></h4>
 											<ul class="prize d-flex">
 											</ul>
 											<div class="action">
