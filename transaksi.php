@@ -205,10 +205,10 @@ session_start();
                                     <thead>
                                         <tr class="title-top">
                                             <th>Kode Buku</th>
-                                            <th>Status Peminjaman</th>
-                                            <th>Tanggal Menminjam</th>
+                                            <th>Tanggal Meminjam</th>
                                             <th>Tanggal Kembali</th>
                                             <th>Tenggang Waktu</th>
+                                            <th>Status Peminjaman</th>
                                             <th>Tindakan</th>
                                         </tr>
                                     </thead>
@@ -219,10 +219,10 @@ session_start();
                         ?>
                                         <tr>
                                               <td><?php echo $data ['id_buku'];?></td>
-                                              <td><?php echo $data ['id_status'];?></td>
                                               <td><?php echo $data ['tgl_pinjam'];?></td>
                                               <td><?php echo $data ['tgl_kembali'];?></td>
                                               <td><?php echo $data ['lama_pinjam'];?></td>
+                                              <td><?php echo $data ['id_status'];?></td>
                                             <td><a href="pdf.php" class="btn btn-warning"><span class="glyphicon glyphicon-edit"></span>Baca Kembali</a><a href="hapus_peminjaman.php?id=<?php echo $data['id_peminjaman'];?>"  onclick="return confirm('yakin ingin menghapus buku ini?');" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span>Hapus</a></td>
                                         </tr>
 

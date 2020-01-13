@@ -28,14 +28,10 @@ function upload1() {
 	$tmpname = $_FILES['buku']['tmp_name'];
 
 	//cek apakah tidak ada gambar yang diupload
-	if( $error === 4 ) {
-		echo "<script>
-				alert('Pilih pdf terlebih dahulu!'); 
-				</script>";
-				return false;
+	
 
 
-	}
+
 
 	move_uploaded_file($tmpname, 'e-book/' . $namafile);
 
@@ -51,14 +47,10 @@ function upload() {
 	$tmpname = $_FILES['gambar']['tmp_name'];
 
 	//cek apakah tidak ada gambar yang diupload
-	if( $error === 4 ) {
-		echo "<script>
-				alert('Pilih gambar terlebih dahulu!'); 
-				</script>";
-				return false;
+	
 
 
-	}
+
 
 	move_uploaded_file($tmpname, 'img/' . $namafile);
 
