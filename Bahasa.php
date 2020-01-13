@@ -189,7 +189,7 @@ session_start();
         			<div class="col-lg-3 col-12 order-2 order-lg-1 md-mt-40 sm-mt-40">
         				<div class="shop__sidebar">
         					<aside class="wedget__categories poroduct--cat">
-        						<h3 class="wedget__title">Categories</h3>
+        						<h3 class="wedget__title">Kategori</h3>
         						<ul>
         							<li><a href="Ipa.php">IPA <span>(6)</span></a></li>
         							<li><a href="Ips.php">IPS <span>(1)</span></a></li>
