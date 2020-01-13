@@ -49,7 +49,7 @@ font-size: 16px;"> Perpustakaan Online &nbsp; </div>
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
 				<li class="text-center">
-                    <img src="assets/img/find_user.png" class="user-image img-responsive"/>
+                    <img class="user-image img-responsive"/>
 					</li>
                     <li>
                         <a  href="homeadmin.php"><i class="fa fa-dashboard fa-3x"></i> Home </a>
@@ -71,7 +71,7 @@ font-size: 16px;"> Perpustakaan Online &nbsp; </div>
             <div id="page-inner">
                 <div class="row">
                     <div class="col-md-12">
-                    <h2 style="text-align: center;"><span style="color: black;">Form Buku</h2> 
+                   <h2 style="text-align: center;">Form Buku</h2>   
                     </div>
                 </div>
                  <!-- /. ROW  -->
