@@ -1,5 +1,9 @@
 <?php
 require ("koneksi.php");
+
+session_start();
+@$sess = $_SESSION['username'];
+
 ?>
 <!doctype html>
 <html class="no-js" lang="zxx">
@@ -72,30 +76,35 @@ require ("koneksi.php");
                                                 </nav>
                                         </div>
                                         <div class="col-md-8 col-sm-8 col-5 col-lg-2">
-                                                <ul class="header__sidebar__right d-flex justify-content-end align-items-center">
-                                                        <li class="shop_search"><a class="search__active" href="#" ></a></li>
-                                                        <li class="setting__bar__icon"><a class="setting__active" href="#"></a>
-                                                                <div class="searchbar__content setting__block">
-                                                                        <div class="content-inner">
-                                                                                <div class="switcher-currency">
-                                                                                        <strong class="label switcher-label">
-                                                                                                <span>My Account</span>
-                                                                                        </strong>
-                                                                                        <div class="switcher-options">
-                                                                                                <div class="switcher-currency-trigger">
-                                                                                                        <div class="setting__menu">
-                                                                                                                <span><a href="#" value="<?php $data['nama_user']?>"> </a></span>
-                                                                                                                <span><a href="#">Sign In</a></span>
-                                                                                                        </div>
-                                                                                                </div>
-                                                                                        </div>
-                                                                                </div>
-                                                                        </div>
-                                                                </div>
-                                                        </li>
-                                                </ul>
+                        <ul class="header__sidebar__right d-flex justify-content-end align-items-center">
+                            <li class="shop_search"><a class="search__active" href="#" ></a></li>
+                            <li class="setting__bar__icon"><a class="setting__active" href="#"></a>
+                                <div class="searchbar__content setting__block">
+                                    <div class="content-inner">
+                                        <div class="switcher-currency">
+                                            <?php
+                                                $query = mysqli_query($koneksi, "SELECT * FROM tb_login_user WHERE username = '$sess'"); //digunakan untuk mengambil data dari database lalu menmapilkannya pada tabel
+                                                while($data = mysqli_fetch_array($query)) {//untuk memecahkan data menjadi array dan memasukkan ke dalam variabel data agar data bisa kita tampilkan dalam bentuk perulangan //aray dalam bentuk object menjadi array yang kita kenal
+                                                ?>
+                                            <strong class="label switcher-label">
+                                                <span><a href="#"><?php echo $data['nama_user']?></a></span>
+                                            </strong>
+                                            <?php } ?>
+                                            <div class="switcher-options">
+                                                <div class="switcher-currency-trigger">
+                                                    <div class="setting__menu">
+                                                        <span><a href="#" value="<?php $data['nama_user']?>"> </a></span>
+                                                        <span><a href="index.php">Logout</a></span>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
+                                    </div>
                                 </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
                                 <!-- End Shopping Cart -->                      
                                 <!-- Start Mobile Menu -->
                                 <div class="row d-none">
@@ -214,7 +223,7 @@ require ("koneksi.php");
                                               <td><?php echo $data ['tgl_pinjam'];?></td>
                                               <td><?php echo $data ['tgl_kembali'];?></td>
                                               <td><?php echo $data ['lama_pinjam'];?></td>
-                                            <td><a class="btn btn-warning"><span class="glyphicon glyphicon-edit"></span>Baca Kembali</a><a href="hapus_peminjaman.php?id=<?php echo $data['id_peminjaman'];?>"  onclick="return confirm('yakin ingin menghapus buku ini?');" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span>Hapus</a></td>
+                                            <td><a href="pdf.php" class="btn btn-warning"><span class="glyphicon glyphicon-edit"></span>Baca Kembali</a><a href="hapus_peminjaman.php?id=<?php echo $data['id_peminjaman'];?>"  onclick="return confirm('yakin ingin menghapus buku ini?');" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span>Hapus</a></td>
                                         </tr>
 
                                         <?php } ?>
