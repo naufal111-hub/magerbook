@@ -184,7 +184,7 @@ session_start();
         			<div class="col-lg-3 col-12 order-2 order-lg-1 md-mt-40 sm-mt-40">
         				<div class="shop__sidebar">
         					<aside class="wedget__categories poroduct--cat">
-        						<h3 class="wedget__title">Categories</h3>
+        						<h3 class="wedget__title">kategori</h3>
         						<ul>
         							<li><a href="Ipa.php">IPA <span>(6)</span></a></li>
         							<li><a href="Ips.php">IPS <span>(4)</span></a></li>
@@ -201,18 +201,17 @@ session_start();
 									<div class="shop__list nav justify-content-center" role="tablist">
 			     
 			                        </div>
-			                        <p>ALL CATEGORIES</p>
-			                        <div class="product__content content--center">
+			                        <p>Buku yang di cari</p>
+			                       <div class="orderby__wrapper">
 		                        </div>
         					</div>
         				</div>
         				<div>
-        					<section class="wn__product__area brown--color pt--70  pb--30">
+        					
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="section__title text-center">
-							<h2 class="title__be--2" style="color: black"><span style="color: black"></span></h2>
 						</div>
 					</div>
 				</div>
@@ -238,6 +237,9 @@ session_start();
 					        		<td>" . $data['pengarang'] . "</td>
 					        		</tr>";  */
 						    ?>
+						    <div class="tab__container">
+	        				<div class="shop-grid tab-pane fade show active" id="nav-grid" role="tabpanel">
+	        					<div class="row">
 								<!-- Start Single Product -->
 								<div class="product product__style--3">
 										<div class="product__thumb">
@@ -249,17 +251,20 @@ session_start();
 										</div>
 									</div>
 								</div>
-
+									<div class="product__content content--center">
 											<div class="action">
 												<div class="actions_inner">
 													<ul class="add_to_links">
-														
-														<li><a class="wishlist" href="tansaksi."><i class="bi bi-shopping-cart-full"></i></a></li>
-														
-														<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="bi bi-search"></i></a></li>
+														<li><a class="wishlist" href="transaksi.php"><i class="bi bi-shopping-cart-full"></i></a></li>
+														<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal1"><i class="bi bi-search"></i></a></li>
 													</ul>
 												</div>
 											</div>
+											<div class="product__hover--content">
+												
+											</div>
+										</div>
+		        					</div>
 								<!-- End Single Product -->
 						    <?php
 							}
@@ -267,15 +272,19 @@ session_start();
 					    }
 					}
 					?>
-
-					<!-- Tutup hasil pencarian -->
-
-
-					</div>
-				</div>
-				<!-- End Single Tab Content -->
-			</div>
-		</section>
+</div>
+	        					<ul class="wn__pagination">
+	        					</ul>
+	        				</div>
+	        				<div class="shop-grid tab-pane fade" id="nav-list" role="tabpanel">
+	        					<div class="list__view__wrapper">
+	        					</div>
+	        				</div>
+        				</div>
+        			</div>
+        		</div>
+        	</div>
+        </div>
         <!-- End Shop Page -->
 		<!-- Footer Area -->
 		<footer id="wn__footer" class="footer__area bg__cat--8 brown--color">
@@ -301,8 +310,10 @@ session_start();
 		<!-- QUICKVIEW PRODUCT -->
 		<div id="quickview-wrapper">
 		    <!-- Modal -->
-		    <div class="modal fade" id="productmodal" tabindex="-1" role="dialog">
-		        <div class="modal-dialog modal__container" role="document" style="height: 400px; width: 800px;>
+		  <div id="quickview-wrapper">
+		    <!-- Modal -->
+		    <div class="modal fade" id="productmodal1" tabindex="-1" role="dialog">
+		        <div class="modal-dialog modal__container" role="document" style="height: 500px; width: 500px;">
 		            <div class="modal-content">
 		                <div class="modal-header modal__header">
 		                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -312,11 +323,22 @@ session_start();
 		                        <!-- Start product images -->
 		                        <div class="product-images">
 		                            <div class="main-image images">
-		                                <img alt="big images" src="images/books/14.png">
+		                                <img alt="big images" src="images/product/big-img/14.png">
 		                            </div>
 		                        </div>
-		                        <div class="action">
-		                        <div class="quick-desc">
+		                        <!-- end product images -->
+		                        <div class="buku-info">
+		                            <h3>Biologi Kelas X Kurikulum 2006</h3>
+		                            <div class="rating__and__review">
+		                                <ul class="rating">
+		                                    <li><span class="ti-star"></span></li>
+		                                    <li><span class="ti-star"></span></li>
+		                                    <li><span class="ti-star"></span></li>
+		                                    <li><span class="ti-star"></span></li>
+		                                    <li><span class="ti-star"></span></li>
+		                                </ul>
+		                            </div>
+		                            <div class="quick-desc">
 										<h6>Judul	 		: Biologi Kelas X Kurikulum 2006</h6>
 										<h6>Penerbit 		: Pusat Perbukuan</h6>
 										<h6>Penulis  		: Moch.Anshori</h6>
@@ -324,7 +346,7 @@ session_start();
 		                            </div>
 		                            <div class="addtocart-btn">
 										<a href="pdf.php">Read Now</a>
-		                            </div>
+										
 		                            </div>
 		                        </div>
 		                    </div>
