@@ -86,7 +86,7 @@ session_start();
 												while($data = mysqli_fetch_array($query)) {//untuk memecahkan data menjadi array dan memasukkan ke dalam variabel data agar data bisa kita tampilkan dalam bentuk perulangan //aray dalam bentuk object menjadi array yang kita kenal
 												?>
 											<strong class="label switcher-label">
-												<span><a href="#"><?php echo $data['nama_user']?></a></span>
+												<span><a><?php echo $data['nama_user']?></a></span>
 											</strong>
 											<?php } ?>
 											<div class="switcher-options">
@@ -202,25 +202,6 @@ session_start();
 					<div class="product product__style--3">
 						<div class="col-lg-3 col-md-4 col-sm-6 col-12">
 							<div class="product__thumb">
-
-								<a class="first__img" href=" "><img src="images/books/2.png" alt="product image" style="height: 200px; height: 400px;"></a>
-								<div class="hot__box">
-									<span class="hot-label">HOT</span>
-								</div>
-							</div>
-							<div class="product__content content--center">
-								<h4><a href="ips.php">SBMPTN SOSHUM 2019</a></h4>
-								<ul class="prize d-flex">
-								</ul>
-								<div class="action">
-									<div class="actions_inner">
-									<ul class="add_to_links">
-										<li><a class="wishlist" href="transaksi.php"><i class="bi bi-shopping-cart-full"></i></a></li>
-										<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal1"><i class="bi bi-search"></i></a></li>
-									</ul>
-									</div>
-								</div>
-
 										<?php
 												$query = mysqli_query($koneksi, "SELECT * FROM tb_buku WHERE gambar = 'ipa.png'"); //digunakan untuk mengambil data dari database lalu menmapilkannya pada tabel
 												while($data = mysqli_fetch_array($query)) {//untuk memecahkan data menjadi array dan memasukkan ke dalam variabel data agar data bisa kita tampilkan dalam bentuk perulangan //aray dalam bentuk object menjadi array yang kita kenal
@@ -229,7 +210,6 @@ session_start();
 								<a class="first__img" href="ipa.php"><img src="img/<?php echo $data['gambar'] ?>" alt="product image" style="height: 200px; height: 400px;"></a>
 								<td><?php echo $data['judul']?></td>
 							<?php }?>
-
 							</div>
 						</div>
 					</div>
@@ -350,7 +330,7 @@ session_start();
 		                        <!-- Start product images -->
 		                        <div class="product-images">
 		                            <div class="main-image images">
-		                                <img alt="big images" src="images/books/2.png"">
+		                                <img alt="big images" src="images/books/2.png">
 		                            </div>
 		                        </div>
 		                        <!-- end product images -->
