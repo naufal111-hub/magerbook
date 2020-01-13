@@ -60,7 +60,7 @@
 				</div>
 
 				<div class="text-center p-t-57 p-b-20">
-					<a href="pass.php " class="txt1 hov1">
+					<a href="pass2.php " class="txt1 hov1">
 						Forgot Password
 					</a>
 				</div>
