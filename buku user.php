@@ -111,28 +111,23 @@ session_start();
 						<nav class="mobilemenu__nav">
 							<ul class="meninmenu">
 								<li><a href="homeuser.php">Home</a></li>
-								<li class="drop"><a href="buku user.php" >Buku</a>
-									<div class="megamenu mega03" style="height: 200px; width: 150px;">
-										<ul class="item item03">
-											<li class="title">Kategori</li>
-											<li><a href="ipa.php">IPA </a></li>
-											<li><a href="ips.php">IPS </a></li>
-											<li><a href="bahasa.php">BAHASA </a></li>
-											<li><a href="umum.php">UMUM </a></li>
-										</ul>
-									</div>
-								</li>
+								<li><a href="index.php">Pages</a>
 									<ul>
 										
-											
+											<ul>
+												<li><a href="portfolio.html">Portfolio</a></li>
+												<li><a href="portfolio-details.html">Portfolio Details</a></li>
+											</ul>
 										</li>
 										<li><a href="my-account.html">My Account</a></li>
 										
 									</ul>
 								</li>
+								<li><a href="shop-grid.php">Shop</a>
 								
-
-								
+									</ul>
+								</li>
+								<li><a href="contact.html">Contact</a></li>
 							</ul>
 						</nav>
 					</div>
@@ -200,13 +195,13 @@ session_start();
 									<div class="shop__list nav justify-content-center" role="tablist">
 			     
 			                        </div>
-			                        <p> SEMUA KATEGORI</p>
-			                        <div class="product__content content--center">
+			                        <p>Semua Buku</p>
+			                        <div class="orderby__wrapper">
 		                        </div>
         					</div>
         				</div>
+        			</div>
         				<div>
-        					<section class="wn__product__area brown--color pt--70  pb--30">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12">
@@ -224,7 +219,11 @@ session_start();
 				</div>
 				<!-- End Single Tab Content -->
 			</div>
-		</section>
+
+		<div class="tab__container">
+	        				<div class="shop-grid tab-pane fade show active" id="nav-grid" role="tabpanel">
+	        					<div class="row">
+	        						<!-- Start Single Product -->
 		        					<div class="product product__style--3 col-lg-4 col-md-4 col-sm-6 col-12">
 			        					<div class="product__thumb">
 											<a class="first__img" href="ips.php"><img src="images/books/2.png" alt="product image" style="height: 200px; height: 400px;"></a>
