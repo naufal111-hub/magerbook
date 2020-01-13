@@ -2,19 +2,16 @@
 	require ("koneksi.php"); //untuk koneksi ke database untuk update/edit data ke database lalu menangkap data yang dikirim dari form dan memasukkan ke variabel masing-masing
 	//deklarasi variabel
 	$id_buku=$_POST['id'];
+	$gambar =$_POST['gambar'];
 	$gambar = upload();
-	if( !$gambar ) {
-		return false;
-	}
+	
 	$judul = $_POST['judul'];
 	$kategori = $_POST['kategori'];
 	$pengarang = $_POST['pengarang'];
 	$halaman = $_POST['halaman'];
 	$tahun_terbit = $_POST['tahun'];
 	$link_path = upload1();
-	if( !$link_path ) {
-		return false;
-	}
+	
 	//query untuk menedit pada tabel siswa
 	$query = "UPDATE tb_buku SET gambar='$gambar', judul='$judul', id_kategori='$kategori', pengarang='$pengarang', halaman='$halaman', thn_terbit='$tahun_terbit', link='$link_path' WHERE id_buku='$id_buku'";
 
