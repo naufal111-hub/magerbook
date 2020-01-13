@@ -76,7 +76,7 @@ session_start();
 					</div>
 					<div class="col-md-8 col-sm-8 col-5 col-lg-2">
 						<ul class="header__sidebar__right d-flex justify-content-end align-items-center">
-							<li class="shop_search"><a class="search__active" href="#" ></a></li>
+							<li class="shop_search"><a class="search__active" href="buku user.php" ></a></li>
 							<li class="setting__bar__icon"><a class="setting__active" href="#"></a>
 								<div class="searchbar__content setting__block">
 									<div class="content-inner">
@@ -153,15 +153,15 @@ session_start();
 		</header>
 		<!-- //Header -->
 		<!-- Start Search Popup -->
-		<div class="box-search-content search_active block-bg close__top">
-			<form id="search_mini_form" class="minisearch" action="#">
+		<div class="brown--color box-search-content search_active block-bg close__top">
+			<form id="search_mini_form" class="minisearch" action="hasil_pencarian.php" method="POST">
 				<div class="field__search">
-					<input type="text" placeholder="Search entire store here...">
-					<div class="action">
-						<a href="#"><i class="zmdi zmdi-search"></i></a>
-					</div>
+					<input type="text" name="q" placeholder="Masukan yang ingin anda cari ...">
+						<input type="submit">
+<!-- 						<a href="hasil_pencarian.php"><i class="zmdi zmdi-search"></i></a> -->
 				</div>
 			</form>
+
 			<div class="close__wrap">
 				<span>close</span>
 			</div>
@@ -208,15 +208,31 @@ session_start();
 									<div class="shop__list nav justify-content-center" role="tablist">
 			     
 			                        </div>
-			                        <p>ALL CATEGORIES</p>
+			                        <p> <p>ALL CATEGORIES</p>
 			                        <div class="product__content content--center">
 		                        </div>
         					</div>
         				</div>
-        				<div class="tab__container">
-	        				<div class="shop-grid tab-pane fade show active" id="nav-grid" role="tabpanel">
-	        					<div class="row">
-	        						<!-- Start Single Product -->
+        				<div>
+        					<section class="wn__product__area brown--color pt--70  pb--30">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="section__title text-center">
+						</div>
+					</div>
+				</div>
+				<!-- Start Single Tab Content -->
+				<div class="furniture--4 border--round arrows_style owl-carousel owl-theme row mt--50">
+					<!-- Start Single Product -->
+					<!-- Start Single Product -->
+					<!-- Start Single Product -->
+						<!-- Start Single Product -->
+					</div>
+				</div>
+				<!-- End Single Tab Content -->
+			</div>
+		</section>
 		        					<div class="product product__style--3 col-lg-4 col-md-4 col-sm-6 col-12">
 			        					<div class="product__thumb">
 											<a class="first__img" href="ips.php"><img src="images/books/2.png" alt="product image" style="height: 200px; height: 400px;"></a>

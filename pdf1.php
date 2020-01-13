@@ -1,11 +1,35 @@
+<?php include "koneksi.php"; ?>
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Title of the document</title>
-  </head>
-  <body>
-    <h1>How to disable downloading of the PDF document</h1>
-    <iframe src="./7908-17458-1-PB.pdf" width="100%" height="500px">
-    </iframe>
-  </body>
+<html lang="en">
+           
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-heading"></div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="pull-left">DOKUMEN PDF</div>
+                            <br>
+                        </div>
+                        <div class="panel-body">
+                           <?php 
+                           $query=mysqli_query($koneksi,"select * from tb_buku ");
+                           $data=mysqli_fetch_row($query);
+                            ?>
+                            <div style='border-bottom:1px solid #000'><?php echo $data[1]; ?></div>
+                            <div><?php echo $data[3]; ?></div><br>
+                            <div>
+                                <iframe src=width="1000" height="1000" src="http://yourwebsite.com/assets/js/web/viewer.html?file=http://yourwebsite.com/yourpdffile.pdf"></iframe>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
 </html>
