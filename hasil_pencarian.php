@@ -255,15 +255,12 @@ session_start();
 											<div class="action">
 												<div class="actions_inner">
 													<ul class="add_to_links">
-<<<<<<< HEAD
+
 														
 														<li><a class="wishlist" href="transaksi.php?id=<?php echo $data['id_buku'];?>"><i class="bi bi-shopping-cart-full"></i></a></li>
 														
 														<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="bi bi-search"></i></a></li>
-=======
-														<li><a class="wishlist" href="transaksi.php?id=<?php echo $data['id_buku'];?>"><i class="bi bi-shopping-cart-full"></i></a></li>
-														<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal1"><i class="bi bi-search"></i></a></li>
->>>>>>> f24eee83429161faaa05a04ba554b3c84b4ff4c5
+
 													</ul>
 												</div>
 											</div>
