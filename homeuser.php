@@ -1,9 +1,13 @@
 <?php
-include ("koneksi.php");
+include ("session.php");
 
 session_start();
 @$sess = $_SESSION['username'];
 
+if(!isset($login_session)) {
+	mysqli_close($koneksi); // Menutup koneksi
+	header('Location:./index.php'); // Mengarahkan ke Home Page
+	}
 
 ?>
 <!doctype html>
@@ -93,7 +97,8 @@ session_start();
 												<div class="switcher-currency-trigger">
 													<div class="setting__menu">
 														<span><a href="#" value="<?php $data['nama_user']?>"> </a></span>
-														<span><a href="index.php">Logout</a></span>
+														<span><a href="logout.php">Logout</a></span>
+
 													</div>
 												</div>
 											</div>

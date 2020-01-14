@@ -1,3 +1,7 @@
+<?php
+  include ('koneksi.php');
+  include ('session.php'); //terhubung dengan session
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,13 +32,6 @@
 <!--===============================================================================================-->
 </head>
 <body>
-	<?php 
-		if(isset($_GET['pesan'])){
-			if($_GET['pesan']=="gagal"){
-				echo "<div class='alert'>Username dan Password tidak sesuai !</div>";
-			}
-		}
-		?>
 	
 	<div class="container-login100" style="background-image: url('images/buku.jpg');">
 		<div class="wrap-login100 p-l-55 p-r-55 p-t-80 p-b-30">
@@ -60,7 +57,7 @@
 				</div>
 
 				<div class="text-center p-t-57 p-b-20">
-					<a href="pass2.php " class="txt1 hov1">
+					<a href="pass.php " class="txt1 hov1">
 						Forgot Password
 					</a>
 				</div>
@@ -70,8 +67,6 @@
 		</div>
 	</div>
 	
-	
-
 	<div id="dropDownSelect1"></div>
 	
 <!--===============================================================================================-->

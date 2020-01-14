@@ -1,7 +1,14 @@
 <?php
-require ("koneksi.php");
+include ("session.php");
+
 session_start();
 @$sess = $_SESSION['username'];
+
+if(!isset($login_session)) {
+	mysqli_close($koneksi); // Menutup koneksi
+	header('Location:./index.php'); // Mengarahkan ke Home Page
+	}
+
 ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -60,7 +67,7 @@ font-size: 16px;"> Perpustakaan Online &nbsp;</a> </div>
                         <a  href="bukuadmin.php"><i class="fa fa-edit fa-3x"></i> Buku </a>
                     </li>				
 					 <li  >
-                        <a   href="index.php"><i class="fa fa-bolt fa-3x"></i> Logout </a>
+                        <a   href="logout.php"><i class="fa fa-bolt fa-3x"></i> Logout </a>
                     </li>	             
         </nav>  
         <!-- /. NAV SIDE  -->
