@@ -21,7 +21,7 @@
                             <div style='border-bottom:1px solid #000'><?php echo $data[1]; ?></div>
                             <div><?php echo $data[3]; ?></div><br>
                             <div>
-                                <embed src="e-book/<?php echo $data[7]; ?>" type="application/pdf" width="100%" height="700"/>
+                                <embed src="e-book/<?php echo $data[id_buku]; ?>" type="application/pdf" width="100%" height="700"/>
                                 
                             </div>
                         </div>
