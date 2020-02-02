@@ -4,10 +4,11 @@ include ("session.php");
 session_start();
 @$sess = $_SESSION['username'];
 
-if(!isset($login_session)) {
-	mysqli_close($koneksi); // Menutup koneksi
-	header('Location:./index.php'); // Mengarahkan ke Home Page
-	}
+// cek apakah yang mengakses halaman ini sudah login
+if($_SESSION['id_akses']==""){
+    header("location:index.php?pesan=gagal");
+}
+ 
 
 ?>
 <!doctype html>

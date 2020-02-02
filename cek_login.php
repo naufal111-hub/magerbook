@@ -15,7 +15,9 @@ $login = mysqli_query($koneksi,"select * from tb_login_user where username='$use
 // menghitung jumlah data yang ditemukan
 $cek = mysqli_num_rows($login);
 
- $data = mysqli_fetch_assoc($login);
+if($cek > 0){
+
+$data = mysqli_fetch_assoc($login);
 
  // cek jika user login sebagai admin
  if($data['id_akses']=="1"){
@@ -35,7 +37,10 @@ $cek = mysqli_num_rows($login);
  }else{
 
 	// alihkan ke halaman login kembali
- 	header("location:index.php?pesan=gagal");
- }
+	 header("location:index.php?pesan=gagal");
+	}
+}else{
+	header("location:index.php?pesan=gagal");
+}
 
 ?>
