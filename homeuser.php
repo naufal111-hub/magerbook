@@ -117,13 +117,14 @@ if($_SESSION['id_akses']==""){
 							<ul class="meninmenu">
 								<li><a href="homeuser.php">Home</a></li>
 								
-								<li><a href="buku user.php">Shop</a>
+								<li><a href="buku user.php">Buku</a>
 									<ul>
-										<li><a href="shop-grid.php">Shop Grid</a></li>
-										<li><a href="single-product.html">Single Product</a></li>
-								
+										<li><a href="ipa.php">IPA</a></li>
+										<li><a href="ips.php">IPS</a></li>
+										<li><a href="bahasa.php">BAHASA</a></li>
 									</ul>
 								</li>
+								<li><a href="transaksi.php">Transaksi</a></li>
 							</ul>
 						</nav>
 					</div>
@@ -196,7 +197,7 @@ if($_SESSION['id_akses']==""){
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="section__title text-center">
-							<h2 class="title__be--2" style="color: black">New <span style="color: black">Books</span></h2>
+							<h2 class="title__be--2" style="color: black">Favourite <span style="color: black">Books</span></h2>
 						</div>
 					</div>
 				</div>

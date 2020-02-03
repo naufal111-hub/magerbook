@@ -89,7 +89,7 @@ font-size: 16px;"> Perpustakaan Online &nbsp; </div>
             
             <tr>
                 <td>Cover</td>
-                <td>: <input type="file" name="gambar" value="<?php echo $data['gambar']?>"></td>
+                <td>: <input type="text" name="gambar" value="<?php echo $data['gambar']?>"></td>
             </tr>
 
             <tr>
@@ -124,7 +124,7 @@ font-size: 16px;"> Perpustakaan Online &nbsp; </div>
             </tr>
             <tr>
                 <td>e-book</td>
-                <td>: <input type="file" name="buku"></td>
+                <td>: <input type="text" name="buku" value="<?php echo $data['link']?>"></td>
             </tr>
             
             <tr>

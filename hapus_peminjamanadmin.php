@@ -8,9 +8,9 @@ if(isset($_GET['id'])){
 	 }else{
 		$del=mysqli_query($koneksi,"DELETE FROM tb_peminjaman WHERE id_peminjaman='$id_peminjaman'");//query untuk menghapus data pada kolom
 		if($del){
-	  			header("location:transaksi.php"); //apabila file berhasil dihapus maka langsung menuju halaman pendaftar.php
+	  			header("location:homeadmin.php"); //apabila file berhasil dihapus maka langsung menuju halaman pendaftar.php
 		}else{
-	  		header("location:transaksi.php");//apabila file yang akan dihapus gagl terhapus maka akan menuju halaman pendaftar.php
+	  		header("location:homeadmin.php");//apabila file yang akan dihapus gagl terhapus maka akan menuju halaman pendaftar.php
 	  	}
 	 }
 }else{

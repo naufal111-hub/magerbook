@@ -102,32 +102,35 @@ font-size: 16px;"> Perpustakaan Online &nbsp;</a> </div>
                         <form action="#">               
                             <div class="table-content wnro__table table-responsive">
                                 <table>
-                                    <thead>
-                                    	<tr class="title-top">
-                                    		<th>User</th>
-                                            <th>Kode Buku</th>
-                                            <th>Status Peminjaman</th>
-                                            <th>Tanggal Menminjam</th>
+                                     <thead>
+                                        <tr class="title-top">
+                                            <th>No</th>
+                                            <th>User</th>
+                                            <th>Judul Buku</th>
+                                            <th>Tanggal Meminjam</th>
                                             <th>Tanggal Kembali</th>
                                             <th>Tenggang Waktu</th>
-                                            <th>Tindakan</th>
+                                            <th>Status Peminjaman</th>
+                                            <th>Aksi</th>
                                         </tr>
                                     </thead>
                                     <tbody>
+                                      <?php $i = 1; ?>
                                          <?php
-                        $query = mysqli_query($koneksi, "SELECT * FROM tb_peminjaman"); //digunakan untuk mengambil data dari database lalu menmapilkannya pada tabel
+                        $query = mysqli_query($koneksi, "SELECT * FROM tb_peminjaman, tb_buku, tb_login_user, tb_status WHERE tb_peminjaman.id_buku = tb_buku.id_buku and tb_peminjaman.id_user = tb_login_user.id_user and tb_peminjaman.id_status = tb_status.id_status order by id_peminjaman"); //digunakan untuk mengambil data dari database lalu menmapilkannya pada tabel
                         while($data = mysqli_fetch_array($query)) { //untuk memecahkan data menjadi array dan memasukkan ke dalam variabel data agar data bisa kita tampilkan dalam bentuk perulangan //aray dalam bentuk object menjadi array yang kita kenal
                         ?>
                                         <tr>
-                                        	<td><?php echo $data ['id_user'];?></td>
-                                              <td><?php echo $data ['id_buku'];?></td>
-                                              <td><?php echo $data ['id_status'];?></td>
+                                              <td><?= $i; ?></td> 
+                                              <td><?php echo $data ['nama_user'];?></td>
+                                              <td><?php echo $data ['judul'];?></td>
                                               <td><?php echo $data ['tgl_pinjam'];?></td>
                                               <td><?php echo $data ['tgl_kembali'];?></td>
-                                              <td><?php echo $data ['lama_pinjam'];?></td>
-                                            <td><a href="hapus_peminjaman.php?id=<?php echo $data['id_peminjaman'];?>"  onclick="return confirm('yakin ingin menghapus buku ini?');" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span>Hapus</a></td>
+                                              <td><?php echo $data ['lama_pinjam'];?> Hari</td>
+                                              <td><?php echo $data ['status'];?></td>
+                                            <td><a href="hapus_peminjamanadmin.php?id=<?php echo $data['id_peminjaman'];?>"  onclick="return confirm('yakin ingin menghapus buku ini?');" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span>Hapus</a></td>
                                         </tr>
-
+                                          <?php $i++; ?>
                                         <?php } ?>
                                     </tbody>
                                 </table>
