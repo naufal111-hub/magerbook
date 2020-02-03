@@ -14,17 +14,20 @@
                             <br>
                         </div>
                         <div class="panel-body">
-                           <?php 
-                           $query=mysqli_query($koneksi,"select * from tb_buku ");
-                           $data=mysqli_fetch_row($query);
-                            ?>
-                            <div style='border-bottom:1px solid #000'><?php echo $data[1]; ?></div>
-                            <div><?php echo $data[3]; ?></div><br>
+                           <?php
+                                                $query = mysqli_query($koneksi, "SELECT * FROM tb_buku"); //digunakan untuk mengambil data dari database lalu menmapilkannya pada tabel
+                                                while($data = mysqli_fetch_array($query)) {//untuk memecahkan data menjadi array dan memasukkan ke dalam variabel data agar data bisa kita tampilkan dalam bentuk perulangan //aray dalam bentuk object menjadi array yang kita kenal
+                                                ?>
+                                          
+                                            
+                            <div style='border-bottom:1px solid #000'><?php echo $data['judul']; ?></div>
+                            <div><?php echo $data['pengarang']; ?></div><br>
                             <div>
-                                <embed src="e-book/<?php echo $data[id_buku]; ?>" type="application/pdf" width="100%" height="700"/>
+                                <embed src="e-book/<?php echo $data['link']; ?>" type="application/pdf" width="100%" height="700"/>
                                 
                             </div>
                         </div>
+                        <?php } ?>
                     </div>
                 </div>
             </div>

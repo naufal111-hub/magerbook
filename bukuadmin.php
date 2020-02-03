@@ -8,7 +8,9 @@ session_start();
 <head>
       <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Admin MaBook </title>
+    <title>Admin MaBook|Buku </title>
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="images/favicon.ico">
 	<!-- BOOTSTRAP STYLES-->
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
      <!-- FONTAWESOME STYLES-->
@@ -36,7 +38,7 @@ session_start();
                         $query = mysqli_query($koneksi, "SELECT * FROM tb_login_user WHERE username = '$sess'"); //digunakan untuk mengambil data dari database lalu menmapilkannya pada tabel
                         while($data = mysqli_fetch_array($query)) {//untuk memecahkan data menjadi array dan memasukkan ke dalam variabel data agar data bisa kita tampilkan dalam bentuk perulangan //aray dalam bentuk object menjadi array yang kita kenal
                         ?>
-                <a class="navbar-brand" href="index.html" style="color: white"><?php echo $data['nama_user']?>
+                <a class="navbar-brand" href="homeadmin.php" style="color: white"><?php echo $data['nama_user']?>
                       <?php } ?> </a>
             </div>
   <div style="color: white;

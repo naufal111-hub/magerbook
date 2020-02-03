@@ -7,6 +7,8 @@ require ("koneksi.php");
       <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin MaBook </title>
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="images/favicon.ico">
 	<!-- BOOTSTRAP STYLES-->
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
      <!-- FONTAWESOME STYLES-->
@@ -42,7 +44,7 @@ font-size: 16px;"> Perpustakaan Online &nbsp; </div>
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
 				<li class="text-center">
-                    <img src="assets/img/find_user.png" class="user-image img-responsive"/>
+                    <img  class="user-image img-responsive"/>
 					</li>
                     <li>
                         <a  href="index.html"><i class="fa fa-dashboard fa-3x"></i> Home </a>
