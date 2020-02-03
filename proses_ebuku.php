@@ -3,7 +3,7 @@
 	//deklarasi variabel
 	$id_buku=$_POST['id'];
 	$gambar =$_POST['gambar'];
-	$gambar = upload();
+
 	
 	$judul = $_POST['judul'];
 	$kategori = $_POST['kategori'];
@@ -11,7 +11,7 @@
 	$halaman = $_POST['halaman'];
 	$tahun_terbit = $_POST['tahun'];
 	$link_path =$_POST['buku'];
-	$link_path = upload1();
+
 
 	//query untuk menedit pada tabel siswa
 	$query = "UPDATE tb_buku SET gambar='$gambar', judul='$judul', id_kategori='$kategori', pengarang='$pengarang', halaman='$halaman', thn_terbit='$tahun_terbit', link='$link_path' WHERE id_buku='$id_buku'";
