@@ -1,5 +1,7 @@
 <?php
 require ("koneksi.php");
+session_start();
+@$sess = $_SESSION['username'];
 if(isset($_GET['id'])){
     $id_user = $_GET['id'];
     $query = mysqli_query($koneksi, "SELECT * FROM tb_login_user WHERE tb_login_user.id_user='$id_user'"); 
@@ -37,7 +39,7 @@ if(isset($_GET['id'])){
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Admin MaBook</a> 
+                 <a class="navbar-brand" href="homeadmin.php">Admin ganteng</a> 
             </div>
   <div style="color: white;
 padding: 15px 50px 5px 50px;
@@ -52,13 +54,13 @@ font-size: 16px;"> Perpustakaan Online &nbsp; </div>
                     <img class="user-image img-responsive"/>
 					</li>
                     <li>
-                        <a  href="index.html"><i class="fa fa-dashboard fa-3x"></i> Home </a>
+                        <a  href="homeadmin.php"><i class="fa fa-dashboard fa-3x"></i> Home </a>
                     </li>
                     <li >
                         <a class="active-menu"  href="anggota.php"><i class="fa fa-table fa-3x"></i> Anggota </a>
                     </li>
                     <li  >
-                        <a  href="buku.html"><i class="fa fa-edit fa-3x"></i> Buku </a>
+                        <a  href="bukuadmin.php"><i class="fa fa-edit fa-3x"></i> Buku </a>
                     </li>				
 					<li  >
                         <a   href="index.php"><i class="fa fa-bolt fa-3x"></i> Logout </a>

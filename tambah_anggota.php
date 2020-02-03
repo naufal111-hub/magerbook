@@ -1,5 +1,7 @@
 <?php
 require ("koneksi.php");
+session_start();
+@$sess = $_SESSION['username'];
 ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -32,7 +34,12 @@ require ("koneksi.php");
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Admin MaBook</a> 
+                <?php
+                        $query = mysqli_query($koneksi, "SELECT * FROM tb_login_user WHERE username = '$sess'"); //digunakan untuk mengambil data dari database lalu menmapilkannya pada tabel
+                        while($data = mysqli_fetch_array($query)) {//untuk memecahkan data menjadi array dan memasukkan ke dalam variabel data agar data bisa kita tampilkan dalam bentuk perulangan //aray dalam bentuk object menjadi array yang kita kenal
+                        ?>
+                <a class="navbar-brand" href="homeadmin.php" style="color: white"><?php echo $data['nama_user']?>
+                      <?php } ?> </a>
             </div>
   <div style="color: white;
 padding: 15px 50px 5px 50px;
