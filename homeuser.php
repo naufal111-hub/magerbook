@@ -66,13 +66,13 @@ if($_SESSION['id_akses']==""){
 								<li class="drop with--one--item"><a href="homeuser.php" style="color: white">Home</a></li>
 								
 								<li class="drop"><a href="buku user.php" style="color: white">Books</a>
-									<div class="megamenu mega03" style="height: 200px; width: 150px;">
+									<div class="megamenu mega03" style="height: 180px; width: 150px;">
 										<ul class="item item03">
 											<li class="title">Kategori</li>
 											<li><a href="ipa.php">IPA </a></li>
 											<li><a href="ips.php">IPS </a></li>
 											<li><a href="bahasa.php">BAHASA </a></li>
-											<li><a href="umum.php">UMUM </a></li>
+										
 										</ul>
 									</div>
 								</li>
@@ -225,11 +225,11 @@ if($_SESSION['id_akses']==""){
 						<div class="col-lg-3 col-md-4 col-sm-6 col-12">
 							<div class="product__thumb">
 										<?php
-												$query = mysqli_query($koneksi, "SELECT * FROM tb_buku WHERE gambar = 'ipa.png'"); //digunakan untuk mengambil data dari database lalu menmapilkannya pada tabel
+												$query = mysqli_query($koneksi, "SELECT * FROM tb_buku WHERE gambar = 'ekonomi kelas XI Ismawanto.jpg'"); //digunakan untuk mengambil data dari database lalu menmapilkannya pada tabel
 												while($data = mysqli_fetch_array($query)) {//untuk memecahkan data menjadi array dan memasukkan ke dalam variabel data agar data bisa kita tampilkan dalam bentuk perulangan //aray dalam bentuk object menjadi array yang kita kenal
 												?>
 							
-								<a class="first__img" href="ipa.php"><img src="img/<?php echo $data['gambar'] ?>" alt="product image" style="height: 200px; height: 400px;"></a>
+								<a class="first__img" href="ips.php"><img src="img/<?php echo $data['gambar'] ?>" alt="product image" style="height: 200px; height: 400px;"></a>
 								<td><?php echo $data['judul']?></td>
 							<?php }?>
 							</div>
@@ -263,38 +263,6 @@ if($_SESSION['id_akses']==""){
 								<a class="first__img" href="ipa.php"><img src="img/<?php echo $data['gambar'] ?>" alt="product image" style="height: 200px; height: 400px;"></a>
 								<?php echo $data['judul']?>
 								<?php }?>
-							</div>
-						</div>
-					</div>
-					<!-- Start Single Product -->
-					<!-- Start Single Product -->
-					<div class="product product__style--3">
-						<div class="col-lg-3 col-md-4 col-sm-6 col-12">
-							<div class="product__thumb">
-										<?php
-												$query = mysqli_query($koneksi, "SELECT * FROM tb_buku WHERE gambar = 'bahasa jepang.png'"); //digunakan untuk mengambil data dari database lalu menmapilkannya pada tabel
-												while($data = mysqli_fetch_array($query)) {//untuk memecahkan data menjadi array dan memasukkan ke dalam variabel data agar data bisa kita tampilkan dalam bentuk perulangan //aray dalam bentuk object menjadi array yang kita kenal
-												?>
-							
-								<a class="first__img" href="bahasa.php"><img src="img/<?php echo $data['gambar'] ?>" alt="product image" style="height: 200px; height: 400px;"></a>
-								<?php echo $data['judul']?>
-							<?php }?>
-							</div>
-						</div>
-					</div>
-						<!-- Start Single Product -->
-					<!-- Start Single Product -->
-					<div class="product product__style--3">
-						<div class="col-lg-3 col-md-4 col-sm-6 col-12">
-							<div class="product__thumb">
-										<?php
-												$query = mysqli_query($koneksi, "SELECT * FROM tb_buku WHERE gambar = 'cinta.jpg'"); //digunakan untuk mengambil data dari database lalu menmapilkannya pada tabel
-												while($data = mysqli_fetch_array($query)) {//untuk memecahkan data menjadi array dan memasukkan ke dalam variabel data agar data bisa kita tampilkan dalam bentuk perulangan //aray dalam bentuk object menjadi array yang kita kenal
-												?>
-							
-								<a class="first__img" href="bahasa.php"><img src="img/<?php echo $data['gambar'] ?>" alt="product image" style="height: 200px; height: 400px;"></a>
-								<?php echo $data['judul']?>
-							<?php }?>
 							</div>
 						</div>
 					</div>

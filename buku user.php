@@ -60,14 +60,14 @@ session_start();
 								
 								<li class="drop with--one--item"><a href="homeuser.php" style="color: white">Home</a></li>
 								
-								<li class="drop"><a href="buku user.php" style="color: white">Books</a>
-									<div class="megamenu mega03" style="height: 200px; width: 150px;">
+								<li class="drop"><a href="buku user.php" style="color: white">Buku</a>
+									<div class="megamenu mega03" style="height: 180px; width: 150px;">
 										<ul class="item item03">
 											<li class="title">Kategori</li>
 											<li><a href="ipa.php">IPA </a></li>
 											<li><a href="ips.php">IPS </a></li>
 											<li><a href="bahasa.php">BAHASA </a></li>
-											<li><a href="umum.php">UMUM </a></li>
+											
 										</ul>
 									</div>
 								</li>
@@ -111,23 +111,15 @@ session_start();
 						<nav class="mobilemenu__nav">
 							<ul class="meninmenu">
 								<li><a href="homeuser.php">Home</a></li>
-								<li><a href="index.php">Pages</a>
-									<ul>
-										
-											<ul>
-												<li><a href="portfolio.html">Portfolio</a></li>
-												<li><a href="portfolio-details.html">Portfolio Details</a></li>
-											</ul>
-										</li>
-										<li><a href="my-account.html">My Account</a></li>
-										
-									</ul>
-								</li>
-								<li><a href="shop-grid.php">Shop</a>
 								
+								<li><a href="buku user.php">Buku</a>
+									<ul>
+										<li><a href="ipa.php">IPA</a></li>
+										<li><a href="ips.php">IPS</a></li>
+										<li><a href="bahasa.php">BAHASA</a></li>
 									</ul>
 								</li>
-								<li><a href="contact.html">Contact</a></li>
+								<li><a href="transaksi.php">Transaksi</a></li>
 							</ul>
 						</nav>
 					</div>
@@ -183,7 +175,7 @@ session_start();
         							<li><a href="Ipa.php">IPA <span>(6)</span></a></li>
         							<li><a href="Ips.php">IPS <span>(4)</span></a></li>
         							<li><a href="Bahasa.php">BAHASA <span>(6)</span></a></li>
-        							<li><a href="Umum.php">UMUM <span>(7)</span></a></li>
+        							
         						</ul>
         					</aside>
         				</div>
@@ -224,328 +216,36 @@ session_start();
 	        				<div class="shop-grid tab-pane fade show active" id="nav-grid" role="tabpanel">
 	        					<div class="row">
 	        						<!-- Start Single Product -->
+		        					<?php
+                        $query = mysqli_query($koneksi, "SELECT * FROM tb_buku"); //digunakan untuk mengambil data dari database lalu menmapilkannya pada tabel
+                        while($data = mysqli_fetch_array($query)) { //untuk memecahkan data menjadi array dan memasukkan ke dalam variabel data agar data bisa kita tampilkan dalam bentuk perulangan //aray dalam bentuk object menjadi array yang kita kenal
+                        ?>
+                        
 		        					<div class="product product__style--3 col-lg-4 col-md-4 col-sm-6 col-12">
 			        					<div class="product__thumb">
-											<a class="first__img" href="ips.php"><img src="images/books/2.png" alt="product image" style="height: 200px; height: 400px;"></a>
+											<a class="first__img" ><img src="img/<?php echo $data ['gambar'];?>" alt="product image" style="height: 200px; height: 400px;"></a>
 											<div class="hot__box">
-												<span class="hot-label">BEST SALLER</span>
+												<span class="hot-label"></span>
 											</div>
 										</div>
 										<div class="product__content content--center">
-											<h4><a href="ips.php">SBMPTN IPS</a></h4>
+											<h4><a><form  action="proses_tbuku.php" method="post"></form><input type="text" name="judul" value="<?php echo $data['judul']?>"></a></h4>
 											
 											<div class="action">
 												<div class="actions_inner">
 													<ul class="add_to_links">
-														
-														<li><a class="wishlist" href="transaksi.php"><i class="bi bi-shopping-cart-full"></i></a></li>
-														
-														<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="bi bi-search"></i></a></li>
+														<li ><a class="wishlist" href="proses_peminjaman.php"><img src="images/icons/rak.png"></a></li>
+														<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal1"><img src="images/icons/books.png"></a></li>
 													</ul>
 												</div>
 											</div>
 											<div class="product__hover--content">
-											
 											</div>
 										</div>
 		        					</div>
-		        					<!-- End Single Product -->
-	        						<!-- Start Single Product -->
-		        					<div class="product product__style--3 col-lg-4 col-md-4 col-sm-6 col-12">
-			        					<div class="product__thumb">
-											<a class="first__img" href="bahasa.php"><img src="images/books/10.png" alt="product image" style="height: 200px; height: 400px;"></a>
-											<div class="hot__box color--2">
-												<span class="hot-label">HOT</span>
-											</div>
-										</div>
-										<div class="product__content content--center">
-											<h4><a href="bahasa.php">Kamus Inggris Indonesia</a></h4>
-											
-											<div class="action">
-												<div class="actions_inner">
-													<ul class="add_to_links">
-														
-														<li><a class="wishlist" href="wishlist.html"><i class="bi bi-shopping-cart-full"></i></a></li>
-														
-														<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="bi bi-search"></i></a></li>
-													</ul>
-												</div>
-											</div>
-											<div class="product__hover--content">
-												
-											</div>
-										</div>
-		        					</div>
-		        					<!-- End Single Product -->
-	        						<!-- Start Single Product -->
-		        					<div class="product product__style--3 col-lg-4 col-md-4 col-sm-6 col-12">
-			        					<div class="product__thumb">
-											<a class="first__img" href="umum.php"><img src="images/books/7.png" alt="product image" style="height: 200px; height: 400px;"></a>
-											<div class="hot__box">
-												<span class="hot-label">HOT</span>
-											</div>
-										</div>
-										<div class="product__content content--center">
-											<h4><a href="umum.php">Majnun</a></h4>
-											
-											<div class="action">
-												<div class="actions_inner">
-													<ul class="add_to_links">
-														
-														<li><a class="wishlist" href="wishlist.html"><i class="bi bi-shopping-cart-full"></i></a></li>
-														
-														<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="bi bi-search"></i></a></li>
-													</ul>
-												</div>
-											</div>
-											<div class="product__hover--content">
-											
-											</div>
-										</div>
-		        					</div>
-		        					<!-- End Single Product -->
-	        						<!-- Start Single Product -->
-		        					<div class="product product__style--3 col-lg-4 col-md-4 col-sm-6 col-12">
-			        					<div class="product__thumb">
-											<a class="first__img" href="umum.php"><img src="images/books/4.png" alt="product image" style="height: 200px; height: 400px;"></a>
-											<div class="hot__box">
-												<span class="hot-label">HOT</span>
-											</div>
-										</div>
-										<div class="product__content content--center">
-											<h4><a href="umum.php">Victoria</a></h4>
-											
-											<div class="action">
-												<div class="actions_inner">
-													<ul class="add_to_links">
-														
-														<li><a class="wishlist" href="wishlist.html"><i class="bi bi-shopping-cart-full"></i></a></li>
-														
-														<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="bi bi-search"></i></a></li>
-													</ul>
-												</div>
-											</div>
-											<div class="product__hover--content">
-										
-											</div>
-										</div>
-		        					</div>
-		        					<!-- End Single Product -->
-	        						<!-- Start Single Product -->
-		        					<div class="product product__style--3 col-lg-4 col-md-4 col-sm-6 col-12">
-			        					<div class="product__thumb">
-											<a class="first__img" href="ipa.php"><img src="images/books/12.png" alt="product image" style="height: 200px; height: 400px;"></a>
-											<div class="hot__box">
-												<span class="hot-label">BEST SALER</span>
-											</div>
-										</div>
-										<div class="product__content content--center content--center">
-											<h4><a href="ipa.php">TOP BOOK</a></h4>
-											
-											<div class="action">
-												<div class="actions_inner">
-													<ul class="add_to_links">
-														
-														<li><a class="wishlist" href="wishlist.html"><i class="bi bi-shopping-cart-full"></i></a></li>
-														
-														<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="bi bi-search"></i></a></li>
-													</ul>
-												</div>
-											</div>
-											<div class="product__hover--content">
-												
-											</div>
-										</div>
-		        					</div>
-		        					<!-- End Single Product -->
-	        						<!-- Start Single Product -->
-		        					<div class="product product__style--3 col-lg-4 col-md-4 col-sm-6 col-12">
-			        					<div class="product__thumb">
-											<a class="first__img" href="umum.php"><img src="images/books/5.png" alt="product image" style="height: 200px; height: 400px;"></a>
-											<div class="hot__box">
-												<span class="hot-label">BEST SALER</span>
-											</div>
-										</div>
-										<div class="product__content content--center content--center">
-											<h4><a href="umum.php">Si ANAK KUAT</a></h4>
-											
-											<div class="action">
-												<div class="actions_inner">
-													<ul class="add_to_links">
-														
-														<li><a class="wishlist" href="wishlist.html"><i class="bi bi-shopping-cart-full"></i></a></li>
-														
-														<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="bi bi-search"></i></a></li>
-													</ul>
-												</div>
-											</div>
-											<div class="product__hover--content">
-											
-											</div>
-										</div>
-		        					</div>
-		        					<!-- End Single Product -->
-	        						<!-- Start Single Product -->
-		        					<div class="product product__style--3 col-lg-4 col-md-4 col-sm-6 col-12">
-			        					<div class="product__thumb">
-											<a class="first__img" href="bahasa.php"><img src="images/books/8.png" alt="product image" style="height: 200px; height: 400px;"></a>
-											<div class="hot__box">
-												<span class="hot-label">BEST SALER</span>
-											</div>
-										</div>
-										<div class="product__content content--center content--center">
-											<h4><a href="bahasa.php">Bahasa Jepang</a></h4>
-											
-											<div class="action">
-												<div class="actions_inner">
-													<ul class="add_to_links">
-														
-														<li><a class="wishlist" href="wishlist.html"><i class="bi bi-shopping-cart-full"></i></a></li>
-														
-														<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="bi bi-search"></i></a></li>
-													</ul>
-												</div>
-											</div>
-											<div class="product__hover--content">
-												
-											</div>
-										</div>
-		        					</div>
-		        					<!-- End Single Product -->
-	        						<!-- Start Single Product -->
-		        					<div class="product product__style--3 col-lg-4 col-md-4 col-sm-6 col-12">
-			        					<div class="product__thumb">
-											<a class="first__img" href="ipa.php"><img src="images/books/15.png" alt="product image" style="height: 200px; height: 400px;"></a>
-											<div class="hot__box">
-												<span class="hot-label">BEST SALER</span>
-											</div>
-										</div>
-										<div class="product__content content--center content--center">
-											<h4><a href="ipa.php">KIMIA</a></h4>
-											
-											<div class="action">
-												<div class="actions_inner">
-													<ul class="add_to_links">
-														
-														<li><a class="wishlist" href="wishlist.html"><i class="bi bi-shopping-cart-full"></i></a></li>
-														
-														<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="bi bi-search"></i></a></li>
-													</ul>
-												</div>
-											</div>
-											<div class="product__hover--content">
-											
-											</div>
-										</div>
-		        					</div>
-		        					<!-- End Single Product -->
-	        						<!-- Start Single Product -->
-		        					<div class="product product__style--3 col-lg-4 col-md-4 col-sm-6 col-12">
-			        					<div class="product__thumb">
-											<a class="first__img" href="ipa.php"><img src="images/books/13.png" alt="product image" style="height: 200px; height: 400px;"></a>
-											<div class="hot__box">
-												<span class="hot-label">BEST SALER</span>
-											</div>
-										</div>
-										<div class="product__content content--center content--center">
-											<h4><a href="ipa.php">SUPER BOOK</a></h4>
-											
-											<div class="action">
-												<div class="actions_inner">
-													<ul class="add_to_links">
-														
-														<li><a class="wishlist" href="wishlist.html"><i class="bi bi-shopping-cart-full"></i></a></li>
-														
-														<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="bi bi-search"></i></a></li>
-													</ul>
-												</div>
-											</div>
-											<div class="product__hover--content">
-												
-											</div>
-										</div>
-		        					</div>
-		        					<!-- End Single Product -->
-	        						<!-- Start Single Product -->
-		        					<div class="product product__style--3 col-lg-4 col-md-4 col-sm-6 col-12">
-			        					<div class="product__thumb">
-											<a class="first__img" href="ipa.php"><img src="images/books/11.png" alt="product image" style="height: 200px; height: 400px;"></a>
-											<div class="hot__box">
-												<span class="hot-label">BEST SALER</span>
-											</div>
-										</div>
-										<div class="product__content content--center content--center">
-											<h4><a href="ipa.php">BRANKAS SOAL KIMIA</a></h4>
-											
-											<div class="action">
-												<div class="actions_inner">
-													<ul class="add_to_links">
-														
-														<li><a class="wishlist" href="wishlist.html"><i class="bi bi-shopping-cart-full"></i></a></li>
-														
-														<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="bi bi-search"></i></a></li>
-													</ul>
-												</div>
-											</div>
-											<div class="product__hover--content">
-												
-											</div>
-										</div>
-		        					</div>
-		        					<!-- End Single Product -->
-	        						<!-- Start Single Product -->
-		        					<div class="product product__style--3 col-lg-4 col-md-4 col-sm-6 col-12">
-			        					<div class="product__thumb">
-											<a class="first__img" href="ipa.php"><img src="images/books/6.png" alt="product image" style="height: 200px; height: 400px;"></a>
-											<div class="hot__box">
-												<span class="hot-label">BEST SALER</span>
-											</div>
-										</div>
-										<div class="product__content content--center content--center">
-											<h4><a href="umum.php">Si ANAK CAHAYA</a></h4>
-											
-											<div class="action">
-												<div class="actions_inner">
-													<ul class="add_to_links">
-														
-														<li><a class="wishlist" href="wishlist.html"><i class="bi bi-shopping-cart-full"></i></a></li>
-														
-														<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="bi bi-search"></i></a></li>
-													</ul>
-												</div>
-											</div>
-											<div class="product__hover--content">
-												
-											</div>
-										</div>
-		        					</div>
-		        					<!-- End Single Product -->
-	        						<!-- Start Single Product -->
-		        					<div class="product product__style--3 col-lg-4 col-md-4 col-sm-6 col-12">
-			        					<div class="product__thumb">
-											<a class="first__img" href="ipa.php"><img src="images/books/14.png" alt="product image" style="height: 200px; height: 400px;"></a>
-											<div class="hot__box">
-												<span class="hot-label">BEST SALER</span>
-											</div>
-										</div>
-										<div class="product__content content--center content--center">
-											<h4><a href="single-product.html">BIOLOGI</a></h4>
-											
-											<div class="action">
-												<div class="actions_inner">
-													<ul class="add_to_links">
-														
-														<li><a class="wishlist" href="wishlist.html"><i class="bi bi-shopping-cart-full"></i></a></li>
-														
-														<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="bi bi-search"></i></a></li>
-													</ul>
-												</div>
-											</div>
-											<div class="product__hover--content">
-												
-											</div>
-										</div>
-		        					</div>
+		        					<?php } ?>
+		        				</div>
+		        			</div>
 		        					<!-- End Single Product -->
 	        					</div>
 	        					<ul class="wn__pagination">
@@ -585,8 +285,12 @@ session_start();
 		<!-- QUICKVIEW PRODUCT -->
 		<div id="quickview-wrapper">
 		    <!-- Modal -->
-		    <div class="modal fade" id="productmodal" tabindex="-1" role="dialog">
-		        <div class="modal-dialog modal__container" role="document" style="height: 400px; width: 800px;>
+		   <?php
+                        $query = mysqli_query($koneksi, "SELECT * FROM tb_buku"); //digunakan untuk mengambil data dari database lalu menmapilkannya pada tabel
+                        while($data = mysqli_fetch_array($query)) { //untuk memecahkan data menjadi array dan memasukkan ke dalam variabel data agar data bisa kita tampilkan dalam bentuk perulangan //aray dalam bentuk object menjadi array yang kita kenal
+                        ?>
+		    <div class="modal fade" id="productmodal1" tabindex="-1" role="dialog">
+		        <div class="modal-dialog modal__container" role="document" style="height: 500px; width: 500px;">
 		            <div class="modal-content">
 		                <div class="modal-header modal__header">
 		                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -596,12 +300,13 @@ session_start();
 		                        <!-- Start product images -->
 		                        <div class="product-images">
 		                            <div class="main-image images">
-		                                <img alt="big images" src="images/books/2.png">
+		                                <img src="img/<?php echo $data ['gambar'];?>" alt="big images">
 		                            </div>
 		                        </div>
 		                        <!-- end product images -->
-		                        <div class="product-info">
-		                            <h1>SBMPTN SOSHUM 2019</h1>
+		                         
+		                        <div class="buku-info">
+		                            <h3><?php echo $data ['judul'];?></h3>
 		                            <div class="rating__and__review">
 		                                <ul class="rating">
 		                                    <li><span class="ti-star"></span></li>
@@ -612,13 +317,13 @@ session_start();
 		                                </ul>
 		                            </div>
 		                            <div class="quick-desc">
-										<h6>Judul	 		: SBMPTN SOSHUM 2019</h6>
-										<h6>Penerbit 		: Pusat Perbukuan</h6>
-										<h6>Penulis  		: Moch.Anshori</h6>
-										<h6>Halaman Buku 	: 262</h6>
+										<h6>Judul	 		: <?php echo $data ['judul'];?></h6>
+										<h6>Penulis 		: <?php echo $data ['pengarang'];?></h6>
+										<h6>TahunTerbit  	: <?php echo $data ['thn_terbit'];?></h6>
+										<h6>Jumlah Halaman 	: <?php echo $data ['halaman'];?> Halaman</h6>
 		                            </div>
 		                            <div class="addtocart-btn">
-										<a href="pdf1.php">Read Now</a>
+										<a href="pdf.php">Read Now</a>
 										
 		                            </div>
 		                        </div>
@@ -628,6 +333,21 @@ session_start();
 		        </div>
 		    </div>
 		</div>
+<?php } ?>
+		<div class="modal fade" id="productmodal2" tabindex="-1" role="dialog">
+			<div class="modal-dialog modal__container" role="document">
+				<div class="modal-content">
+					<div class="modal-header modal__header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					</div>
+					<div class="modal-body">
+						<div class="modal-product">
+							<!-- Start product images -->
+							<div class="product-images">
+								<div class="main-image images">
+									<img alt="big images" src="images/product/big-img/3.png">
+								</div>
+							</div>
 		<!-- END QUICKVIEW PRODUCT -->
 		</div>
 		<!-- //Main wrapper -->

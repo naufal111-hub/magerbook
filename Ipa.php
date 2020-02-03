@@ -60,14 +60,14 @@ session_start();
 								
 								<li class="drop with--one--item"><a href="homeuser.php" style="color: white">Home</a></li>
 								
-								<li class="drop"><a href="buku user.php" style="color: white">Books</a>
-									<div class="megamenu mega03" style="height: 200px; width: 150px;">
+								<li class="drop"><a href="buku user.php" style="color: white">Buku</a>
+									<div class="megamenu mega03" style="height: 180px; width: 150px;">
 										<ul class="item item03">
 											<li class="title">Kategori</li>
 											<li><a href="ipa.php">IPA </a></li>
 											<li><a href="ips.php">IPS </a></li>
 											<li><a href="bahasa.php">BAHASA </a></li>
-											<li><a href="umum.php">UMUM </a></li>
+										
 										</ul>
 									</div>
 								</li>
@@ -111,36 +111,16 @@ session_start();
 					<div class="col-lg-12 d-none">
 						<nav class="mobilemenu__nav">
 							<ul class="meninmenu">
-								<li><a href="homeuser.html">Home</a></li>
+								<li><a href="homeuser.php">Home</a></li>
+								
+								<li><a href="buku user.php">Buku</a>
 									<ul>
-										<li><a href="about.html">About Page</a></li>
-											<ul>
-												<li><a href="portfolio.html">Portfolio</a></li>
-												<li><a href="portfolio-details.html">Portfolio Details</a></li>
-											</ul>
-										</li>
-										<li><a href="my-account.html">My Account</a></li>
-										<li><a href="cart.html">Cart Page</a></li>
-										<li><a href="checkout.html">Checkout Page</a></li>
-										<li><a href="wishlist.html">Wishlist Page</a></li>
-										<li><a href="error404.html">404 Page</a></li>
-										<li><a href="faq.html">Faq Page</a></li>
-										<li><a href="team.html">Team Page</a></li>
+										<li><a href="ipa.php">IPA</a></li>
+										<li><a href="ips.php">IPS</a></li>
+										<li><a href="bahasa.php">BAHASA</a></li>
 									</ul>
 								</li>
-								<li><a href="shop-grid.html">Shop</a>
-									<ul>
-										<li><a href="shop-grid.html">Shop Grid</a></li>
-										<li><a href="single-product.html">Single Product</a></li>
-									</ul>
-								</li>
-								<li><a href="blog.html">Blog</a>
-									<ul>
-										<li><a href="blog.html">Blog Page</a></li>
-										<li><a href="blog-details.html">Blog Details</a></li>
-									</ul>
-								</li>
-								<li><a href="contact.html">Contact</a></li>
+								<li><a href="transaksi.php">Transaksi</a></li>
 							</ul>
 						</nav>
 					</div>
@@ -195,7 +175,7 @@ session_start();
         							<li><a href="Ipa.php">IPA <span>(6)</span></a></li>
         							<li><a href="Ips.php">IPS <span>(1)</span></a></li>
         							<li><a href="Bahasa.php">BAHASA <span>(3)</span></a></li>
-        							<li><a href="Umum.php">UMUM <span>(4)</span></a></li>
+        						
         						</ul>
         					</aside>
         				</div>
@@ -204,324 +184,72 @@ session_start();
         				<div class="row">
         					<div class="col-lg-12">
 								<div class="shop__list__wrapper d-flex flex-wrap flex-md-nowrap justify-content-between">
-									<div class="product__content content--center"> </div>
-			                       IPA 
+									<div class="shop__list nav justify-content-center" role="tablist">
+			     
+			                        </div>
+			                        <p>IPA</p>
 			                        <div class="orderby__wrapper">
 		                        </div>
         					</div>
         				</div>
-        				<div class="tab__container">
+        			</div>
+        				<div>
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="section__title text-center">
+						</div>
+					</div>
+				</div>
+				<!-- Start Single Tab Content -->
+				<div class="furniture--4 border--round arrows_style owl-carousel owl-theme row mt--50">
+					<!-- Start Single Product -->
+						<!-- Start Single Product -->
+					</div>
+				</div>
+				<!-- End Single Tab Content -->
+			</div>
+
+		<div class="tab__container">
 	        				<div class="shop-grid tab-pane fade show active" id="nav-grid" role="tabpanel">
 	        					<div class="row">
 	        						<!-- Start Single Product -->
+	        						 <?php
+                        $query = mysqli_query($koneksi, "SELECT * FROM tb_buku where id_kategori=1"); //digunakan untuk mengambil data dari database lalu menmapilkannya pada tabel
+                        while($data = mysqli_fetch_array($query)) { //untuk memecahkan data menjadi array dan memasukkan ke dalam variabel data agar data bisa kita tampilkan dalam bentuk perulangan //aray dalam bentuk object menjadi array yang kita kenal
+                        ?>
 		        					<div class="product product__style--3 col-lg-4 col-md-4 col-sm-6 col-12">
 			        					<div class="product__thumb">
-											<a class="first__img" ><img src="images/books/14.png" alt="product image" style="height: 200px; height: 400px;"></a>
+											<a class="first__img" ><img src="img/<?php echo $data ['gambar'];?>" alt="product image" style="height: 200px; height: 400px;"></a>
 											<div class="hot__box">
-												<span class="hot-label">BEST</span>
+												<span class="hot-label"></span>
 											</div>
 										</div>
 										<div class="product__content content--center">
-											<h4><a href="single-product.html">BIOLOGI</a></h4>
-											<ul class="prize d-flex">
-											</ul>
-											<div class="action">
-												<div class="actions_inner">
-													<ul class="add_to_links">
-														<li><a class="wishlist" href="transaksi.php"><i class="bi bi-shopping-cart-full"></i></a></li>
-														<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal1"><i class="bi bi-search"></i></a></li>
-													</ul>
-												</div>
-											</div>
-											<div class="product__hover--content">
-												
-											</div>
-										</div>
-		        					</div>
-		        					<!-- End Single Product -->
-	        						<!-- Start Single Product -->
-		        					<div class="product product__style--3 col-lg-4 col-md-4 col-sm-6 col-12">
-			        					<div class="product__thumb">
-											<a class="first__img" ><img src="images/books/15.png" alt="product image" style="height: 200px; height: 400px;"></a>
-											<div class="hot__box">
-												<span class="hot-label">HOT</span>
-											</div>
-										</div>
-										<div class="product__content content--center">
-											<h4><a>Kimia Kelas X Kurikulum 2013</a></h4>
-											<ul class="prize d-flex">
-											</ul>
-											<div class="action">
-												<div class="actions_inner">
-													<ul class="add_to_links">
-														<li><a class="wishlist" href="transaksi.php"><i class="bi bi-shopping-cart-full"></i></a></li>
-														<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal2"><i class="bi bi-search"></i></a></li>
-													</ul>
-												</div>
-											</div>
-											<div class="product__hover--content">
-			
-											</div>
-										</div>
-		        					</div>
-		        					<!-- End Single Product -->
-	        						<!-- Start Single Product -->
-		        					<div class="product product__style--3 col-lg-4 col-md-4 col-sm-6 col-12">
-			        					<div class="product__thumb">
-											<a class="first__img" ><img src="images/books/12.png" alt="product image" style="height: 200px; height: 400px;"></a>
-											<div class="hot__box">
-												<span class="hot-label">HOT</span>
-											</div>
-										</div>
-										<div class="product__content content--center">
-											<h4><a href="single-product.html">TOP BOOK</a></h4>
-											<ul class="prize d-flex">
-											</ul>
-											<div class="action">
-												<div class="actions_inner">
-													<ul class="add_to_links">
-														<li><a class="wishlist" href="wishlist.html"><i class="bi bi-shopping-cart-full"></i></a></li>
-														<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal3"><i class="bi bi-search"></i></a></li>
-													</ul>
-												</div>
-											</div>
-											<div class="product__hover--content">
+											<h4><a><?php echo $data ['judul'];?></a></h4>
 											
-											</div>
-										</div>
-		        					</div>
-		        					<!-- End Single Product -->
-	        						<!-- Start Single Product -->
-		        					<div class="product product__style--3 col-lg-4 col-md-4 col-sm-6 col-12">
-			        					<div class="product__thumb">
-											<a class="first__img" ><img src="images/books/13.png" alt="product image" style="height: 200px; height: 400px;"></a>
-											<div class="hot__box">
-												<span class="hot-label">HOT</span>
-											</div>
-										</div>
-										<div class="product__content content--center">
-											<h4><a href="single-product.html">SUPER BOOK</a></h4>
-											<ul class="prize d-flex">
-											</ul>
 											<div class="action">
 												<div class="actions_inner">
 													<ul class="add_to_links">
-														<li><a class="wishlist" href="wishlist.html"><i class="bi bi-shopping-cart-full"></i></a></li>
-														<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal4"><i class="bi bi-search"></i></a></li>
+														<li><a class="wishlist" href="transaksi.php"><img src="images/icons/rak.png"></a></li>
+														<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal1"><img src="images/icons/books.png"></a></li>
 													</ul>
 												</div>
 											</div>
 											<div class="product__hover--content">
-											
 											</div>
 										</div>
 		        					</div>
+		        					<?php } ?>
 		        					<!-- End Single Product -->
 	        						<!-- Start Single Product -->
-		        					<div class="product product__style--3 col-lg-4 col-md-4 col-sm-6 col-12">
-			        					<div class="product__thumb">
-											<a class="first__img" ><img src="images/books/11.png" alt="product image" style="height: 200px; height: 400px;"></a>
-											<div class="hot__box">
-												<span class="hot-label">BEST SALER</span>
-											</div>
-										</div>
-										<div class="product__content content--center content--center">
-											<h4><a href="single-product.html">Brankas SOAL KIMIA</a></h4>
-											<ul class="prize d-flex">
-											</ul>
-											<div class="action">
-												<div class="actions_inner">
-													<ul class="add_to_links">
-														<li><a class="wishlist" href="wishlist.html"><i class="bi bi-shopping-cart-full"></i></a></li>
-														<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="bi bi-search"></i></a></li>
-													</ul>
-												</div>
-											</div>
-											<div class="product__hover--content">
-											
-											</div>
-										</div>
-		        					</div>
-		        					<!-- End Single Product -->
-	        						<!-- Start Single Product -->
-		        					<div class="product product__style--3 col-lg-4 col-md-4 col-sm-6 col-12">
-			        					<div class="product__thumb">
-											<a class="first__img" ><img src="images/books/3.png" alt="product image" style="height: 200px; height: 400px;"></a>
-											<div class="hot__box">
-												<span class="hot-label">BEST SALER</span>
-											</div>
-										</div>
-										<div class="product__content content--center content--center">
-											<h4><a href="single-product.html">SBMPTN SAINTEK</a></h4>
-											<ul class="prize d-flex">
-											</ul>
-											<div class="action">
-												<div class="actions_inner">
-													<ul class="add_to_links">
-														<li><a class="wishlist" href="wishlist.html"><i class="bi bi-shopping-cart-full"></i></a></li>
-														<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="bi bi-search"></i></a></li>
-													</ul>
-												</div>
-											</div>
-											<div class="product__hover--content">
-											
-											</div>
-										</div>
-		        					</div>
-		        					<!-- End Single Product -->
-	        					</div> 
+
+	        					</div>
+	        					<ul class="wn__pagination">
+	        					</ul>
 	        				</div>
 	        				<div class="shop-grid tab-pane fade" id="nav-list" role="tabpanel">
 	        					<div class="list__view__wrapper">
-	        						<!-- Start Single Product -->
-	        						<div class="list__view">
-	        							<div class="thumb">
-	        								<a class="first__img" ><img src="images/product/1.jpg" alt="product images"></a>
-	        								<a class="second__img animation1" href="single-product.html"><img src="images/product/2.jpg" alt="product images" ></a>
-	        							</div>
-	        							<div class="content">
-	        								<h2><a href="single-product.html">Ali Smith</a></h2>
-	        								<ul class="rating d-flex">
-	        									<li class="on"><i class="fa fa-star-o"></i></li>
-	        									<li class="on"><i class="fa fa-star-o"></i></li>
-	        									<li class="on"><i class="fa fa-star-o"></i></li>
-	        									<li class="on"><i class="fa fa-star-o"></i></li>
-	        									<li><i class="fa fa-star-o"></i></li>
-	        									<li><i class="fa fa-star-o"></i></li>
-	        								</ul>
-	        								<ul class="prize__box">
-	        									<li>$111.00</li>
-	        									<li class="old__prize">$220.00</li>
-	        								</ul>
-	        								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla.</p>
-	        								<ul class="cart__action d-flex">
-	        									<li class="cart"><a href="cart.html">Add to cart</a></li>
-	        									<li class="wishlist"><a href="cart.html"></a></li>
-	        									<li class="compare"><a href="cart.html"></a></li>
-	        								</ul>
-
-	        							</div>
-	        						</div>
-	        						<!-- End Single Product -->
-	        						<!-- Start Single Product -->
-	        						<div class="list__view mt--40">
-	        							<div class="thumb">
-	        								<a class="first__img" href="single-product.html"><img src="images/product/2.jpg" alt="product images"></a>
-	        								<a class="second__img animation1" href="single-product.html"><img src="images/product/4.jpg" alt="product images"></a>
-	        							</div>
-	        							<div class="content">
-	        								<h2><a href="single-product.html">Blood In Water</a></h2>
-	        								<ul class="rating d-flex">
-	        									<li class="on"><i class="fa fa-star-o"></i></li>
-	        									<li class="on"><i class="fa fa-star-o"></i></li>
-	        									<li class="on"><i class="fa fa-star-o"></i></li>
-	        									<li class="on"><i class="fa fa-star-o"></i></li>
-	        									<li><i class="fa fa-star-o"></i></li>
-	        									<li><i class="fa fa-star-o"></i></li>
-	        								</ul>
-	        								<ul class="prize__box">
-	        									<li>$111.00</li>
-	        									<li class="old__prize">$220.00</li>
-	        								</ul>
-	        								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla.</p>
-	        								<ul class="cart__action d-flex">
-	        									<li class="cart"><a href="cart.html">Add to cart</a></li>
-	        									<li class="wishlist"><a href="cart.html"></a></li>
-	        									<li class="compare"><a href="cart.html"></a></li>
-	        								</ul>
-
-	        							</div>
-	        						</div>
-	        						<!-- End Single Product -->
-	        						<!-- Start Single Product -->
-	        						<div class="list__view mt--40">
-	        							<div class="thumb">
-	        								<a class="first__img" href="single-product.html"><img src="images/product/3.jpg" alt="product images"></a>
-	        								<a class="second__img animation1" href="single-product.html"><img src="images/product/6.jpg" alt="product images"></a>
-	        							</div>
-	        							<div class="content">
-	        								<h2><a href="single-product.html">Madeness Overated</a></h2>
-	        								<ul class="rating d-flex">
-	        									<li class="on"><i class="fa fa-star-o"></i></li>
-	        									<li class="on"><i class="fa fa-star-o"></i></li>
-	        									<li class="on"><i class="fa fa-star-o"></i></li>
-	        									<li class="on"><i class="fa fa-star-o"></i></li>
-	        									<li><i class="fa fa-star-o"></i></li>
-	        									<li><i class="fa fa-star-o"></i></li>
-	        								</ul>
-	        								<ul class="prize__box">
-	        									<li>$111.00</li>
-	        									<li class="old__prize">$220.00</li>
-	        								</ul>
-	        								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla.</p>
-	        								<ul class="cart__action d-flex">
-	        									<li class="cart"><a href="cart.html">Add to cart</a></li>
-	        									<li class="wishlist"><a href="cart.html"></a></li>
-	        									<li class="compare"><a href="cart.html"></a></li>
-	        								</ul>
-
-	        							</div>
-	        						</div>
-	        						<!-- End Single Product -->
-	        						<!-- Start Single Product -->
-	        						<div class="list__view mt--40">
-	        							<div class="thumb">
-	        								<a class="first__img" href="single-product.html"><img src="images/product/4.jpg" alt="product images"></a>
-	        								<a class="second__img animation1" href="single-product.html"><img src="images/product/6.jpg" alt="product images"></a>
-	        							</div>
-	        							<div class="content">
-	        								<h2><a href="single-product.html">Watching You</a></h2>
-	        								<ul class="rating d-flex">
-	        									<li class="on"><i class="fa fa-star-o"></i></li>
-	        									<li class="on"><i class="fa fa-star-o"></i></li>
-	        									<li class="on"><i class="fa fa-star-o"></i></li>
-	        									<li class="on"><i class="fa fa-star-o"></i></li>
-	        									<li><i class="fa fa-star-o"></i></li>
-	        									<li><i class="fa fa-star-o"></i></li>
-	        								</ul>
-	        								<ul class="prize__box">
-	        									<li>$111.00</li>
-	        									<li class="old__prize">$220.00</li>
-	        								</ul>
-	        								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla.</p>
-	        								<ul class="cart__action d-flex">
-	        									<li class="cart"><a href="cart.html">Add to cart</a></li>
-	        									<li class="wishlist"><a href="cart.html"></a></li>
-	        									<li class="compare"><a href="cart.html"></a></li>
-	        								</ul>
-
-	        							</div>
-	        						</div>
-	        						<!-- End Single Product -->
-	        						<!-- Start Single Product -->
-	        						<div class="list__view mt--40">
-	        							<div class="thumb">
-	        								<a class="first__img" href="single-product.html"><img src="images/product/5.jpg" alt="product images"></a>
-	        								<a class="second__img animation1" href="single-product.html"><img src="images/product/9.jpg" alt="product images"></a>
-	        							</div>
-	        							<div class="content">
-	        								<h2><a href="single-product.html">Court Wings Run</a></h2>
-	        								<ul class="rating d-flex">
-	        									<li class="on"><i class="fa fa-star-o"></i></li>
-	        									<li class="on"><i class="fa fa-star-o"></i></li>
-	        									<li class="on"><i class="fa fa-star-o"></i></li>
-	        									<li class="on"><i class="fa fa-star-o"></i></li>
-	        									<li><i class="fa fa-star-o"></i></li>
-	        									<li><i class="fa fa-star-o"></i></li>
-	        								</ul>
-	        								<ul class="prize__box">
-	        									<li>$111.00</li>
-	        									<li class="old__prize">$220.00</li>
-	        								</ul>
-	        								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla.</p>
-	        								<ul class="cart__action d-flex">
-	        									<li class="cart"><a href="cart.html">Add to cart</a></li>
-	        									<li class="wishlist"><a href="cart.html"></a></li>
-	        									<li class="compare"><a href="cart.html"></a></li>
-	        								</ul>
-	        							</div>
-	        						</div>
-	        						<!-- End Single Product -->
 	        					</div>
 	        				</div>
         				</div>
@@ -538,8 +266,8 @@ session_start();
 						<div class="col-lg-12">
 							<div class="footer__widget footer__menu">
 								<div class="ft__logo">
-									<a href="homeuser.html">
-										<img src="images/logo/logo.png" alt="logo" style="height: 100px; width: 100px; border-radius: 50%;">
+									<a href="index.html">
+										<img src="images/logo/3.png" alt="logo" style="height: 80px; width: 80px; border-radius: 50%;">
 									</a>
 									<p>Aku Rela Di Penjara Asalkan Bersama Buku, Karena Dengan Buku Aku Bebas</p>
 								</div>
@@ -554,6 +282,10 @@ session_start();
 		<!-- QUICKVIEW PRODUCT -->
 		<div id="quickview-wrapper">
 		    <!-- Modal -->
+		   <?php
+                        $query = mysqli_query($koneksi, "SELECT * FROM tb_buku"); //digunakan untuk mengambil data dari database lalu menmapilkannya pada tabel
+                        while($data = mysqli_fetch_array($query)) { //untuk memecahkan data menjadi array dan memasukkan ke dalam variabel data agar data bisa kita tampilkan dalam bentuk perulangan //aray dalam bentuk object menjadi array yang kita kenal
+                        ?>
 		    <div class="modal fade" id="productmodal1" tabindex="-1" role="dialog">
 		        <div class="modal-dialog modal__container" role="document" style="height: 500px; width: 500px;">
 		            <div class="modal-content">
@@ -565,12 +297,13 @@ session_start();
 		                        <!-- Start product images -->
 		                        <div class="product-images">
 		                            <div class="main-image images">
-		                                <img alt="big images" src="images/product/big-img/14.png">
+		                                <img src="img/<?php echo $data ['gambar'];?>" alt="big images">
 		                            </div>
 		                        </div>
 		                        <!-- end product images -->
+		                         
 		                        <div class="buku-info">
-		                            <h3>Biologi Kelas X Kurikulum 2006</h3>
+		                            <h3><?php echo $data ['judul'];?></h3>
 		                            <div class="rating__and__review">
 		                                <ul class="rating">
 		                                    <li><span class="ti-star"></span></li>
@@ -581,10 +314,10 @@ session_start();
 		                                </ul>
 		                            </div>
 		                            <div class="quick-desc">
-										<h6>Judul	 		: Biologi Kelas X Kurikulum 2006</h6>
-										<h6>Penerbit 		: Pusat Perbukuan</h6>
-										<h6>Penulis  		: Moch.Anshori</h6>
-										<h6>Halaman Buku 	: 262</h6>
+										<h6>Judul	 		: <?php echo $data ['judul'];?></h6>
+										<h6>Penulis 		: <?php echo $data ['pengarang'];?></h6>
+										<h6>TahunTerbit  	: <?php echo $data ['thn_terbit'];?></h6>
+										<h6>Jumlah Halaman 	: <?php echo $data ['halaman'];?> Halaman</h6>
 		                            </div>
 		                            <div class="addtocart-btn">
 										<a href="pdf.php">Read Now</a>
@@ -597,6 +330,7 @@ session_start();
 		        </div>
 		    </div>
 		</div>
+<?php } ?>
 		<div class="modal fade" id="productmodal2" tabindex="-1" role="dialog">
 			<div class="modal-dialog modal__container" role="document">
 				<div class="modal-content">
@@ -611,115 +345,6 @@ session_start();
 									<img alt="big images" src="images/product/big-img/3.png">
 								</div>
 							</div>
-							<!-- end product images -->
-							<div class="buku-info">
-								<h3>Brankas Kimia Kelas X,XI,XII</h3>
-								<div class="rating__and__review">
-									<ul class="rating">
-										<li><span class="ti-star"></span></li>
-										<li><span class="ti-star"></span></li>
-										<li><span class="ti-star"></span></li>
-										<li><span class="ti-star"></span></li>
-										<li><span class="ti-star"></span></li>
-									</ul>
-								</div>
-								<div class="quick-desc">
-									<h6>Judul	 : Brankas Kimia Kelas X,XI,XII</h6>
-									<h6>Penerbit : PT Antariksa</h6>
-									<h6>Penulis  : Media</h6>
-								</div>
-								<div class="read-btn">
-									<a href="baca.php">Read Now</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="modal fade" id="productmodal3" tabindex="-1" role="dialog">
-		<div class="modal-dialog modal__container" role="document">
-			<div class="modal-content">
-				<div class="modal-header modal__header">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				</div>
-				<div class="modal-body">
-					<div class="modal-product">
-						<!-- Start product images -->
-						<div class="product-images">
-							<div class="main-image images">
-								<img alt="big images" src="images/product/big-img/8.png">
-							</div>
-						</div>
-						<!-- end product images -->
-						<div class="buku-info">
-							<h3>Brankas Kimia Kelas X,XI,XII</h3>
-							<div class="rating__and__review">
-								<ul class="rating">
-									<li><span class="ti-star"></span></li>
-									<li><span class="ti-star"></span></li>
-									<li><span class="ti-star"></span></li>
-									<li><span class="ti-star"></span></li>
-									<li><span class="ti-star"></span></li>
-								</ul>
-							</div>
-							<div class="quick-desc">
-								<h6>Judul	 : Brankas Kimia Kelas X,XI,XII</h6>
-								<h6>Penerbit : PT Antariksa</h6>
-								<h6>Penulis  : Media</h6>
-							</div>
-							<div class="read-btn">
-								<a href="baca.php">Read Now</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-<div class="modal fade" id="productmodal4" tabindex="-1" role="dialog">
-	<div class="modal-dialog modal__container" role="document">
-		<div class="modal-content">
-			<div class="modal-header modal__header">
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-			</div>
-			<div class="modal-body">
-				<div class="modal-product">
-					<!-- Start product images -->
-					<div class="product-images">
-						<div class="main-image images">
-							<img alt="big images" src="images/product/big-img/9.png">
-						</div>
-					</div>
-					<!-- end product images -->
-					<div class="buku-info">
-						<h3>Brankas Kimia Kelas X,XI,XII</h3>
-						<div class="rating__and__review">
-							<ul class="rating">
-								<li><span class="ti-star"></span></li>
-								<li><span class="ti-star"></span></li>
-								<li><span class="ti-star"></span></li>
-								<li><span class="ti-star"></span></li>
-								<li><span class="ti-star"></span></li>
-							</ul>
-						</div>
-						<div class="quick-desc">
-							<h6>Judul	 : Brankas Kimia Kelas X,XI,XII</h6>
-							<h6>Penerbit : PT Antariksa</h6>
-							<h6>Penulis  : Media</h6>
-						</div>
-						<div class="read-btn">
-							<a href="baca.php">Read Now</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-</div>
 		<!-- END QUICKVIEW PRODUCT -->
 		</div>
 		<!-- //Main wrapper -->
