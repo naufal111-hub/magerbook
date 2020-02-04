@@ -172,9 +172,9 @@ session_start();
         					<aside class="wedget__categories poroduct--cat">
         						<h3 class="wedget__title">Kategori</h3>
         						<ul>
-        							<li><a href="Ipa.php">IPA <span>(6)</span></a></li>
-        							<li><a href="Ips.php">IPS <span>(4)</span></a></li>
-        							<li><a href="Bahasa.php">BAHASA <span>(6)</span></a></li>
+        							<li><a href="Ipa.php">IPA <span>(1)</span></a></li>
+        							<li><a href="Ips.php">IPS <span>(1)</span></a></li>
+        							<li><a href="Bahasa.php">BAHASA <span>(1)</span></a></li>
         							
         						</ul>
         					</aside>

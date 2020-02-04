@@ -15,7 +15,7 @@
                         </div>
                         <div class="panel-body">
                            <?php
-                                                $query = mysqli_query($koneksi, "SELECT * FROM tb_buku where id_kategori=3"); //digunakan untuk mengambil data dari database lalu menmapilkannya pada tabel
+                                                $query = mysqli_query($koneksi, "SELECT * FROM tb_buku where id_kategori=2"); //digunakan untuk mengambil data dari database lalu menmapilkannya pada tabel
                                                 while($data = mysqli_fetch_array($query)) {//untuk memecahkan data menjadi array dan memasukkan ke dalam variabel data agar data bisa kita tampilkan dalam bentuk perulangan //aray dalam bentuk object menjadi array yang kita kenal
                                                 ?>
                                           
